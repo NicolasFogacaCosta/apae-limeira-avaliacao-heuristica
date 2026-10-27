@@ -60,7 +60,7 @@ Data, valores e categorias ficam como `[a confirmar com a entidade]`.
 **Aceite:** toda página de evento responde à pergunta "como eu participo?" sem exigir
 busca externa; o formulário valida no preenchimento, não após o envio.
 
-### [ ] 03 — Home carrega com a área principal em branco
+### [x] 03 — Home carrega com a área principal em branco
 **Heurística:** 01 — Visibilidade do status do sistema · **Página:** home
 
 A home leva cerca de 6,5 s para concluir o carregamento (110 requisições) e, durante

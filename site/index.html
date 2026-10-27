@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Engagement&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;500;700&family=Rubik:wght@300;400&family=Sansita:wght@400;700&display=swap">
 <link rel="stylesheet" href="assets/css/estilo.css">
+<!-- Achado 03: o primeiro slide do banner tem prioridade de carregamento -->
+<link rel="preload" as="image" type="image/webp" imagesrcset="storage/2026/06/Banner-SIte-960.webp 960w, storage/2026/06/Banner-SIte.webp 1975w" imagesizes="(max-width: 1600px) 100vw, 1600px" fetchpriority="high">
 </head>
 <body class="home">
 <script src="assets/js/layout.js" data-parte="cabecalho"></script>
@@ -16,18 +18,20 @@
 
   <!-- Banner principal. Achado 01: os slides com chamada para ação são links reais;
        .banner__alvo marca, sobre a arte, o botão desenhado (posição em % da imagem 1975×860). -->
-  <section class="banner">
+  <!-- Achado 03: altura reservada pela proporção da arte, imagem de baixa resolução
+       embutida no primeiro slide e esqueleto animado enquanto as imagens carregam. -->
+  <section class="banner" aria-busy="true" aria-label="Destaques">
     <div class="banner__trilho">
       <div class="banner__slide">
         <a class="banner__link" href="meia-maratona-da-inclusao/">
-          <img src="storage/2026/06/Banner-SIte.png" alt="2ª Meia-Maratona da Inclusão de Limeira: inscrições abertas. Garanta sua inscrição">
+          <picture><source type="image/webp" srcset="storage/2026/06/Banner-SIte-960.webp 960w, storage/2026/06/Banner-SIte.webp 1975w" sizes="(max-width: 1600px) 100vw, 1600px"><img src="storage/2026/06/Banner-SIte.png" width="1975" height="860" alt="2ª Meia-Maratona da Inclusão de Limeira: inscrições abertas. Garanta sua inscrição" decoding="async" fetchpriority="high" style="background:url(data:image/webp;base64,UklGRjwBAABXRUJQVlA4IDABAAAwBwCdASooABEAPtFapk0oJSOiKqoBABoJZgCxH3PsAZIArALAD31FZ0tKQYSs/rpaO2mqtpdu5481hV4XZhW3BRAA/tYjDm/LR1Zk+4MqgfS6vzo5phIb0zwVL+eAcq6lBujw9BIo8MtmwfWeCqYDzA5YN26QTBQZOXF5s11LcoNmpQNWJb3+SR8YNl7YHocua5fJj3i1ZMdjOWQQKIlNn+8MhLrr7AcZf5DMAzuJg91E1fCMcvCge7e7C+yodIqly2IiX+t5CD80wH4JeGpqqM+UPjfY1KIuaNf6m8SSCq0osdo9LYTTh8VwjH+L7C1Gg0A7t9q35HUISTqIhod5LP7k28Cx4LWooG+TLEk/ySOEqGBBxFZEbfOqY3UDq0ncUwCOv/M0eus0zdjEAAAA) center / cover"></picture>
           <span class="banner__alvo" style="left:60%;top:73.9%;width:31.4%;height:9.5%" aria-hidden="true"></span>
         </a>
       </div>
-      <div class="banner__slide"><img src="storage/2026/04/banner_site_60anos.jpg" alt=""></div>
+      <div class="banner__slide"><picture><source type="image/webp" srcset="storage/2026/04/banner_site_60anos-960.webp 960w, storage/2026/04/banner_site_60anos.webp 1975w" sizes="(max-width: 1600px) 100vw, 1600px"><img src="storage/2026/04/banner_site_60anos.jpg" width="1975" height="860" alt="" decoding="async" loading="lazy"></picture></div>
       <div class="banner__slide">
         <a class="banner__link" href="selo-empresa-cidada-2026/">
-          <img src="storage/2026/10/banner-site-selo.jpg" alt="Certificado Empresa Cidadã 2026: ver as fotos da entrega">
+          <picture><source type="image/webp" srcset="storage/2026/10/banner-site-selo-960.webp 960w, storage/2026/10/banner-site-selo.webp 1975w" sizes="(max-width: 1600px) 100vw, 1600px"><img src="storage/2026/10/banner-site-selo.jpg" width="1975" height="860" alt="Certificado Empresa Cidadã 2026: ver as fotos da entrega" decoding="async" loading="lazy"></picture>
           <span class="banner__alvo" style="left:72.3%;top:75.2%;width:21.2%;height:9.5%" aria-hidden="true"></span>
         </a>
       </div>
@@ -44,12 +48,12 @@
   </div>
   <section class="servicos">
     <div class="servicos__linha">
-      <div class="servicos__item"><a href="teste-do-pezinho/"><img src="storage/2025/05/servico01.png" alt=""></a></div>
-      <div class="servicos__item"><a href="bazar-e-estacionamento/"><img src="storage/2025/05/servico03.png" alt=""></a></div>
+      <div class="servicos__item"><a href="teste-do-pezinho/"><picture><source type="image/webp" srcset="storage/2025/05/servico01.webp"><img src="storage/2025/05/servico01.png" width="600" height="330" alt="" loading="lazy" decoding="async"></picture></a></div>
+      <div class="servicos__item"><a href="bazar-e-estacionamento/"><picture><source type="image/webp" srcset="storage/2025/05/servico03.webp"><img src="storage/2025/05/servico03.png" width="600" height="330" alt="" loading="lazy" decoding="async"></picture></a></div>
     </div>
     <div class="servicos__linha">
-      <div class="servicos__item"><a href="organizacao-de-eventos/"><img src="storage/2025/05/servico04.png" alt=""></a></div>
-      <div class="servicos__item"><a href="reforma-de-pallets/"><img src="storage/2026/09/paletes.png" alt=""></a></div>
+      <div class="servicos__item"><a href="organizacao-de-eventos/"><picture><source type="image/webp" srcset="storage/2025/05/servico04.webp"><img src="storage/2025/05/servico04.png" width="600" height="330" alt="" loading="lazy" decoding="async"></picture></a></div>
+      <div class="servicos__item"><a href="reforma-de-pallets/"><picture><source type="image/webp" srcset="storage/2026/09/paletes.webp"><img src="storage/2026/09/paletes.png" width="600" height="330" alt="" loading="lazy" decoding="async"></picture></a></div>
     </div>
   </section>
 
@@ -62,7 +66,8 @@
   <section class="eventos">
     <div class="eventos__carrossel">
       <div class="eventos__trilho">
-        <div class="eventos__slide" style="background-image:url(wp-content/uploads/2025/05/evento01.png)">
+        <div class="eventos__slide">
+          <picture><source type="image/webp" srcset="wp-content/uploads/2025/05/evento01.webp"><img class="eventos__fundo" src="wp-content/uploads/2025/05/evento01.png" width="1499" height="818" alt="" loading="lazy" decoding="async"></picture>
           <a class="eventos__slide-link" href="apae-motor-rock/" aria-label="APAE MOTOR ROCK"></a>
           <div class="eventos__conteudo">
             <div class="eventos__titulo">APAE MOTOR ROCK</div>
@@ -70,7 +75,8 @@
             <div class="eventos__botao">Saiba mais</div>
           </div>
         </div>
-        <div class="eventos__slide" style="background-image:url(wp-content/uploads/2025/05/evento02.png)">
+        <div class="eventos__slide">
+          <picture><source type="image/webp" srcset="wp-content/uploads/2025/05/evento02.webp"><img class="eventos__fundo" src="wp-content/uploads/2025/05/evento02.png" width="1499" height="818" alt="" loading="lazy" decoding="async"></picture>
           <a class="eventos__slide-link" href="apae-running-limeira/" aria-label="APAE RUNNING"></a>
           <div class="eventos__conteudo">
             <div class="eventos__titulo">APAE RUNNING</div>
@@ -78,13 +84,15 @@
             <div class="eventos__botao">Saiba mais</div>
           </div>
         </div>
-        <div class="eventos__slide" style="background-image:url(wp-content/uploads/2025/05/evento03.png)">
+        <div class="eventos__slide">
+          <picture><source type="image/webp" srcset="wp-content/uploads/2025/05/evento03.webp"><img class="eventos__fundo" src="wp-content/uploads/2025/05/evento03.png" width="1499" height="818" alt="" loading="lazy" decoding="async"></picture>
           <div class="eventos__conteudo">
             <div class="eventos__titulo">SELO EMPRESA CIDADÃ</div>
             <div class="eventos__texto">A entrega do Selo de Empresa Cidadã é um evento promovido anualmente pela APAE Limeira, que reconhece o valor das ações de responsabilidade social desenvolvidas pelas empresas da cidade de Limeira.</div>
           </div>
         </div>
-        <div class="eventos__slide" style="background-image:url(wp-content/uploads/2025/05/evento04.png)">
+        <div class="eventos__slide">
+          <picture><source type="image/webp" srcset="wp-content/uploads/2025/05/evento04.webp"><img class="eventos__fundo" src="wp-content/uploads/2025/05/evento04.png" width="1499" height="818" alt="" loading="lazy" decoding="async"></picture>
           <div class="eventos__conteudo">
             <div class="eventos__titulo">APAE BEACH TENNIS</div>
             <div class="eventos__texto">O APAE Beach Tennis é um evento esportivo beneficente, promovido anualmente pela APAE Limeira, que busca arrecadar fundos para a entidade e promover a inclusão por intermédio do esporte. Neste torneio, os participantes terão a oportunidade de competir em partidas emocionantes de Beach Tennis, enquanto contribuem para uma causa nobre.</div>
@@ -117,12 +125,12 @@
   <section class="programas">
     <div class="programas__janela">
       <div class="programas__trilho">
-        <div class="programas__item"><img src="storage/2025/05/programa06.png" alt="programa06"></div>
-        <div class="programas__item"><img src="storage/2025/05/programa07.png" alt="programa07"></div>
-        <div class="programas__item"><img src="storage/2025/05/programa02.png" alt="programa02"></div>
-        <div class="programas__item"><img src="storage/2025/05/programa03.png" alt="programa03"></div>
-        <div class="programas__item"><img src="storage/2025/05/programa04.png" alt="programa04"></div>
-        <div class="programas__item"><img src="storage/2025/05/programa05.png" alt="programa05"></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa06.webp"><img src="storage/2025/05/programa06.png" width="360" height="360" alt="programa06" loading="lazy" decoding="async"></picture></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa07.webp"><img src="storage/2025/05/programa07.png" width="360" height="360" alt="programa07" loading="lazy" decoding="async"></picture></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa02.webp"><img src="storage/2025/05/programa02.png" width="360" height="360" alt="programa02" loading="lazy" decoding="async"></picture></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa03.webp"><img src="storage/2025/05/programa03.png" width="360" height="360" alt="programa03" loading="lazy" decoding="async"></picture></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa04.webp"><img src="storage/2025/05/programa04.png" width="360" height="360" alt="programa04" loading="lazy" decoding="async"></picture></div>
+        <div class="programas__item"><picture><source type="image/webp" srcset="storage/2025/05/programa05.webp"><img src="storage/2025/05/programa05.png" width="360" height="360" alt="programa05" loading="lazy" decoding="async"></picture></div>
       </div>
     </div>
     <div class="programas__seta programas__seta--ant" data-anterior role="button" tabindex="0" aria-label="Previous"><svg class="icone" aria-hidden="true"><use href="#i-esquerda"></use></svg></div>
@@ -131,7 +139,7 @@
 
   <!-- Mapa -->
   <section class="mapa">
-    <iframe src="https://maps.google.com/maps?q=Av.%20Ant%C3%B4nio%20D%27Andr%C3%A9a%2C%20364%20-%20Parque%20N%20Senhora%20das%20Dores%2C%20Limeira%20-%20SP%2C%2013483-000&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="Av. Antônio D'Andréa, 364 - Parque N Senhora das Dores, Limeira - SP, 13483-000" aria-label="Av. Antônio D'Andréa, 364 - Parque N Senhora das Dores, Limeira - SP, 13483-000"></iframe>
+    <iframe loading="lazy" src="https://maps.google.com/maps?q=Av.%20Ant%C3%B4nio%20D%27Andr%C3%A9a%2C%20364%20-%20Parque%20N%20Senhora%20das%20Dores%2C%20Limeira%20-%20SP%2C%2013483-000&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="Av. Antônio D'Andréa, 364 - Parque N Senhora das Dores, Limeira - SP, 13483-000" aria-label="Av. Antônio D'Andréa, 364 - Parque N Senhora das Dores, Limeira - SP, 13483-000"></iframe>
   </section>
 
 </main>

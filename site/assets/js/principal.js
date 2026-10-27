@@ -105,8 +105,16 @@
 
   var banner = document.querySelector('.banner');
   if (banner) {
-    // O slider só aparece quando todas as imagens terminam de carregar.
-    window.addEventListener('load', function () { banner.classList.add('carregado'); });
+    // Achado 03: o banner aparece de imediato (com a prévia em baixa resolução);
+    // quando o primeiro slide termina de carregar, os demais começam a carregar.
+    var primeira = banner.querySelector('.banner__slide img');
+    function bannerCarregado() {
+      banner.setAttribute('aria-busy', 'false');
+      primeira.style.background = '';
+      banner.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    }
+    if (primeira.complete && primeira.naturalWidth) bannerCarregado();
+    else primeira.addEventListener('load', bannerCarregado);
     var slides = carrossel(banner, { trilho: '.banner__trilho', intervalo: 5000, reiniciar: true });
     // Achado 01: a chamada que recebe foco pelo teclado fica visível na tela.
     var slidesBanner = Array.prototype.slice.call(banner.querySelectorAll('.banner__slide'));

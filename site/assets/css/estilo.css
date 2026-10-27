@@ -281,11 +281,20 @@ iframe { max-width: 100%; border: 0; }
    Home
    -------------------------------------------------------------------------- */
 .home { background: #fff; }
-.banner { position: relative; max-width: var(--container-largo); margin: 0 auto; overflow: hidden; visibility: hidden; }
-.banner.carregado { visibility: visible; }
+.banner { position: relative; max-width: var(--container-largo); margin: 0 auto; overflow: hidden; }
+/* Achado 03: espaço do banner reservado e esqueleto enquanto as imagens carregam */
+.banner__slide { aspect-ratio: 1975 / 860; background: #E8EBEE; }
+.banner[aria-busy="true"]::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .45) 50%, transparent 70%) 0 0 / 200% 100%;
+  animation: banner-carregando 1.4s linear infinite;
+}
+@keyframes banner-carregando { from { background-position: 120% 0; } to { background-position: -120% 0; } }
+@media (prefers-reduced-motion: reduce) { .banner[aria-busy="true"]::after { animation: none; } }
 .banner__trilho { display: flex; transition: transform .6s ease; }
 .banner__slide { flex: 0 0 100%; }
 .banner__slide img { display: block; width: 100%; height: auto; }
+.banner__slide picture { display: block; }
 /* Achado 01: chamada do banner como link real, com hover e foco visíveis */
 .banner { overflow: clip; } /* impede que o foco role o carrossel para fora do slide atual */
 .banner__link { position: relative; display: block; }
@@ -318,6 +327,7 @@ iframe { max-width: 100%; border: 0; }
   flex: 0 0 100%; height: 615px; position: relative; display: flex; align-items: flex-end;
   background-size: cover; background-position: center; color: #fff;
 }
+.eventos__fundo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .eventos__slide-link { position: absolute; inset: 0; z-index: 1; }
 .eventos__conteudo { position: relative; padding: 50px; max-width: 100%; }
 .eventos__titulo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 35px; margin: 0 0 10px; color: #fff; }
@@ -331,6 +341,9 @@ iframe { max-width: 100%; border: 0; }
 .eventos__seta--prox { right: 0; }
 
 .doe-faixa { background: url(../../wp-content/uploads/2025/05/bg_doe.jpg) center / cover no-repeat; }
+@supports (background-image: image-set(url(a.webp) type("image/webp"))) {
+  .doe-faixa { background-image: image-set(url(../../wp-content/uploads/2025/05/bg_doe.webp) type("image/webp"), url(../../wp-content/uploads/2025/05/bg_doe.jpg) type("image/jpeg")); }
+}
 .doe-faixa__inner { display: flex; align-items: center; max-width: var(--container-largo); margin: 0 auto; min-height: 340px; padding: 0 10px; }
 .doe-faixa__texto { width: 50%; padding: 10px; text-align: justify; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; }
 .doe-faixa__texto p { margin: 0; }
