@@ -365,7 +365,7 @@ entidade, não é mencionado.
 
 ## Achado adicional — identificado na prototipação
 
-### [ ] 27 — Contraste insuficiente no botão de doação
+### [x] 27 — Contraste insuficiente no botão de doação
 **Heurística:** 04 — Consistência e padrões (critério de acessibilidade) · **Páginas:** todas
 
 O rosa `#FF448D` do botão "Doe agora" não sustenta texto legível em nenhuma das duas

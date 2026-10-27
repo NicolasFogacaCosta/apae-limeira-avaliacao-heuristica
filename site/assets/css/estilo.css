@@ -8,6 +8,9 @@
   --azul-institucional: #063560;
   --amarelo: #F5AB32;
   --rosa-doacao: #FF448D;
+  /* Achado 27: texto do botão de doação sobre o rosa (4,95:1; hover #FF6AA3: 6,01:1) */
+  --texto-doacao: #04223F;
+  --rosa-doacao-hover: #FF6AA3;
   --texto: #404040;
   --fundo-alt: #F3F5F7;
   --branco: #FFFFFF;
@@ -86,11 +89,11 @@ iframe { max-width: 100%; border: 0; }
 .rede span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .botao-doe-topo {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--rosa-doacao); color: #fff;
+  background: var(--rosa-doacao); color: var(--texto-doacao);
   font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500; line-height: 1;
   padding: 20px 30px; min-height: 72px; text-align: center;
 }
-.botao-doe-topo:hover { color: #fff; }
+.botao-doe-topo:hover, .botao-doe-topo:focus-visible { color: var(--texto-doacao); background: var(--rosa-doacao-hover); }
 .botao-doe-topo__texto { display: inline-block; width: 3.4em; }
 
 /* --------------------------------------------------------------------------
@@ -427,11 +430,11 @@ iframe { max-width: 100%; border: 0; }
 .doe-faixa__acao { width: 50%; text-align: center; }
 .botao-doe-grande {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--rosa-doacao); color: #fff;
+  background: var(--rosa-doacao); color: var(--texto-doacao);
   font-family: 'Montserrat', sans-serif; font-size: 25px; font-weight: 700; line-height: 1;
   padding: 35px 85px; border-radius: 15px;
 }
-.botao-doe-grande:hover { color: #fff; }
+.botao-doe-grande:hover, .botao-doe-grande:focus-visible { color: var(--texto-doacao); background: var(--rosa-doacao-hover); }
 
 .programas { max-width: var(--container); margin: 0 auto; padding: 20px 40px 55px; position: relative; }
 .programas__janela { overflow: hidden; }
@@ -462,11 +465,11 @@ iframe { max-width: 100%; border: 0; }
 .rodape__telefone { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 900; line-height: 1.1; margin: 0 0 20px; }
 .rodape__doe {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--rosa-doacao); color: #fff;
+  background: var(--rosa-doacao); color: var(--texto-doacao);
   font-family: 'Montserrat', sans-serif; font-size: 25px; font-weight: 700; line-height: 1;
   padding: 20px 55px; border-radius: 15px;
 }
-.rodape__doe:hover { color: #fff; }
+.rodape__doe:hover, .rodape__doe:focus-visible { color: var(--texto-doacao); background: var(--rosa-doacao-hover); }
 .rodape__titulo { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 35px; font-weight: 800; margin: 0 0 20px; }
 .rodape__lista { list-style: none; margin: 0; padding: 0; }
 .rodape__lista li { padding: 5px 0; }
@@ -644,7 +647,7 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
 /* Botão de doação: rosa com texto #04223F (4,95:1), conforme o achado 27 */
 .acesso__item--doar em {
   align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 6px;
-  background: var(--rosa-doacao); color: #04223F; font-weight: 800; text-decoration: none;
+  background: var(--rosa-doacao); color: var(--texto-doacao); font-weight: 800; text-decoration: none;
 }
 
 @media (max-width: 1024px) {
@@ -790,9 +793,9 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
 /* Botão de doação: rosa com texto #04223F (4,95:1), conforme o achado 27 */
 .doacao__doar {
   margin-top: auto; min-height: 60px; border: 0; border-radius: 6px; cursor: pointer;
-  background: var(--rosa-doacao); color: #04223F; font: 800 18px 'Montserrat', sans-serif;
+  background: var(--rosa-doacao); color: var(--texto-doacao); font: 800 18px 'Montserrat', sans-serif;
 }
-.doacao__doar:hover { background: #FF6AA3; }
+.doacao__doar:hover { background: var(--rosa-doacao-hover); }
 .doacao__doar:focus-visible, .doacao__copiar:focus-visible { outline: 3px solid var(--azul-institucional); outline-offset: 3px; }
 .doacao__resultado { padding: 14px 16px; border-left: 6px solid var(--amarelo); background: #FFF8EA; font-size: 16px; }
 .doacao__contato { margin-top: auto; }
@@ -991,3 +994,10 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
   .compartilhe__inner { justify-content: center; }
   .compartilhe__botoes { justify-content: center; }
 }
+
+/* Achado 27: foco visível em todos os botões de doação, sobre qualquer fundo */
+.botao-doe-topo:focus-visible, .botao-doe-grande:focus-visible, .rodape__doe:focus-visible,
+.acesso__item--doar a:focus-visible em, .doacao__doar:focus-visible {
+  outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px var(--texto-doacao);
+}
+.acesso__item--doar a:hover em { background: var(--rosa-doacao-hover); }
