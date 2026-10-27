@@ -1,0 +1,11 @@
+# Repositório da skill de engenharia reversa (clonado à parte)
+claude-reverse-engineering-skill/
+.claude/skills/
+.claude/settings.local.json
+
+# Zip original da proposta (o conteúdo extraído está em proposta-ui/extraido/)
+proposta-ui/*.zip
+
+# Cache de download da reconstrução
+ferramentas/reconstrucao/.cache/
+__pycache__/
