@@ -454,6 +454,35 @@ iframe { max-width: 100%; border: 0; }
 .cookies-modal__salvar { background: #61a229; color: #fff; border: 0; padding: 10px 20px; cursor: pointer; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
+   Achado 16: Dúvidas frequentes em acordeão e conteúdo técnico em revisão
+   -------------------------------------------------------------------------- */
+.revisao-pendente {
+  display: inline-block; background: #E8F0F8; color: var(--azul-institucional); border: 1px solid #6B8CB0; border-radius: 4px;
+  padding: 2px 10px; font: 600 14px/1.5 'Open Sans', sans-serif;
+}
+.faq__aviso { background: var(--fundo-alt); border-left: 6px solid var(--amarelo); padding: 14px 18px; font-size: 16px; margin-bottom: 24px; }
+.faq { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+.faq__item { background: #fff; border: 2px solid #C9CFD5; border-radius: 6px; }
+.faq__item[open] { border-color: var(--azul-institucional); }
+.faq__pergunta {
+  list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px;
+  padding: 14px 20px; cursor: pointer; font: 700 18px/1.35 'Montserrat', sans-serif; color: var(--azul-institucional);
+}
+.faq__pergunta::-webkit-details-marker { display: none; }
+.faq__pergunta::after { content: '+'; flex: none; font: 700 26px/1 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.faq__item[open] > .faq__pergunta::after { content: '\2212'; }
+.faq__pergunta:hover { background: var(--fundo-alt); }
+.faq__pergunta:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.faq__resposta { padding: 4px 20px 18px; font-size: 16px; line-height: 1.6; }
+.faq__resposta p { margin: 0 0 12px; }
+.faq__resposta ul { margin: 0 0 12px; }
+.faq__revisao { margin-bottom: 10px; }
+.referencias { background: var(--fundo-alt); padding: 20px 24px; font-size: 15px; margin-top: 24px; }
+.pagina__conteudo .referencias h2 { margin: 0 0 8px; font: 700 20px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.referencias ul { margin: 8px 0 0; }
+.referencias li { margin-bottom: 6px; }
+
+/* --------------------------------------------------------------------------
    Achado 14: Transparência como lista estruturada por tema
    -------------------------------------------------------------------------- */
 .transparencia { color: var(--texto); font-family: 'Open Sans', sans-serif; text-align: left; }

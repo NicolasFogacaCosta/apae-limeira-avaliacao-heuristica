@@ -150,7 +150,7 @@ prestação de contas, convênios.
 
 **Aceite:** nenhum item exibe apenas sigla; cada documento informa ano e formato.
 
-### [ ] 16 — FAQ com base teórica e terminologia superadas
+### [x] 16 — FAQ com base teórica e terminologia superadas
 **Heurística:** 02 — Correspondência com o mundo real · **Página:** `/duvidas-frequentes/`
 
 O conteúdo cita o DSM-IV-TR (2003), o manual "Retardo Mental" (2006) e uma revista de

@@ -65,3 +65,17 @@ dos PDFs no Google Drive, além dos anos listados em cada subpágina.
 - **Certificado ISO 9001:2015 vencido:** o documento publicado vale de 17/06/2023 a
   17/06/2026. Em 26/10/2026 ele já passou da validade. A página mostra a validade
   como está no documento; cabe à entidade publicar o certificado renovado.
+
+## Achado 16: revisão técnica da equipe da APAE antes de publicar
+
+**O que está no repositório:** `/duvidas-frequentes/` virou um acordeão, com uma
+pergunta por bloco. As respostas 1, 2 e 8 e o texto e as referências de
+`/sobre-a-deficiencia-intelectual/` foram atualizados conforme a CID-11 (OMS, 2022),
+o DSM-5-TR (APA, 2022) e a AAIDD, 12ª edição (2021). A principal mudança é o critério
+de manifestação: durante o período de desenvolvimento, antes dos 22 anos, no lugar de
+"antes dos 18 anos". Cada trecho alterado está marcado como "Aguarda revisão da
+equipe técnica da APAE".
+
+**O que falta:** a equipe técnica da APAE precisa revisar e aprovar esses trechos.
+Depois disso, as marcas e o aviso do topo da página podem ser retirados. As respostas
+não alteradas continuam com o texto original.
