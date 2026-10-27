@@ -502,7 +502,18 @@ iframe { max-width: 100%; border: 0; }
 .doacao__doar:focus-visible, .doacao__copiar:focus-visible { outline: 3px solid var(--azul-institucional); outline-offset: 3px; }
 .doacao__resultado { padding: 14px 16px; border-left: 6px solid var(--amarelo); background: #FFF8EA; font-size: 16px; }
 .doacao__contato { margin-top: auto; }
-.pagina__conteudo .doacao__contato .botao { display: block; padding: 20px 24px; line-height: 1.1; }
+/* Achado 06: botão do WhatsApp com rótulo, ícone e aviso de nova janela.
+   Azul institucional: é um contato, e o rosa fica reservado ao botão de doação. */
+.pagina__conteudo .doacao__whatsapp {
+  display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; padding: 10px 18px;
+  background: var(--azul-institucional); color: #fff; border-radius: 6px; font: 700 18px/1.25 'Montserrat', sans-serif; text-align: center;
+}
+.pagina__conteudo .doacao__whatsapp:hover { background: #0B4275; color: #fff; }
+.pagina__conteudo .doacao__whatsapp:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.doacao__whatsapp-icone { width: 28px; height: 28px; flex: none; }
+.doacao__externo { width: 18px; height: 18px; flex: none; }
+.doacao__bloco p.doacao__aviso { display: flex; gap: 12px; align-items: flex-start; margin-top: 16px; background: var(--fundo-alt); padding: 14px 16px; font-size: 16px; line-height: 1.5; }
+.doacao__aviso-icone { width: 28px; height: 28px; flex: none; border-radius: 50%; background: var(--azul-institucional); color: #fff; font: 700 16px/28px 'Montserrat', sans-serif; text-align: center; }
 .doacao__destino { display: flex; align-items: center; justify-content: space-between; gap: 32px; background: var(--fundo-alt); padding: 28px 32px; text-align: left; }
 .pagina__conteudo .doacao__destino h2 { margin: 0 0 6px; font: 700 22px 'Montserrat', sans-serif; color: var(--azul-institucional); }
 .doacao__destino p { margin: 0; font-size: 18px; }

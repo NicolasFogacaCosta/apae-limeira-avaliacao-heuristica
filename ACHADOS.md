@@ -188,7 +188,7 @@ de contato dedicado.
 
 ## Severidade 3
 
-### [ ] 06 — Botão de doação abre o WhatsApp sem aviso
+### [x] 06 — Botão de doação abre o WhatsApp sem aviso
 **Heurística:** 01 — Visibilidade do status do sistema · **Página:** `/doacoes/`
 
 O botão "Clique aqui para ajudar! (19) 99304-6428" abre `api.whatsapp.com` sem ícone,
