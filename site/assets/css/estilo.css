@@ -457,6 +457,66 @@ iframe { max-width: 100%; border: 0; }
 .secao-lista__resumo { margin: 0; font-size: 16px; }
 
 /* --------------------------------------------------------------------------
+   Achado 05: página Doações com Pix, cartão e WhatsApp
+   -------------------------------------------------------------------------- */
+.doacao { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: stretch; margin-bottom: 32px; text-align: left; }
+.doacao__bloco { display: flex; flex-direction: column; gap: 16px; background: #fff; border: 2px solid #C9CFD5; border-top: 8px solid var(--amarelo); padding: 28px; }
+.doacao__bloco p { margin: 0; font-size: 18px; line-height: 1.6; }
+.pagina__conteudo .doacao__titulo { margin: 0; font: 700 26px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.pagina__conteudo .doacao__rotulo { margin: 0 0 6px; padding: 0; font: 600 16px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.doacao__qr {
+  width: 220px; height: 220px; align-self: center; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; padding: 16px; text-align: center; border: 2px dashed #6B7480; background: var(--fundo-alt); font-weight: 600;
+}
+.doacao__chave { min-height: 52px; border: 2px solid #6B7480; border-radius: 6px; padding: 8px 14px; display: flex; align-items: center; background: #fff; overflow-wrap: anywhere; }
+.doacao__copiar {
+  min-height: 52px; background: #fff; color: var(--azul-institucional); border: 2px solid var(--azul-institucional); border-radius: 6px;
+  font: 700 16px 'Montserrat', sans-serif; cursor: pointer;
+}
+.doacao__copiar:hover { background: #EEF3F8; }
+.doacao__copiar[aria-disabled="true"] { cursor: not-allowed; }
+.doacao__bloco p.doacao__status { font-size: 16px; min-height: 0; }
+.doacao__bloco p.doacao__status:empty { display: none; }
+.doacao__passos { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; }
+.doacao__form { display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.doacao__valores { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.doacao__valores legend { grid-column: 1 / -1; }
+.pagina__conteudo .doacao__valor { position: relative; display: block; margin: 0; text-transform: none; }
+.doacao__valor input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.doacao__valor span {
+  display: flex; align-items: center; justify-content: center; min-height: 64px; border: 2px solid #6B7480; border-radius: 6px;
+  background: #fff; color: var(--azul-institucional); font: 700 22px 'Montserrat', sans-serif; cursor: pointer;
+}
+.doacao__valor--outro span { font-size: 18px; }
+.doacao__valor input:checked + span { background: var(--azul-institucional); border-color: var(--azul-institucional); color: #fff; }
+.doacao__valor input:focus-visible + span { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.doacao__outro[hidden] { display: none; }
+.pagina__conteudo .doacao__mensal { display: flex; align-items: center; gap: 14px; min-height: 56px; background: var(--fundo-alt); padding: 8px 16px; cursor: pointer; text-transform: none; font-size: 16px; }
+.doacao__mensal input { width: 24px; height: 24px; flex: none; accent-color: var(--azul-institucional); }
+/* Botão de doação: rosa com texto #04223F (4,95:1), conforme o achado 27 */
+.doacao__doar {
+  margin-top: auto; min-height: 60px; border: 0; border-radius: 6px; cursor: pointer;
+  background: var(--rosa-doacao); color: #04223F; font: 800 18px 'Montserrat', sans-serif;
+}
+.doacao__doar:hover { background: #FF6AA3; }
+.doacao__doar:focus-visible, .doacao__copiar:focus-visible { outline: 3px solid var(--azul-institucional); outline-offset: 3px; }
+.doacao__resultado { padding: 14px 16px; border-left: 6px solid var(--amarelo); background: #FFF8EA; font-size: 16px; }
+.doacao__contato { margin-top: auto; }
+.pagina__conteudo .doacao__contato .botao { display: block; padding: 20px 24px; line-height: 1.1; }
+.doacao__destino { display: flex; align-items: center; justify-content: space-between; gap: 32px; background: var(--fundo-alt); padding: 28px 32px; text-align: left; }
+.pagina__conteudo .doacao__destino h2 { margin: 0 0 6px; font: 700 22px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.doacao__destino p { margin: 0; font-size: 18px; }
+.pagina__conteudo .doacao__destino a {
+  flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 24px; border: 2px solid var(--azul-institucional);
+  border-radius: 6px; color: var(--azul-institucional); font: 700 16px 'Montserrat', sans-serif;
+}
+.pagina__conteudo .doacao__destino a:hover { background: #fff; }
+@media (max-width: 1024px) {
+  .doacao { grid-template-columns: 1fr; }
+  .doacao__destino { flex-direction: column; align-items: flex-start; }
+}
+
+/* --------------------------------------------------------------------------
    Achado 02: página do evento, inscrição em etapas e "Como participar"
    -------------------------------------------------------------------------- */
 /* Dado que a entidade ainda precisa confirmar (CLAUDE.md) */

@@ -34,16 +34,73 @@
 									<p>Sua solidariedade faz toda a diferença.</p>								
 				</div>
 				<div class="el-w el-w-text-editor el-30eefc6">
-									<p>Saiba como ajudar clicando no botão abaixo e entrando em contato diretamente conosco!</p>								
-				</div>
-				<div class="el-w el-w-button el-alinha-center el-1001626">
-					<a href="https://api.whatsapp.com/send?phone=5519993046428" target="_blank" class="botao">
-									Clique aqui para ajudar!<br><br>(19) 99304-6428
-					</a>
+									<p>Escolha uma das três formas abaixo. Toda doação ajuda a APAE de Limeira a continuar o atendimento.</p>
 				</div>
 		</div>
 					</div>
 		</div>
+
+    <!-- Achado 05: três meios de doar -->
+    <div class="doacao">
+      <section class="doacao__bloco" aria-labelledby="doar-pix">
+        <h2 class="doacao__titulo" id="doar-pix">Doar por Pix</h2>
+        <div class="doacao__qr" role="img" aria-label="QR Code do Pix: será exibido quando a chave Pix for confirmada">
+          <span>QR Code do Pix</span>
+          <span class="a-confirmar">[a confirmar com a entidade: chave PIX]</span>
+        </div>
+        <div>
+          <p class="doacao__rotulo" id="chave-pix-rotulo">Chave Pix</p>
+          <div class="doacao__chave" aria-labelledby="chave-pix-rotulo"><span class="a-confirmar">[a confirmar com a entidade: chave PIX]</span></div>
+        </div>
+        <button type="button" class="doacao__copiar" data-copiar-chave data-chave="">Copiar a chave Pix</button>
+        <p class="doacao__status" data-copiar-status role="status"></p>
+        <ol class="doacao__passos">
+          <li>Abra o aplicativo do seu banco.</li>
+          <li>Escolha Pix e leia o QR Code ou cole a chave.</li>
+          <li>Confira o nome da APAE de Limeira e confirme.</li>
+        </ol>
+      </section>
+
+      <section class="doacao__bloco" aria-labelledby="doar-cartao">
+        <h2 class="doacao__titulo" id="doar-cartao">Doar com cartão</h2>
+        <form class="doacao__form" id="doacao-cartao" novalidate>
+          <fieldset class="doacao__valores">
+            <legend class="doacao__rotulo">Escolha um valor</legend>
+            <label class="doacao__valor"><input type="radio" name="valor" value="30"><span>R$ 30</span></label>
+            <label class="doacao__valor"><input type="radio" name="valor" value="50" checked><span>R$ 50</span></label>
+            <label class="doacao__valor"><input type="radio" name="valor" value="100"><span>R$ 100</span></label>
+            <label class="doacao__valor doacao__valor--outro"><input type="radio" name="valor" value="outro"><span>Outro valor</span></label>
+          </fieldset>
+          <div class="campo doacao__outro" hidden>
+            <label for="doacao-outro">Valor da doação, em reais <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input id="doacao-outro" name="outro" type="text" inputmode="decimal" autocomplete="off" aria-describedby="doacao-outro-dica doacao-outro-erro">
+            <span class="campo__dica" id="doacao-outro-dica">Exemplo: 25 ou 25,50</span>
+            <span class="campo__erro" id="doacao-outro-erro" hidden></span>
+          </div>
+          <label class="doacao__mensal"><input type="checkbox" name="mensal"><span><strong>Doação mensal.</strong> O mesmo valor é cobrado no cartão todo mês.</span></label>
+          <button type="submit" class="doacao__doar" data-doar-rotulo>Doar R$ 50</button>
+          <div class="doacao__resultado" role="status" hidden></div>
+        </form>
+      </section>
+
+      <section class="doacao__bloco" aria-labelledby="doar-equipe">
+        <h2 class="doacao__titulo" id="doar-equipe">Falar com a equipe</h2>
+        <p>Prefere doar de outra forma ou tirar dúvidas? Converse com a equipe da APAE pelo WhatsApp.</p>
+        <div class="el-1001626 doacao__contato">
+          <a href="https://api.whatsapp.com/send?phone=5519993046428" target="_blank" class="botao">
+            Clique aqui para ajudar!<br><br>(19) 99304-6428
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <section class="doacao__destino" aria-labelledby="doacao-destino">
+      <div>
+        <h2 id="doacao-destino">Para onde vai a sua doação</h2>
+        <p>O dinheiro doado apoia o atendimento às pessoas com deficiência atendidas pela APAE de Limeira.</p>
+      </div>
+      <a href="../transparencia/">Ver a prestação de contas na página Transparência <span aria-hidden="true">→</span></a>
+    </section>
   </div>
 </main>
 <section class="compartilhe">
@@ -60,5 +117,6 @@
 </section>
 <script src="../assets/js/layout.js" data-parte="rodape"></script>
 <script src="../assets/js/principal.js"></script>
+<script src="../assets/js/doacao.js"></script>
 </body>
 </html>

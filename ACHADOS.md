@@ -90,7 +90,7 @@ correta está em `CLAUDE.md`.
 **Aceite:** nenhum item de menu aponta para `/`; os oito itens têm comportamento uniforme;
 o submenu funciona por teclado.
 
-### [ ] 05 — "Doe Agora" leva a uma página sem meio de doação
+### [x] 05 — "Doe Agora" leva a uma página sem meio de doação
 **Heurística:** 02 — Correspondência com o mundo real · **Página:** `/doacoes/`
 
 O botão aparece no topo fixo, no rodapé e em todas as páginas internas, e conduz a uma
