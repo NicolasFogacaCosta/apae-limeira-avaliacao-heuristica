@@ -252,6 +252,51 @@
     }
     function normalizar(t) { return t.toLowerCase(); }
 
+    // Achado 11: sugestão de grafia. Compara cada palavra buscada com as
+    // palavras dos títulos do site (sem acento) e só sugere se a busca
+    // corrigida tiver resultados.
+    function semAcento(t) { return t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+    function distancia(a, b) {
+      if (Math.abs(a.length - b.length) > 2) return 99;
+      var ant = [], i, j;
+      for (j = 0; j <= b.length; j++) ant[j] = j;
+      for (i = 1; i <= a.length; i++) {
+        var atual = [i];
+        for (j = 1; j <= b.length; j++) {
+          atual[j] = Math.min(ant[j] + 1, atual[j - 1] + 1, ant[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        }
+        ant = atual;
+      }
+      return ant[b.length];
+    }
+    function sugerirGrafia(lista) {
+      if (!lista.length) return '';
+      var vocab = {};
+      window.APAE_INDICE.forEach(function (item) {
+        item.t.split(/[^A-Za-zÀ-ÿ]+/).forEach(function (w) {
+          if (w.length >= 4) { var k = semAcento(w); if (!vocab[k]) vocab[k] = w.toLowerCase(); }
+        });
+      });
+      var mudou = false;
+      var corrigidas = lista.map(function (p) {
+        var alvo = semAcento(p);
+        if (vocab[alvo]) return vocab[alvo] === p ? p : (mudou = true, vocab[alvo]);
+        var melhor = '', menor = alvo.length > 5 ? 3 : 2;
+        Object.keys(vocab).forEach(function (k) {
+          var d = distancia(alvo, k);
+          if (d < menor) { menor = d; melhor = vocab[k]; }
+        });
+        if (melhor) { mudou = true; return melhor; }
+        return p;
+      });
+      if (!mudou) return '';
+      var temResultado = window.APAE_INDICE.some(function (item) {
+        var t = normalizar(item.t + ' ' + item.r + ' ' + item.x);
+        return corrigidas.every(function (p) { return t.indexOf(p) !== -1; });
+      });
+      return temResultado ? corrigidas.join(' ') : '';
+    }
+
     // Como no WordPress: todas as palavras precisam aparecer no título,
     // no resumo ou no conteúdo; resultados do mais recente ao mais antigo.
     var palavras = normalizar(termo).split(/\s+/).filter(Boolean);
@@ -270,11 +315,36 @@
 
     var html;
     if (!achados.length) {
-      html = '<section class="no-results"><h1 class="busca__titulo">Nenhum resultado encontrado</h1>' +
+      // Achado 11: a busca vazia explica o que houve e oferece caminhos de saída.
+      var sugestao = sugerirGrafia(palavras);
+      var link = function (q) { return BASE + 'busca/?s=' + encodeURIComponent(q); };
+      var POPULARES = ['Teste do Pezinho', 'doações', 'deficiência intelectual', 'eventos', 'Transparência'];
+      var SECOES = [
+        ['Doações', 'doacoes/'], ['Teste do Pezinho', 'teste-do-pezinho/'], ['Eventos', 'eventos/'],
+        ['Programas', 'programas/'], ['Transparência', 'transparencia/'], ['Dúvidas frequentes', 'duvidas-frequentes/']
+      ];
+      html = '<section class="sem-resultados"><h1 class="busca__titulo">Nenhum resultado encontrado</h1>' +
+        '<p class="sem-resultados__explica">' + (termo
+          ? 'A busca por <strong>“' + esc(termo) + '”</strong> não encontrou nenhuma página ou publicação do site. Confira a grafia ou tente uma palavra mais curta ou mais geral.'
+          : 'Digite uma palavra para buscar no site.') + '</p>' +
+        (sugestao ? '<p class="sem-resultados__sugestao">Você quis dizer <a href="' + link(sugestao) + '">' + esc(sugestao) + '</a>?</p>' : '') +
         '<form class="busca__form" role="search" method="get" action="' + BASE + 'busca/">' +
         '<label for="s"><input type="text" value="' + esc(termo) + '" placeholder="Buscar…" name="s" id="s" aria-label="Buscar no site"></label>' +
         '<button type="submit" aria-label="Buscar"><svg class="icone" aria-hidden="true"><use href="#i-busca"></use></svg></button>' +
-        '</form></section>';
+        '</form>' +
+        '<div class="sem-resultados__caminhos">' +
+          '<section><h2>Buscas mais comuns</h2><ul>' + POPULARES.map(function (q) {
+            return '<li><a href="' + link(q) + '">' + esc(q) + '</a></li>';
+          }).join('') + '</ul></section>' +
+          '<section><h2>Seções mais procuradas</h2><ul>' + SECOES.map(function (s) {
+            return '<li><a href="' + BASE + s[1] + '">' + s[0] + '</a></li>';
+          }).join('') + '</ul></section>' +
+          '<section><h2>Fale com a APAE</h2><ul>' +
+            '<li><a href="tel:+551934041569">Telefone: (19) 3404-1569</a></li>' +
+            '<li><a href="mailto:apae@apaelimeira.org.br">E-mail: apae@apaelimeira.org.br</a></li>' +
+            '<li><a href="' + BASE + 'contato/">Página de contato e ouvidoria</a></li>' +
+          '</ul></section>' +
+        '</div></section>';
     } else {
       var inicio = (pagina - 1) * POR_PAGINA;
       html = '<h1 class="busca__titulo">Resultados da busca por: <span>' + esc(termo) + '</span></h1>' +

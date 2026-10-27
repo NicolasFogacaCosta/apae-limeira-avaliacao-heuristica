@@ -216,7 +216,7 @@ encabeçada por "Search Results for:" e as chamadas trazem "Read more".
 **Correção:** traduzir todas as cadeias de interface. **Aceite:** varredura do repositório
 não encontra nenhuma dessas cadeias nem outras em inglês visíveis ao usuário.
 
-### [ ] 11 — Busca sem resultados não oferece saída
+### [x] 11 — Busca sem resultados não oferece saída
 **Heurística:** 09 — Recuperação de erros · **Página:** resultados de busca
 
 A tela exibe apenas "Nothing Found" e o campo preenchido novamente. Sem explicação, sem

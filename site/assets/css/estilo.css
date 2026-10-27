@@ -292,6 +292,17 @@ iframe { max-width: 100%; border: 0; }
 .busca__form input { flex: 1; padding: 10px 12px; border: 1px solid #ddd; font: 15px 'Open Sans', sans-serif; }
 .busca__form button { border: 0; background: var(--texto); color: #fff; padding: 0 16px; cursor: pointer; }
 .busca__paginacao { display: flex; justify-content: space-between; }
+/* Achado 11: busca sem resultados com caminhos de saída */
+.sem-resultados__explica { font-size: 17px; max-width: 720px; }
+.sem-resultados__sugestao { font-size: 18px; }
+.sem-resultados__sugestao a, .sem-resultados__caminhos a { color: #1c6880; text-decoration: underline; font-weight: 600; }
+.sem-resultados .busca__form { margin: 8px 0 32px; }
+.sem-resultados__caminhos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.sem-resultados__caminhos section { background: var(--fundo-alt); border-top: 4px solid var(--amarelo); padding: 18px 20px; }
+.sem-resultados__caminhos h2 { margin: 0 0 10px; font: 700 18px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.sem-resultados__caminhos ul { list-style: none; margin: 0; padding: 0; }
+.sem-resultados__caminhos li a { display: inline-flex; align-items: center; min-height: 36px; }
+@media (max-width: 1024px) { .sem-resultados__caminhos { grid-template-columns: 1fr; } }
 .busca__paginacao a { font-weight: 600; }
 
 /* --------------------------------------------------------------------------
