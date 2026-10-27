@@ -23,13 +23,34 @@
     menu.querySelector('.menu-principal__alternar').addEventListener('click', function () {
       menu.classList.toggle('aberto');
     });
-    // No celular, tocar no item com submenu abre o submenu.
-    menu.querySelectorAll('.tem-submenu > .menu-principal__link').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (!mobile.matches) return;
-        e.preventDefault();
-        link.parentNode.classList.toggle('aberto');
+    // Achado 04: o link do item leva à página de seção; no celular, o botão
+    // ao lado abre o submenu. No computador o submenu abre ao passar o mouse
+    // ou quando o foco do teclado entra no item; Esc fecha.
+    menu.querySelectorAll('.submenu-alternar').forEach(function (botao) {
+      botao.addEventListener('click', function () {
+        var aberto = botao.parentNode.classList.toggle('aberto');
+        botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
       });
+    });
+    menu.addEventListener('keydown', function (e) {
+      var item = e.target.closest('.tem-submenu');
+      if (!item) return;
+      if (e.key === 'Escape') {
+        item.classList.add('fechado');
+        item.querySelector('.menu-principal__link').focus();
+      } else if (e.key === 'ArrowDown' && e.target.classList.contains('menu-principal__link')) {
+        e.preventDefault();
+        item.classList.remove('fechado');
+        item.querySelector('.submenu a').focus();
+      }
+    });
+    menu.addEventListener('focusout', function (e) {
+      var item = e.target.closest('.tem-submenu');
+      if (item && !item.contains(e.relatedTarget)) item.classList.remove('fechado');
+    });
+    menu.addEventListener('mouseover', function (e) {
+      var item = e.target.closest('.tem-submenu');
+      if (item) item.classList.remove('fechado');
     });
   }
 

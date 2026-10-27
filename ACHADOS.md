@@ -75,7 +75,7 @@ tudo que está abaixo da dobra e reduzir o número de requisições.
 **Aceite:** nenhum intervalo em que a área do banner apareça vazia e sem indicação;
 sem deslocamento de layout quando o banner carrega.
 
-### [ ] 04 — Cinco itens do menu principal voltam para a home
+### [x] 04 — Cinco itens do menu principal voltam para a home
 **Heurística:** 04 — Consistência e padrões · **Páginas:** todas (cabeçalho)
 
 "Quem Somos", "Programas", "Projetos", "Serviços" e "Eventos" têm `href="/"`. No desktop

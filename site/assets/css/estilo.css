@@ -130,6 +130,14 @@ iframe { max-width: 100%; border: 0; }
   display: none;
 }
 .menu-principal__item:hover > .submenu { display: block; }
+/* Achado 04: o submenu também abre pelo teclado; Esc fecha (.fechado) */
+.menu-principal__item:focus-within > .submenu { display: block; }
+.menu-principal__item.fechado > .submenu { display: none; }
+.menu-principal__link:focus-visible, .submenu a:focus-visible, .submenu-alternar:focus-visible {
+  outline: 3px solid var(--azul-institucional); outline-offset: -3px;
+}
+.submenu-alternar { display: none; }
+.visualmente-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .submenu li:not(:last-child) { border-bottom: 1px solid #c4c4c4; }
 .submenu a {
   display: block; padding: 15px 15px 15px 35px; color: var(--menu);
@@ -419,6 +427,21 @@ iframe { max-width: 100%; border: 0; }
 .cookies-modal__salvar { background: #61a229; color: #fff; border: 0; padding: 10px 20px; cursor: pointer; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
+   Achado 04: páginas de seção (Quem Somos, Programas, Projetos, Serviços, Eventos)
+   -------------------------------------------------------------------------- */
+.secao-intro { font-size: 18px; margin-bottom: 30px; }
+.secao-lista { clear: both; list-style: none; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.pagina__conteudo .secao-lista { padding: 0; }
+.secao-lista__item { position: relative; background: #fff; border: 2px solid #C9CFD5; border-top: 6px solid var(--amarelo); padding: 24px; }
+.secao-lista__item:hover { border-color: var(--azul-institucional); border-top-color: var(--amarelo); }
+.pagina__conteudo .secao-lista__titulo { margin: 0 0 10px; font: 700 22px/1.25 'Montserrat', sans-serif; }
+.pagina__conteudo .secao-lista__titulo a { color: var(--azul-institucional); text-decoration: underline; }
+.secao-lista__titulo a::after { content: ''; position: absolute; inset: 0; } /* o cartão inteiro é clicável */
+.secao-lista__titulo a:focus-visible { outline: none; }
+.secao-lista__item:focus-within { outline: 3px solid var(--azul-institucional); outline-offset: 2px; }
+.secao-lista__resumo { margin: 0; font-size: 16px; }
+
+/* --------------------------------------------------------------------------
    Achado 02: página do evento, inscrição em etapas e "Como participar"
    -------------------------------------------------------------------------- */
 /* Dado que a entidade ainda precisa confirmar (CLAUDE.md) */
@@ -546,8 +569,18 @@ iframe { max-width: 100%; border: 0; }
   .menu-principal__item { border-bottom: 1px solid #eee; }
   .menu-principal__link { justify-content: space-between; }
   .submenu { position: static; width: auto; box-shadow: none; display: none; }
-  .menu-principal__item:hover > .submenu { display: none; }
+  .menu-principal__item:hover > .submenu,
+  .menu-principal__item:focus-within > .submenu { display: none; }
   .menu-principal__item.aberto > .submenu { display: block; }
+  .menu-principal__item.tem-submenu { display: flex; flex-wrap: wrap; }
+  .tem-submenu > .menu-principal__link { flex: 1; }
+  .tem-submenu > .menu-principal__link .menu-principal__seta { display: none; }
+  .submenu-alternar {
+    display: flex; align-items: center; justify-content: center; width: 52px; min-height: 44px;
+    background: none; border: 0; border-left: 1px solid #eee; cursor: pointer; color: var(--menu); font-size: 14px;
+  }
+  .submenu-alternar[aria-expanded="true"] .icone { transform: rotate(180deg); }
+  .tem-submenu > .submenu { flex-basis: 100%; }
   .servicos__linha, .doe-faixa__inner, .rodape__inner { flex-direction: column; }
   .servicos__item, .doe-faixa__texto, .doe-faixa__acao,
   .rodape__col--marca, .rodape__col--menu, .rodape__col--redes { width: 100%; }

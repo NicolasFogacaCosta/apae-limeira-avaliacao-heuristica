@@ -51,11 +51,11 @@
     }).join('') + '</div>';
   }
 
-  // Menu principal como está em produção: os itens com submenu e o item
-  // "Home" usam href="#".
+  // Menu principal. Achado 04: cada item com submenu abre a sua página de
+  // seção e "Home" leva à página inicial; nenhum item usa mais href="#".
   var MENU = [
-    ['Home', '#'],
-    ['Quem Somos', '#', [
+    ['Home', ''],
+    ['Quem Somos', 'quem-somos/', [
       ['A Entidade', 'estrutura/'],
       ['A Diretoria', 'diretoria/'],
       ['Conselho', 'conselho/'],
@@ -63,44 +63,47 @@
       ['Parceiros', 'parceiros/'],
       ['Revista APAE Limeira 50 anos', 'revista-apae-limeira-50-anos/']
     ]],
-    ['Programas', '#', [
+    ['Programas', 'programas/', [
       ['Centro de Ações Preventivas', 'cap/'],
       ['Centro de Apoio Diagnóstico', 'cad/'],
       ['Centro de Atenção Terapêutica', 'cat/'],
       ['Escola de Educação Especial “João Ometto”', 'escola-de-educacao-especial-joao-ometto/'],
       ['Centro Profissionalizante e de Convivência', 'cpc/']
     ]],
-    ['Projetos', '#', [
+    ['Projetos', 'projetos/', [
       ['EquoterAPAE', 'equoterapia/'],
       ['APAE Esporte', 'apae-esporte/'],
       ['APAE Cultural', 'apae-cultural/'],
       ['Conexão Teen', 'conexao-teen/']
     ]],
-    ['Serviços', '#', [
+    ['Serviços', 'servicos/', [
       ['Teste do Pezinho', 'teste-do-pezinho/'],
       ['Bazar e Estacionamento', 'bazar-e-estacionamento/'],
       ['Organização de Eventos', 'organizacao-de-eventos/'],
       ['Fábrica de Paletes', 'fabrica-de-paletes/']
     ]],
-    ['Eventos', '#', [
+    ['Eventos', 'eventos/', [
       ['Da Prevenção á Inclusão: vencendo desafios', 'da-prevencao-a-inclusao/'],
       ['APAE Motor Rock', 'apae-motor-rock/'],
       ['APAE Running', 'apae-running-limeira/'],
-      ['APAE Beach Tennis', 'apae-beach-tennis/']
+      ['APAE Beach Tennis', 'apae-beach-tennis/'],
+      ['Selo Empresa Cidadã', 'selo-empresa-cidada-2026/']
     ]],
     ['Transparência', 'transparencia/'],
     ['Contato/Ouvidoria', 'contato/']
   ];
 
-  function href(destino) { return destino === '#' ? '#' : url(destino); }
-
   function menu() {
-    return '<ul class="menu-principal__lista">' + MENU.map(function (item) {
+    return '<ul class="menu-principal__lista">' + MENU.map(function (item, i) {
       var sub = item[2];
+      var idSub = 'submenu-' + i;
       return '<li class="menu-principal__item' + (sub ? ' tem-submenu' : '') + '">' +
-        '<a class="menu-principal__link" href="' + href(item[1]) + '">' + item[0] +
-        (sub ? '<span class="menu-principal__seta">' + icone('baixo') + '</span>' : '') + '</a>' +
-        (sub ? '<ul class="submenu">' + sub.map(function (s) {
+        '<a class="menu-principal__link" href="' + url(item[1]) + '">' + item[0] +
+        (sub ? '<span class="menu-principal__seta" aria-hidden="true">' + icone('baixo') + '</span>' : '') + '</a>' +
+        // No celular, o submenu abre por um botão próprio; o link leva à página de seção.
+        (sub ? '<button class="submenu-alternar" type="button" aria-expanded="false" aria-controls="' + idSub + '">' +
+          icone('baixo') + '<span class="visualmente-oculto">Mostrar as páginas de ' + item[0] + '</span></button>' : '') +
+        (sub ? '<ul class="submenu" id="' + idSub + '">' + sub.map(function (s) {
           return '<li><a href="' + url(s[1]) + '">' + s[0] + '</a></li>';
         }).join('') + '</ul>' : '') +
         '</li>';
