@@ -130,7 +130,7 @@
           '<div class="cabecalho__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-sitetopo.png') + '" alt="logo-60-anos-sitetopo"></a></div>' +
           '<div class="cabecalho__direita">' +
             '<form class="busca-topo" role="search" action="' + url('busca/') + '" method="get">' +
-              '<input class="busca-topo__campo" type="search" name="s" title="Search" value="">' +
+              '<input class="busca-topo__campo" type="search" name="s" title="Buscar no site" aria-label="Buscar no site" value="">' +
               '<span class="busca-topo__icone" aria-hidden="true">' + icone('busca') + '</span>' +
             '</form>' +
             '<nav class="menu-principal">' +
@@ -195,7 +195,7 @@
     var categorias = [
       ['Funcional', 'Os cookies funcionais ajudam a executar certas funcionalidades, como compartilhar o conteúdo do site em plataformas de mídia social, coletar feedbacks e outros recursos de terceiros.'],
       ['Desempenho', 'Os cookies de desempenho são usados para entender e analisar os principais índices de desempenho do site, o que ajuda a oferecer uma melhor experiência de usuário aos visitantes.'],
-      ['Analytics', 'Os cookies analíticos são usados para entender como os visitantes interagem com o site. Esses cookies ajudam a fornecer informações sobre métricas de número de visitantes, taxa de rejeição, origem de tráfego, etc.'],
+      ['Analíticos', 'Os cookies analíticos são usados para entender como os visitantes interagem com o site. Esses cookies ajudam a fornecer informações sobre métricas de número de visitantes, taxa de rejeição, origem de tráfego, etc.'],
       ['Propaganda', 'Os cookies de publicidade são usados para fornecer aos visitantes anúncios e campanhas de marketing relevantes. Esses cookies rastreiam os visitantes em sites e coletam informações para fornecer anúncios personalizados.'],
       ['Outros', 'Outros cookies não categorizados são aqueles que estão sendo analisados e ainda não foram classificados em uma categoria.']
     ];

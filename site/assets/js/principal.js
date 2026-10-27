@@ -270,14 +270,14 @@
 
     var html;
     if (!achados.length) {
-      html = '<section class="no-results"><h1 class="busca__titulo">Nothing Found</h1>' +
+      html = '<section class="no-results"><h1 class="busca__titulo">Nenhum resultado encontrado</h1>' +
         '<form class="busca__form" role="search" method="get" action="' + BASE + 'busca/">' +
-        '<label for="s"><input type="text" value="' + esc(termo) + '" placeholder="Search …" name="s" id="s"></label>' +
-        '<button type="submit" aria-label="Search"><svg class="icone" aria-hidden="true"><use href="#i-busca"></use></svg></button>' +
+        '<label for="s"><input type="text" value="' + esc(termo) + '" placeholder="Buscar…" name="s" id="s" aria-label="Buscar no site"></label>' +
+        '<button type="submit" aria-label="Buscar"><svg class="icone" aria-hidden="true"><use href="#i-busca"></use></svg></button>' +
         '</form></section>';
     } else {
       var inicio = (pagina - 1) * POR_PAGINA;
-      html = '<h1 class="busca__titulo">Search Results for: <span>' + esc(termo) + '</span></h1>' +
+      html = '<h1 class="busca__titulo">Resultados da busca por: <span>' + esc(termo) + '</span></h1>' +
         achados.slice(inicio, inicio + POR_PAGINA).map(function (item) {
           var link = BASE + item.u;
           var d = item.d.split('-');
@@ -293,7 +293,7 @@
               '<div><h2 class="resultado__titulo"><a href="' + link + '">' + esc(item.t) + '</a></h2>' + meta + '</div>' +
             '</header>' +
             '<div class="resultado__resumo"><p>' + esc(resumo(item)) + '</p></div>' +
-            '<div class="resultado__leia"><a href="' + link + '">Read more</a></div>' +
+            '<div class="resultado__leia"><a href="' + link + '">Leia mais<span class="visualmente-oculto">: ' + esc(item.t) + '</span></a></div>' +
             '</article>';
         }).join('');
       var nav = '';
@@ -303,7 +303,7 @@
       if (pagina > 1) {
         nav += '<div><a href="?s=' + encodeURIComponent(termo) + '&pagina=' + (pagina - 1) + '">Publicações mais recentes</a></div>';
       }
-      html += '<nav class="busca__paginacao" aria-label="Posts"><h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Navegação por posts</h2>' + nav + '</nav>';
+      html += '<nav class="busca__paginacao" aria-label="Páginas de resultados"><h2 class="visualmente-oculto">Navegação pelas páginas de resultados</h2>' + nav + '</nav>';
     }
     areaBusca.innerHTML = html;
     var campoTopo = document.querySelector('.busca-topo__campo');

@@ -207,7 +207,7 @@ Os números aparecem como texto inerte no topo fixo, no rodapé, em `/contato/`,
 **Correção:** converter todos em links `tel:` e `https://wa.me/`, mantendo a formatação
 visível legível. **Aceite:** nenhum número em texto puro no repositório.
 
-### [ ] 10 — Mensagens do sistema em inglês
+### [x] 10 — Mensagens do sistema em inglês
 **Heurística:** 02 — Correspondência com o mundo real · **Páginas:** busca e listagens
 
 O documento declara `lang="pt-BR"`, mas a busca vazia exibe "Nothing Found", a listagem é

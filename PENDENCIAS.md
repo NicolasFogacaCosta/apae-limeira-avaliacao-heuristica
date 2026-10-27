@@ -99,3 +99,11 @@ página de seção Programas e na faixa "Acesso rápido" da home.
   o acompanhamento depois da contratação vieram da proposta visual e estão marcados
   como proposta de texto. Os textos do CPC e do Selo foram tirados das páginas do
   próprio site.
+
+## Achado 10: edições do Jornal APAE Notícias
+
+As páginas `/jornal-apae-noticias/` e `/437-2/` exibiam, também em produção, os atalhos
+crus `[download id="…"]` de um plugin de downloads que não existe mais. Eles foram
+trocados por um aviso em português, porque os arquivos das edições não estão
+acessíveis. **Falta:** a entidade precisa fornecer os PDFs das edições do jornal, que
+podem então ser listados nas duas páginas.
