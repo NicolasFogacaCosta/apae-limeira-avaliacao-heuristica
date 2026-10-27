@@ -369,9 +369,32 @@
     // Como no WordPress: todas as palavras precisam aparecer no título,
     // no resumo ou no conteúdo; resultados do mais recente ao mais antigo.
     var palavras = normalizar(termo).split(/\s+/).filter(Boolean);
+
+    // Achado 22: vocabulário do público. Cada palavra buscada também encontra
+    // os sinônimos do grupo; termos de até 3 letras (como "TEA") só casam como
+    // palavra inteira, para não trazer "teatro".
+    var AUTISMO = ['autismo', 'autista', 'autistas', 'tea', 'espectro autista', 'transtorno do espectro autista'];
+    var SINONIMOS = {
+      autismo: AUTISMO, autista: AUTISMO, autistas: AUTISMO, tea: AUTISMO,
+      neurodivergente: AUTISMO, neurodivergentes: AUTISMO, neurodivergência: AUTISMO,
+      neurodiversidade: AUTISMO, neuroatípico: AUTISMO, neuroatípicos: AUTISMO, neuroatípica: AUTISMO
+    };
+    var TEMA_AUTISMO = [
+      ['Escola de Educação Especial “João Ometto”', 'escola-de-educacao-especial-joao-ometto/', 'Educação especializada que inclui estudantes com Transtorno do Espectro Autista (TEA) associado à deficiência intelectual.'],
+      ['Centro de Apoio Diagnóstico', 'cad/', 'Triagens e avaliações do desenvolvimento infantil, porta de entrada da APAE.'],
+      ['Sobre a deficiência intelectual', 'sobre-a-deficiencia-intelectual/', 'O que é, como se manifesta e quais são as causas.'],
+      ['Dúvidas frequentes', 'duvidas-frequentes/', 'Respostas às perguntas mais comuns das famílias.']
+    ];
+    function contem(alvo, termoBusca) {
+      if (termoBusca.length <= 3) return new RegExp('(^|[^a-zà-ÿ0-9])' + termoBusca + '([^a-zà-ÿ0-9]|$)').test(alvo);
+      return alvo.indexOf(termoBusca) !== -1;
+    }
+    var expandiu = palavras.some(function (p) { return SINONIMOS[p]; });
     var achados = palavras.length ? window.APAE_INDICE.filter(function (item) {
       var alvo = normalizar(item.t + ' ' + item.r + ' ' + item.x);
-      return palavras.every(function (p) { return alvo.indexOf(p) !== -1; });
+      return palavras.every(function (p) {
+        return (SINONIMOS[p] || [p]).some(function (s) { return contem(alvo, s); });
+      });
     }) : window.APAE_INDICE.slice();
 
     document.title = 'Resultados da pesquisa por “' + termo + '” – APAE Limeira';
@@ -417,6 +440,11 @@
     } else {
       var inicio = (pagina - 1) * POR_PAGINA;
       html = '<h1 class="busca__titulo">Resultados da busca por: <span>' + esc(termo) + '</span></h1>' +
+        (expandiu && pagina === 1 ? '<p class="busca__relacionados">Mostrando também resultados para termos relacionados: autismo, autista, TEA e transtorno do espectro autista.</p>' +
+          '<section class="busca__tema" aria-labelledby="busca-tema-titulo"><h2 id="busca-tema-titulo">Conteúdo sobre o tema</h2><ul>' +
+          TEMA_AUTISMO.map(function (t) {
+            return '<li><a href="' + BASE + t[1] + '">' + t[0] + '</a><span>' + t[2] + '</span></li>';
+          }).join('') + '</ul></section>' : '') +
         achados.slice(inicio, inicio + POR_PAGINA).map(function (item) {
           var link = BASE + item.u;
           var d = item.d.split('-');

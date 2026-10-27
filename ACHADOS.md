@@ -281,7 +281,7 @@ antiga. Padronizar rótulo de menu, título da página e entrada de rodapé com 
 **Aceite:** o texto clicado reaparece como título na página de destino; nenhuma página
 órfã permanece.
 
-### [ ] 22 — Vocabulário do público ausente
+### [x] 22 — Vocabulário do público ausente
 **Heurística:** 02 — Correspondência com o mundo real · **Páginas:** conteúdo geral e busca
 
 A busca por "neurodivergente" e "neurodiversidade" não retorna nada. "Autismo" e "TEA"

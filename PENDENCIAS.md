@@ -143,3 +143,17 @@ home agora aponta para a página do menu.
   com detalhes de produção e empresas parceiras. A atual diz "Iniciado em 2012". Como
   as informações se contradizem, o texto antigo não foi copiado. A entidade pode
   confirmar a data e decidir se quer reaproveitar algo do histórico.
+
+## Achado 22: vocabulário do público nos textos das páginas
+
+**O que está no repositório:** a busca reconhece "neurodivergente", "neurodiversidade",
+"neuroatípico", "TEA", "autismo" e "autista" como sinônimos. "TEA" casa só como palavra
+inteira, sem trazer "teatro". Para essas buscas aparece um bloco "Conteúdo sobre o tema",
+com a Escola João Ometto, que atende TEA associado à deficiência intelectual, o Centro de
+Apoio Diagnóstico, "Sobre a deficiência intelectual" e as Dúvidas frequentes.
+
+**O que falta:** o achado também pede incorporar esses termos aos textos "onde forem
+corretos". O único texto institucional que já os usa corretamente é o da Escola. Para os
+demais programas (CAD, CAT, CPC), a entidade precisa dizer quais serviços atendem pessoas
+autistas ou neurodivergentes; sem isso, escrever esses termos nas páginas seria afirmar
+um atendimento sem confirmação.
