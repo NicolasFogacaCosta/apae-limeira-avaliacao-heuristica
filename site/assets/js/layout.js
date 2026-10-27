@@ -52,6 +52,7 @@
   }
 
   // Achado 08: o telefone do topo e do rodapé é um link tel:.
+  // Achado 09: telefone e endereço na grafia única do CLAUDE.md.
   // Menu principal. Achado 04: cada item com submenu abre a sua página de
   // seção e "Home" leva à página inicial; nenhum item usa mais href="#".
   var MENU = [
@@ -151,7 +152,7 @@
         '<div class="rodape__inner">' +
           '<div class="rodape__col rodape__col--marca">' +
             '<div class="rodape__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-siterodape.png') + '" alt="APAE Limeira, 60 anos: página inicial"></a></div>' +
-            '<p class="rodape__endereco">Av. Antônio D’Andréa, 364<br>Parque N Senhora das Dores<br>Limeira – SP | CEP: 13483-000</p>' +
+            '<p class="rodape__endereco">Av. Antônio D&#39;Andréa, 364<br>Parque Nossa Senhora das Dores<br>Limeira/SP — CEP 13483-000</p>' +
             '<p class="rodape__email">apae@apaelimeira.org.br</p>' +
             '<p class="rodape__telefone"><a href="tel:+551934041569">(19) 3404-1569</a></p>' +
             '<a class="rodape__doe" href="' + url('doacoes/') + '">' + icone('coracao') + 'Doe Agora</a>' +

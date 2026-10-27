@@ -320,7 +320,7 @@ ouvidoria" no seletor de assunto do formulário.
 
 ## Severidade 2
 
-### [ ] 09 — Telefone e endereço em formatações divergentes
+### [x] 09 — Telefone e endereço em formatações divergentes
 **Heurística:** 04 — Consistência e padrões · **Páginas:** todas
 
 O mesmo telefone aparece como "(19) 3404-1569", "(19) 3404.1569" e "3404 15 69". O
