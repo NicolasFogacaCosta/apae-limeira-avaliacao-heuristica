@@ -396,7 +396,7 @@
       ['Escola de Educação Especial “João Ometto”', 'escola-de-educacao-especial-joao-ometto/', 'Educação especializada que inclui estudantes com Transtorno do Espectro Autista (TEA) associado à deficiência intelectual.'],
       ['Centro de Apoio Diagnóstico', 'cad/', 'Triagens e avaliações do desenvolvimento infantil, porta de entrada da APAE.'],
       ['Sobre a deficiência intelectual', 'sobre-a-deficiencia-intelectual/', 'O que é, como se manifesta e quais são as causas.'],
-      ['Dúvidas frequentes', 'duvidas-frequentes/', 'Respostas às perguntas mais comuns das famílias.']
+      ['Dúvidas Frequentes', 'duvidas-frequentes/', 'Respostas às perguntas mais comuns das famílias.']
     ];
     function contem(alvo, termoBusca) {
       if (termoBusca.length <= 3) return new RegExp('(^|[^a-zà-ÿ0-9])' + termoBusca + '([^a-zà-ÿ0-9]|$)').test(alvo);
@@ -426,7 +426,7 @@
       var POPULARES = ['Teste do Pezinho', 'doações', 'deficiência intelectual', 'eventos', 'Transparência'];
       var SECOES = [
         ['Doações', 'doacoes/'], ['Teste do Pezinho', 'teste-do-pezinho/'], ['Eventos', 'eventos/'],
-        ['Programas', 'programas/'], ['Transparência', 'transparencia/'], ['Dúvidas frequentes', 'duvidas-frequentes/']
+        ['Programas', 'programas/'], ['Transparência', 'transparencia/'], ['Dúvidas Frequentes', 'duvidas-frequentes/']
       ];
       html = '<section class="sem-resultados"><h1 class="busca__titulo">Nenhum resultado encontrado</h1>' +
         '<p class="sem-resultados__explica">' + (termo

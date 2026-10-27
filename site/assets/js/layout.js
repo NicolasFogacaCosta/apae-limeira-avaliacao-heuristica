@@ -86,7 +86,7 @@
       ['Fábrica de Paletes', 'fabrica-de-paletes/']
     ]],
     ['Eventos', 'eventos/', [
-      ['Da Prevenção á Inclusão: vencendo desafios', 'da-prevencao-a-inclusao/'],
+      ['Da Prevenção à Inclusão: vencendo desafios', 'da-prevencao-a-inclusao/'],
       ['APAE Motor Rock', 'apae-motor-rock/'],
       ['APAE Running', 'apae-running-limeira/'],
       ['APAE Beach Tennis', 'apae-beach-tennis/'],
@@ -176,7 +176,7 @@
             '<div class="rodape__uteis">' +
               '<h2 class="rodape__titulo">Links Úteis</h2>' +
               '<ul class="rodape__lista">' +
-                itemLista('Dúvidas Frequentes (FAQ)', url('duvidas-frequentes/')) +
+                itemLista('Dúvidas Frequentes', url('duvidas-frequentes/')) +
                 itemLista('Sobre a Deficiência Intelectual', url('sobre-a-deficiencia-intelectual/')) +
                 itemLista('Prevenção da Deficiência Intelectual', url('prevencao-da-deficiencia-intelectual/')) +
               '</ul>' +

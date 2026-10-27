@@ -330,7 +330,7 @@ endereço aparece como "Av. Antônio D'Andréa, 364", "Av. Antônio d'Andrea, 36
 **Correção:** padronizar conforme `CLAUDE.md`, de preferência em um parcial ou componente
 único reaproveitado. **Aceite:** uma só grafia de cada dado em todo o repositório.
 
-### [ ] 17 — Ortografia pré-reforma e erros de acentuação
+### [x] 17 — Ortografia pré-reforma e erros de acentuação
 **Heurística:** 04 — Consistência e padrões · **Páginas:** `/duvidas-frequentes/`, menu
 
 Título "DÚVIDAS FREQÜENTES" com trema, enquanto o link do rodapé escreve "Dúvidas
