@@ -79,14 +79,23 @@
     }
     window.addEventListener('resize', function () { ir(Math.min(atual, total() - 1)); });
     iniciar();
-    return { ir: ir };
+    return { ir: ir, parar: parar, iniciar: iniciar };
   }
 
   var banner = document.querySelector('.banner');
   if (banner) {
     // O slider só aparece quando todas as imagens terminam de carregar.
     window.addEventListener('load', function () { banner.classList.add('carregado'); });
-    carrossel(banner, { trilho: '.banner__trilho', intervalo: 5000, reiniciar: true });
+    var slides = carrossel(banner, { trilho: '.banner__trilho', intervalo: 5000, reiniciar: true });
+    // Achado 01: a chamada que recebe foco pelo teclado fica visível na tela.
+    var slidesBanner = Array.prototype.slice.call(banner.querySelectorAll('.banner__slide'));
+    banner.querySelectorAll('.banner__link').forEach(function (link) {
+      link.addEventListener('focus', function () {
+        slides.parar();
+        slides.ir(slidesBanner.indexOf(link.closest('.banner__slide')));
+      });
+      link.addEventListener('blur', function () { slides.iniciar(); });
+    });
   }
   carrossel(document.querySelector('.eventos__carrossel'), {
     trilho: '.eventos__trilho', intervalo: 5000, reiniciar: true, pausarNoPonteiro: true

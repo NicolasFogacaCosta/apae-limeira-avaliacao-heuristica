@@ -24,7 +24,7 @@ correspondência entre o documento entregue e o repositório permaneça honesta.
 
 ## Severidade 5
 
-### [ ] 01 — Botão do banner principal não é clicável
+### [x] 01 — Botão do banner principal não é clicável
 **Heurística:** 04 — Consistência e padrões · **Página:** home
 
 O banner da página inicial anuncia a 2ª Meia-Maratona da Inclusão de Limeira com
