@@ -194,12 +194,14 @@ iframe { max-width: 100%; border: 0; }
 .el-alinha-right { text-align: right; }
 .el-titulo { color: var(--azul-titulo); font-family: 'Montserrat', sans-serif; font-weight: 700; }
 .el-w-divider .el-divisor { border-top: 1px solid #ccc; }
-.botao, .pagina__conteudo a.botao {
-  display: inline-block; background: #61CE70; color: #fff; /* cor de destaque padrão do kit Elementor */
+/* Padrão do kit Elementor; as regras .el-<id> .botao de cada página sobrescrevem */
+.botao {
+  display: inline-block; background: #61CE70; color: #fff;
   font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 500; line-height: 1;
   padding: 12px 24px; border-radius: 3px; text-align: center;
 }
-.botao:hover, .pagina__conteudo a.botao:hover { color: #fff; filter: brightness(1.05); }
+.pagina__conteudo a.botao, .botao:hover, .pagina__conteudo a.botao:hover { color: #fff; }
+.botao:hover { filter: brightness(1.05); }
 
 /* Formulário de contato (Contact Form 7) */
 .pagina__conteudo form label { display: block; text-transform: uppercase; font-size: 14px; }
