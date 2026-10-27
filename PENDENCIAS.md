@@ -47,3 +47,21 @@ para outro canal"):**
 - **Cartão:** depende de plataforma de pagamento (PagSeguro, Mercado Pago, Stripe ou
   outra), inclusive para a cobrança mensal recorrente. Hoje, o botão "Doar" confere
   o valor e avisa que o pagamento ainda não está disponível. Ele não simula a doação.
+
+## Achado 14: dados que faltam na Transparência
+
+**O que está no repositório:** a página `/transparencia/` lista os 20 documentos em
+quatro grupos: certificações e títulos, documentos constitutivos, prestação de contas
+e convênios. Cada documento traz o nome por extenso, uma explicação, o ano e o
+formato. Ano, formato e tamanho saíram dos próprios arquivos: nome, tamanho e texto
+dos PDFs no Google Drive, além dos anos listados em cada subpágina.
+
+**O que falta confirmar com a entidade:**
+- Ano dos títulos de utilidade pública, das declarações/CND/certificados e dos
+  regulamentos de compras e de contratação de pessoal. Esses documentos ficam em
+  subpáginas e não informam o ano.
+- Nome por extenso da sigla CID, no documento da Lei Paulista de Incentivo ao
+  Esporte. O PDF é uma imagem escaneada, sem texto.
+- **Certificado ISO 9001:2015 vencido:** o documento publicado vale de 17/06/2023 a
+  17/06/2026. Em 26/10/2026 ele já passou da validade. A página mostra a validade
+  como está no documento; cabe à entidade publicar o certificado renovado.

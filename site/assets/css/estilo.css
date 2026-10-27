@@ -454,6 +454,22 @@ iframe { max-width: 100%; border: 0; }
 .cookies-modal__salvar { background: #61a229; color: #fff; border: 0; padding: 10px 20px; cursor: pointer; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
+   Achado 14: Transparência como lista estruturada por tema
+   -------------------------------------------------------------------------- */
+.transparencia { color: var(--texto); font-family: 'Open Sans', sans-serif; text-align: left; }
+.transparencia__grupo { margin-bottom: 40px; }
+.pagina__conteudo .transparencia__titulo {
+  margin: 0 0 16px; padding-bottom: 8px; border-bottom: 3px solid var(--amarelo);
+  font: 700 26px 'Montserrat', sans-serif; color: var(--azul-titulo);
+}
+.pagina__conteudo .transparencia__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.transparencia__item { background: #fff; border: 1px solid #DDE2E7; border-left: 4px solid #1c6880; padding: 16px 20px; }
+.pagina__conteudo .transparencia__nome { margin: 0 0 6px; font: 700 17px/1.35 'Montserrat', sans-serif; color: inherit; }
+.pagina__conteudo .transparencia__nome a { color: #1c6880; text-decoration: underline; }
+.transparencia__explicacao { margin: 0 0 10px; font-size: 15px; line-height: 1.5; }
+.transparencia__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; font-size: 14px; color: #4A4A4A; }
+
+/* --------------------------------------------------------------------------
    Achado 07: Teste do Pezinho encaminha ao Instituto Jô Clemente
    -------------------------------------------------------------------------- */
 .instituto {

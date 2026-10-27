@@ -136,7 +136,7 @@ e exibir a mensagem de erro abaixo do campo, em português, preservando o conte�
 **Aceite:** leitor de tela anuncia rótulo e obrigatoriedade de cada campo; erro aparece
 antes do envio; nenhum dado digitado se perde ao falhar a validação.
 
-### [ ] 14 — Transparência é um muro de siglas sem explicação
+### [x] 14 — Transparência é um muro de siglas sem explicação
 **Heurística:** 02 — Correspondência com o mundo real · **Página:** `/transparencia/`
 
 Cerca de vinte links em caixa alta — "AVCB", "CID – LPIE", "CEBAS", "CREMESP",
