@@ -269,8 +269,8 @@ iframe { max-width: 100%; border: 0; }
 .compartilhe__btn:hover { color: #fff; filter: brightness(1.1); }
 .compartilhe__btn--facebook { background: #3b5998; }
 .compartilhe__btn--whatsapp { background: #25d366; }
-.compartilhe__btn--twitter { background: #1da1f2; }
-.compartilhe__btn--pinterest { background: #bd081c; }
+/* Achado 24: "Twitter" passa a "X"; Pinterest sai da barra */
+.compartilhe__btn--x { background: #000; }
 .compartilhe__btn--linkedin { background: #0077b5; }
 
 /* --------------------------------------------------------------------------

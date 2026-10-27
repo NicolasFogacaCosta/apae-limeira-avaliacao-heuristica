@@ -22,3 +22,13 @@ normal. Os botões da faixa foram corrigidos no achado 19; o texto, não, porque
 achado o aponta.
 
 **Sugestão:** texto branco sobre o mesmo azul (5,75:1) ou um azul mais escuro na faixa.
+
+## Páginas órfãs de plugins antigos, com título em inglês
+
+Percebido no achado 24. A cópia do WordPress inclui páginas criadas por plugins de loja
+e de agendamento que não existem mais: `/checkout/`, `/my-bookings/`, `/products-page/`,
+`/transaction-results/`, `/your-account/` e `/preschool/`, além de `/pagina-exemplo-3/`.
+Nenhum link do site leva a elas, mas os títulos estão em inglês ou são de exemplo.
+
+**Sugestão:** retirá-las do servidor (com redirecionamento para a home), já que não
+fazem parte do site da entidade.

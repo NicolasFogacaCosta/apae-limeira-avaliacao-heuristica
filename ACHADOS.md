@@ -340,7 +340,7 @@ acento. No menu: "Da Prevenção á Inclusão", com acento agudo no lugar da cra
 **Correção:** revisão ortográfica conforme o Acordo vigente; rótulo do link e título da
 página com a mesma grafia. **Aceite:** revisão ortográfica sem ocorrências.
 
-### [ ] 24 — Compartilhamento social em páginas institucionais
+### [x] 24 — Compartilhamento social em páginas institucionais
 **Heurística:** 08 — Estética e design minimalista · **Página:** `/transparencia/` e similares
 
 Barra com Facebook, WhatsApp, Twitter, Pinterest e LinkedIn abaixo do bloco de prestação

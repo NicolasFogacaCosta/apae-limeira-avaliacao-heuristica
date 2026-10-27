@@ -230,8 +230,7 @@
       var destinos = {
         facebook: 'https://www.facebook.com/sharer.php?u=' + u,
         whatsapp: 'https://api.whatsapp.com/send?text=' + t + '%20' + u,
-        twitter: 'https://twitter.com/intent/tweet?text=' + t + '&url=' + u,
-        pinterest: 'https://www.pinterest.com/pin/create/button/?url=' + u,
+        x: 'https://x.com/intent/tweet?text=' + t + '&url=' + u,
         linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=' + u
       };
       window.open(destinos[botao.getAttribute('data-rede')], '_blank', 'width=600,height=500');
