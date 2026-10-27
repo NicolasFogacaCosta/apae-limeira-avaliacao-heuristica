@@ -203,7 +203,9 @@
         '<p class="cookies__texto">Nós utilizamos cookies para lembrar suas preferências e te fornecer a melhor experiência de navegação possível no nosso site. Ao clicar em "aceitar todos", você consente o uso de todos os cookies. Você também pode clicar em "Configurações de cookies" para alterar as configurações.</p>' +
         '<div class="cookies__acoes">' +
           '<button class="cookies__btn cookies__btn--config" type="button" data-cookies="config">Configurações de cookies</button>' +
-          '<button class="cookies__btn cookies__btn--aceitar" type="button" data-cookies="aceitar">Aceitar todos</button>' +
+          // Achado 19: recusar custa o mesmo clique que aceitar, com o mesmo peso visual
+          '<button class="cookies__btn cookies__btn--escolha" type="button" data-cookies="recusar">Recusar não essenciais</button>' +
+          '<button class="cookies__btn cookies__btn--escolha" type="button" data-cookies="aceitar">Aceitar todos</button>' +
         '</div>' +
       '</div>' +
       '<button class="cookies-reabrir" type="button" data-cookies="config" hidden>Gerenciar consentimento</button>' +

@@ -13,3 +13,12 @@ desenvolvimento antigo (`dev.triader.com.br`), que não responde mais:
 - `/eventos/`: cartaz do APAE Motor Rock de 2016 (`cartaz-motor-rock.jpg`), alinhado à esquerda.
 
 **Sugestão:** remover as duas imagens ou trocá-las por fotos atuais fornecidas pela entidade.
+
+## Contraste do texto do aviso de cookies
+
+Percebido no achado 19. O texto da faixa de cookies, amarelo `#F2DC79` sobre azul
+`#0066BF`, tem contraste de 4,19:1, abaixo do mínimo de 4,5:1 do CLAUDE.md para texto
+normal. Os botões da faixa foram corrigidos no achado 19; o texto, não, porque nenhum
+achado o aponta.
+
+**Sugestão:** texto branco sobre o mesmo azul (5,75:1) ou um azul mais escuro na faixa.

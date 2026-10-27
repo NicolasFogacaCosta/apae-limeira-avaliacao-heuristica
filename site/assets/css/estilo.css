@@ -472,10 +472,17 @@ iframe { max-width: 100%; border: 0; }
 }
 .cookies[hidden] { display: none; }
 .cookies__texto { margin: 0; max-width: 1000px; }
-.cookies__acoes { display: flex; gap: 8px; flex-shrink: 0; }
+.cookies__acoes { display: flex; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
 .cookies__btn { border: 0; cursor: pointer; font: 13px 'Open Sans', sans-serif; padding: 7px 12px; border-radius: 0; }
 .cookies__btn--config { background: #dedfe0; color: #333; }
-.cookies__btn--aceitar { background: var(--cookie-botao); color: #fff; }
+/* Achado 19: "Recusar não essenciais" e "Aceitar todos" com o mesmo peso visual
+   (azul da faixa sobre branco, 5,75:1); "Configurações" segue como opção secundária */
+.cookies__btn--escolha { background: #fff; color: var(--cookie-fundo); font-weight: 700; min-height: 44px; padding: 7px 16px; border: 2px solid #fff; }
+.cookies__btn--config { min-height: 44px; }
+.cookies__btn:focus-visible { outline: 3px solid var(--cookie-texto); outline-offset: 2px; }
+/* A faixa não cobre o conteúdo: espaço reservado no fim da página */
+html { scroll-padding-bottom: var(--altura-aviso-cookies, 0px); }
+body { padding-bottom: var(--altura-aviso-cookies, 0px); }
 .cookies-reabrir {
   position: fixed; right: 100px; bottom: 0; z-index: 9998;
   background: var(--cookie-fundo); color: var(--cookie-texto); border: 0; cursor: pointer;

@@ -193,17 +193,29 @@
     var consentimento = armazenar('apae-cookies');
     if (consentimento) reabrir.hidden = false; else aviso.hidden = false;
 
+    // Achado 19: a faixa não cobre o conteúdo. Enquanto ela (ou a aba
+    // "Gerenciar consentimento") está visível, a página ganha um espaço no
+    // fim do mesmo tamanho, e o elemento focado rola para cima dela.
+    function reservarEspaco() {
+      var visivel = !aviso.hidden ? aviso : (!reabrir.hidden ? reabrir : null);
+      var altura = visivel ? visivel.getBoundingClientRect().height : 0;
+      document.documentElement.style.setProperty('--altura-aviso-cookies', Math.ceil(altura) + 'px');
+    }
+    reservarEspaco();
+    window.addEventListener('resize', reservarEspaco);
+
     document.addEventListener('click', function (e) {
       var alvo = e.target.closest('[data-cookies]');
       if (!alvo) return;
       var acao = alvo.getAttribute('data-cookies');
       if (acao === 'config') { modal.hidden = false; return; }
       if (acao === 'fechar') { modal.hidden = true; return; }
-      if (acao === 'aceitar' || acao === 'salvar') {
-        armazenar('apae-cookies', acao === 'aceitar' ? 'todos' : 'personalizado');
+      if (acao === 'aceitar' || acao === 'recusar' || acao === 'salvar') {
+        armazenar('apae-cookies', { aceitar: 'todos', recusar: 'necessarios', salvar: 'personalizado' }[acao]);
         aviso.hidden = true;
         modal.hidden = true;
         reabrir.hidden = false;
+        reservarEspaco();
       }
     });
   }

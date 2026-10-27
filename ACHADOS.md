@@ -257,7 +257,7 @@ uma seta de avanço fica visível.
 pausar ao receber foco ou ponteiro; respeitar `prefers-reduced-motion`.
 **Aceite:** é possível parar a rotação e voltar a um slide específico.
 
-### [ ] 19 — Aviso de cookies sem opção de recusar
+### [x] 19 — Aviso de cookies sem opção de recusar
 **Heurística:** 03 — Controle e liberdade do usuário · **Páginas:** todas
 
 A faixa fixa oferece "Aceitar todos" em destaque e "Configurações de cookies". Recusar os
