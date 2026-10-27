@@ -107,7 +107,7 @@ registrar em `PENDENCIAS.md`.
 **Aceite:** a página oferece pelo menos um meio de doar que se completa sem sair para
 outro canal; o rótulo "Doe agora" corresponde ao que a página entrega.
 
-### [ ] 07 — Teste do Pezinho não remete ao Instituto Jô Clemente
+### [x] 07 — Teste do Pezinho não remete ao Instituto Jô Clemente
 **Heurística:** 10 — Ajuda e documentação · **Página:** `/teste-do-pezinho/`
 
 A página descreve bem os cinco painéis, o local de coleta, o agendamento e o pagamento,

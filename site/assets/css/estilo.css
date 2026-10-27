@@ -442,6 +442,33 @@ iframe { max-width: 100%; border: 0; }
 .cookies-modal__salvar { background: #61a229; color: #fff; border: 0; padding: 10px 20px; cursor: pointer; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
+   Achado 07: Teste do Pezinho encaminha ao Instituto Jô Clemente
+   -------------------------------------------------------------------------- */
+.instituto {
+  position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px 32px;
+  margin: 36px 0 32px; padding: 36px 32px 28px; border: 3px solid var(--azul-institucional); background: #fff;
+}
+.instituto__etiqueta {
+  position: absolute; top: -16px; left: 28px; background: var(--amarelo); color: var(--azul-institucional);
+  font: 700 15px 'Montserrat', sans-serif; padding: 5px 14px;
+}
+.pagina__conteudo .instituto__titulo { margin: 0 0 6px; font: 700 26px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.instituto__texto p { margin: 0; font-size: 18px; line-height: 1.6; }
+.pagina__conteudo .instituto__link {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 60px;
+  padding: 8px 24px; border: 3px solid var(--azul-institucional); border-radius: 6px; background: #fff; text-align: center;
+  color: var(--azul-institucional); font: 700 16px 'Montserrat', sans-serif;
+}
+.pagina__conteudo .instituto__link:hover { background: var(--fundo-alt); color: var(--azul-institucional); }
+.pagina__conteudo .instituto__link:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.instituto__link > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+.instituto__aviso { font: 400 15px 'Open Sans', sans-serif; }
+.icone-externo { width: 18px; height: 18px; flex: none; }
+@media (max-width: 767px) {
+  .instituto { grid-template-columns: 1fr; padding: 32px 20px 24px; }
+}
+
+/* --------------------------------------------------------------------------
    Achado 04: páginas de seção (Quem Somos, Programas, Projetos, Serviços, Eventos)
    -------------------------------------------------------------------------- */
 .secao-intro { font-size: 18px; margin-bottom: 30px; }
