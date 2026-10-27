@@ -44,7 +44,7 @@ aparência de botão sem destino.
 
 ## Severidade 4
 
-### [ ] 02 — Eventos sem formulário ou link de inscrição
+### [x] 02 — Eventos sem formulário ou link de inscrição
 **Heurística:** 06 — Reconhecimento em vez de memorização · **Páginas:** `/apae-running-limeira/`, `/apae-beach-tennis/`, `/apae-motor-rock/`, `/da-prevencao-a-inclusao/` + nova página do evento em destaque
 
 Nenhuma página de evento tem formulário de inscrição, link para plataforma externa,

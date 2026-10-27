@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2ª Meia-Maratona da Inclusão de Limeira – APAE Limeira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Engagement&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;500;700&family=Rubik:wght@300;400&family=Sansita:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body class="pagina-interna pagina-evento">
+<script src="../assets/js/layout.js" data-parte="cabecalho"></script>
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">2ª Meia-Maratona da Inclusão de Limeira</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo evento">
+
+    <div class="evento__info">
+      <p class="evento__selo">Inscrições abertas</p>
+      <p class="evento__intro">Uma experiência de esporte, superação e inclusão para todos os corredores, em benefício da APAE de Limeira. Leia as informações abaixo e faça a inscrição em três etapas curtas.</p>
+
+      <ul class="evento__fatos">
+        <li><strong>Data</strong><span class="a-confirmar">[a confirmar com a entidade: data]</span></li>
+        <li><strong>Local de largada</strong><span class="a-confirmar">[a confirmar com a entidade: local]</span></li>
+        <li><strong>Valor da inscrição</strong><span class="a-confirmar">[a confirmar com a entidade: valores]</span></li>
+      </ul>
+
+      <h2 class="evento__subtitulo">Percurso</h2>
+      <p>O mapa do percurso, com os pontos de água e de apoio, será publicado nesta página.</p>
+      <p><span class="a-confirmar">[a confirmar com a entidade: trajeto]</span></p>
+
+      <h2 class="evento__subtitulo">Categorias</h2>
+      <p><span class="a-confirmar">[a confirmar com a entidade: categorias, distâncias e valores]</span></p>
+      <table class="evento__tabela">
+        <thead>
+          <tr><th scope="col">Categoria</th><th scope="col">Distância</th><th scope="col">Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Meia-maratona</th><td>21 km</td><td><span class="a-confirmar">[a confirmar]</span></td></tr>
+          <tr><th scope="row">Corrida de percurso menor</th><td><span class="a-confirmar">[a confirmar]</span></td><td><span class="a-confirmar">[a confirmar]</span></td></tr>
+          <tr><th scope="row">Caminhada</th><td><span class="a-confirmar">[a confirmar]</span></td><td><span class="a-confirmar">[a confirmar]</span></td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="evento__subtitulo">Dúvidas sobre a inscrição</h2>
+      <p>Fale com a APAE pelo telefone <a href="tel:+551934041569">(19) 3404-1569</a> ou pelo e-mail <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a>.</p>
+    </div>
+
+    <div class="evento__lateral">
+      <form class="inscricao" id="inscricao" novalidate aria-labelledby="inscricao-titulo">
+        <div class="inscricao__cabecalho"><h2 id="inscricao-titulo">Inscrição</h2></div>
+        <div class="inscricao__corpo">
+          <ol class="etapas" aria-label="Etapas da inscrição">
+            <li class="etapas__item" data-etapa-indicador="1" aria-current="step"><span class="etapas__numero">1</span><span class="etapas__nome">Dados</span></li>
+            <li class="etapas__item" data-etapa-indicador="2"><span class="etapas__numero">2</span><span class="etapas__nome">Categoria</span></li>
+            <li class="etapas__item" data-etapa-indicador="3"><span class="etapas__numero">3</span><span class="etapas__nome">Pagamento</span></li>
+          </ol>
+
+          <!-- Etapa 1 -->
+          <section class="inscricao__etapa" data-etapa="1">
+            <h3 class="inscricao__titulo-etapa" tabindex="-1">Etapa 1 de 3: seus dados</h3>
+            <p class="inscricao__legenda">Os campos com <span class="obrigatorio" aria-hidden="true">*</span> são obrigatórios.</p>
+            <div class="inscricao__grade">
+              <div class="campo campo--inteiro">
+                <label for="insc-nome">Nome completo <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input id="insc-nome" name="nome" type="text" autocomplete="name" required data-validar="nome" aria-describedby="insc-nome-erro">
+                <span class="campo__erro" id="insc-nome-erro" hidden></span>
+              </div>
+              <div class="campo">
+                <label for="insc-nasc">Data de nascimento <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input id="insc-nasc" name="nascimento" type="text" inputmode="numeric" autocomplete="bday" maxlength="10" required data-validar="data" aria-describedby="insc-nasc-dica insc-nasc-erro">
+                <span class="campo__dica" id="insc-nasc-dica">Exemplo: 25/03/1990</span>
+                <span class="campo__erro" id="insc-nasc-erro" hidden></span>
+              </div>
+              <div class="campo">
+                <label for="insc-cpf">CPF <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input id="insc-cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" required data-validar="cpf" aria-describedby="insc-cpf-dica insc-cpf-erro">
+                <span class="campo__dica" id="insc-cpf-dica">Somente números</span>
+                <span class="campo__erro" id="insc-cpf-erro" hidden></span>
+              </div>
+              <div class="campo campo--inteiro">
+                <label for="insc-email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input id="insc-email" name="email" type="email" autocomplete="email" required data-validar="email" aria-describedby="insc-email-erro">
+                <span class="campo__erro" id="insc-email-erro" hidden></span>
+              </div>
+              <div class="campo campo--inteiro">
+                <label for="insc-tel">Telefone com DDD <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input id="insc-tel" name="telefone" type="tel" autocomplete="tel" required data-validar="telefone" aria-describedby="insc-tel-dica insc-tel-erro">
+                <span class="campo__dica" id="insc-tel-dica">Exemplo: (19) 99999-9999</span>
+                <span class="campo__erro" id="insc-tel-erro" hidden></span>
+              </div>
+            </div>
+            <button type="button" class="inscricao__avancar" data-ir="2">Continuar para a categoria <span aria-hidden="true">→</span></button>
+            <ul class="inscricao__proximas">
+              <li><span class="inscricao__proxima-num">2</span><span><strong>Categoria.</strong> Escolha a distância. Valor: <span class="a-confirmar">[a confirmar]</span></span></li>
+              <li><span class="inscricao__proxima-num">3</span><span><strong>Pagamento.</strong> Pix ou cartão.</span></li>
+            </ul>
+          </section>
+
+          <!-- Etapa 2 -->
+          <section class="inscricao__etapa" data-etapa="2">
+            <h3 class="inscricao__titulo-etapa" tabindex="-1">Etapa 2 de 3: categoria</h3>
+            <fieldset class="opcoes" data-validar-grupo="categoria" aria-describedby="insc-categoria-erro">
+              <legend>Escolha a categoria <span class="obrigatorio" aria-hidden="true">*</span></legend>
+              <label class="opcao"><input type="radio" name="categoria" value="Meia-maratona (21 km)" required><span><strong>Meia-maratona</strong> 21 km · Valor: <span class="a-confirmar">[a confirmar]</span></span></label>
+              <label class="opcao"><input type="radio" name="categoria" value="Corrida de percurso menor"><span><strong>Corrida de percurso menor</strong> Distância e valor: <span class="a-confirmar">[a confirmar]</span></span></label>
+              <label class="opcao"><input type="radio" name="categoria" value="Caminhada"><span><strong>Caminhada</strong> Distância e valor: <span class="a-confirmar">[a confirmar]</span></span></label>
+              <span class="campo__erro" id="insc-categoria-erro" hidden></span>
+            </fieldset>
+            <div class="inscricao__acoes">
+              <button type="button" class="inscricao__voltar" data-ir="1"><span aria-hidden="true">←</span> Voltar para os dados</button>
+              <button type="button" class="inscricao__avancar" data-ir="3">Continuar para o pagamento <span aria-hidden="true">→</span></button>
+            </div>
+            <ul class="inscricao__proximas">
+              <li><span class="inscricao__proxima-num">3</span><span><strong>Pagamento.</strong> Pix ou cartão.</span></li>
+            </ul>
+          </section>
+
+          <!-- Etapa 3 -->
+          <section class="inscricao__etapa" data-etapa="3">
+            <h3 class="inscricao__titulo-etapa" tabindex="-1">Etapa 3 de 3: pagamento</h3>
+            <dl class="inscricao__resumo">
+              <dt>Nome</dt><dd data-resumo="nome"></dd>
+              <dt>Categoria</dt><dd data-resumo="categoria"></dd>
+              <dt>Valor</dt><dd><span class="a-confirmar">[a confirmar com a entidade: valor]</span></dd>
+            </dl>
+            <fieldset class="opcoes" data-validar-grupo="pagamento" aria-describedby="insc-pagamento-erro">
+              <legend>Forma de pagamento <span class="obrigatorio" aria-hidden="true">*</span></legend>
+              <label class="opcao"><input type="radio" name="pagamento" value="Pix" required><span><strong>Pix</strong></span></label>
+              <label class="opcao"><input type="radio" name="pagamento" value="Cartão de crédito"><span><strong>Cartão de crédito</strong></span></label>
+              <span class="campo__erro" id="insc-pagamento-erro" hidden></span>
+            </fieldset>
+            <p class="inscricao__aviso">O pagamento e a confirmação da inscrição dependem da plataforma que a entidade vai adotar. <span class="a-confirmar">[a confirmar com a entidade: plataforma de inscrição e pagamento]</span></p>
+            <div class="inscricao__acoes">
+              <button type="button" class="inscricao__voltar" data-ir="2"><span aria-hidden="true">←</span> Voltar para a categoria</button>
+              <button type="submit" class="inscricao__avancar">Confirmar inscrição</button>
+            </div>
+            <div class="inscricao__resultado" role="status" hidden></div>
+          </section>
+        </div>
+      </form>
+
+      <aside class="outros-eventos" aria-labelledby="outros-eventos-titulo">
+        <h2 id="outros-eventos-titulo">Outros eventos</h2>
+        <a class="outros-eventos__item" href="../apae-motor-rock/"><img src="../wp-content/uploads/2025/05/evento01.png" alt="" loading="lazy"><span><strong>APAE Motor Rock</strong>Como participar e situação das inscrições</span></a>
+        <a class="outros-eventos__item" href="../apae-running-limeira/"><img src="../wp-content/uploads/2025/05/evento02.png" alt="" loading="lazy"><span><strong>APAE Running</strong>Como participar e situação das inscrições</span></a>
+        <a class="outros-eventos__item" href="../apae-beach-tennis/"><img src="../wp-content/uploads/2025/05/evento04.png" alt="" loading="lazy"><span><strong>APAE Beach Tennis</strong>Como participar e situação das inscrições</span></a>
+        <a class="outros-eventos__item" href="../selo-empresa-cidada-2026/"><img src="../wp-content/uploads/2025/05/evento03.png" alt="" loading="lazy"><span><strong>Selo Empresa Cidadã</strong>Para empresas que apoiam a APAE</span></a>
+      </aside>
+    </div>
+
+  </div>
+</main>
+<section class="compartilhe">
+  <div class="container compartilhe__inner">
+    <h2 class="compartilhe__titulo">Compartilhe:</h2>
+    <div class="compartilhe__botoes" data-compartilhar>
+      <a class="compartilhe__btn compartilhe__btn--facebook" data-rede="facebook" role="button" tabindex="0">Facebook</a>
+      <a class="compartilhe__btn compartilhe__btn--whatsapp" data-rede="whatsapp" role="button" tabindex="0">WhatsApp</a>
+      <a class="compartilhe__btn compartilhe__btn--twitter" data-rede="twitter" role="button" tabindex="0">Twitter</a>
+      <a class="compartilhe__btn compartilhe__btn--pinterest" data-rede="pinterest" role="button" tabindex="0">Pinterest</a>
+      <a class="compartilhe__btn compartilhe__btn--linkedin" data-rede="linkedin" role="button" tabindex="0">LinkedIn</a>
+    </div>
+  </div>
+</section>
+<script src="../assets/js/layout.js" data-parte="rodape"></script>
+<script src="../assets/js/principal.js"></script>
+<script src="../assets/js/inscricao.js"></script>
+</body>
+</html>

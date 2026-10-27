@@ -412,6 +412,115 @@ iframe { max-width: 100%; border: 0; }
 .cookies-modal__salvar { background: #61a229; color: #fff; border: 0; padding: 10px 20px; cursor: pointer; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
+   Achado 02: página do evento, inscrição em etapas e "Como participar"
+   -------------------------------------------------------------------------- */
+/* Dado que a entidade ainda precisa confirmar (CLAUDE.md) */
+.a-confirmar {
+  display: inline-block; background: #FDEBC8; color: #5C3B00; border: 1px solid #E0A030; border-radius: 4px;
+  padding: 2px 10px; font: 600 16px/1.5 'Open Sans', sans-serif;
+}
+
+.evento { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 480px); gap: 48px; align-items: start; text-align: left; }
+.evento p { font-size: 18px; line-height: 1.6; }
+.evento a:not(.outros-eventos__item) { color: var(--azul-institucional); text-decoration: underline; }
+.evento__selo { display: inline-block; background: var(--amarelo); color: var(--azul-institucional); font: 700 16px 'Montserrat', sans-serif; padding: 8px 16px; border-radius: 4px; }
+.evento__fatos { list-style: none; padding: 0; margin: 0 0 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pagina__conteudo .evento__fatos { padding: 0; }
+.evento__fatos li { background: var(--fundo-alt); padding: 16px 20px; }
+.evento__fatos strong { display: block; font: 700 16px 'Montserrat', sans-serif; color: var(--azul-institucional); margin-bottom: 6px; }
+.pagina__conteudo .evento__subtitulo { margin: 0 0 12px; font: 700 28px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.evento__tabela { margin-bottom: 40px; font-size: 16px; }
+.pagina__conteudo .evento__tabela th, .pagina__conteudo .evento__tabela td { padding: 12px 16px; border: 1px solid #DDE2E7; text-align: left; vertical-align: middle; }
+.evento__tabela thead th { background: var(--azul-institucional); color: #fff; font: 700 16px 'Montserrat', sans-serif; }
+.evento__tabela tbody tr:nth-child(even) { background: var(--fundo-alt); }
+
+.inscricao { border: 2px solid var(--azul-institucional); background: #fff; margin-bottom: 32px; }
+.inscricao__cabecalho { background: var(--azul-institucional); color: #fff; padding: 18px 28px; }
+.pagina__conteudo .inscricao__cabecalho h2 { margin: 0; color: #fff; font: 700 24px 'Montserrat', sans-serif; }
+.inscricao__corpo { padding: 24px 28px 28px; }
+.etapas { list-style: none; margin: 0 0 24px; padding: 0; display: flex; justify-content: space-between; position: relative; }
+.pagina__conteudo .etapas { padding: 0; }
+.etapas::before { content: ''; position: absolute; left: 48px; right: 48px; top: 20px; height: 4px; background: #C9CFD5; }
+.etapas__item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 96px; font: 600 16px 'Montserrat', sans-serif; color: var(--texto); }
+.etapas__numero { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #fff; border: 3px solid #6B7480; font: 700 18px 'Montserrat', sans-serif; }
+.etapas__item--atual, .etapas__item--feita { color: var(--azul-institucional); font-weight: 700; }
+.etapas__item--atual .etapas__numero, .etapas__item--feita .etapas__numero { background: var(--azul-institucional); border-color: var(--azul-institucional); color: #fff; }
+.inscricao__etapa[hidden] { display: none; }
+.pagina__conteudo .inscricao__titulo-etapa { margin: 0 0 4px; font: 700 18px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.inscricao__titulo-etapa:focus { outline: none; }
+.inscricao__titulo-etapa:focus-visible { outline: 3px solid var(--azul-institucional); outline-offset: 4px; }
+.inscricao p.inscricao__legenda { font-size: 16px; margin: 0 0 16px; }
+.obrigatorio { color: #B3261E; font-weight: 700; }
+.inscricao__grade { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.campo--inteiro { grid-column: 1 / -1; }
+.pagina__conteudo .campo label { display: block; font: 600 16px 'Montserrat', sans-serif; color: var(--azul-institucional); margin-bottom: 6px; text-transform: none; }
+.pagina__conteudo .campo input {
+  width: 100%; height: 48px; margin: 0; border: 2px solid #6B7480; border-radius: 6px; padding: 0 14px;
+  font: 16px 'Open Sans', sans-serif; color: var(--texto); background: #fff;
+}
+.pagina__conteudo .campo input:focus { outline: 3px solid var(--amarelo); outline-offset: 1px; border-color: var(--azul-institucional); }
+.pagina__conteudo .campo input[aria-invalid="true"] { border-color: #B3261E; }
+.campo__dica { display: block; margin-top: 4px; font-size: 15px; }
+.campo__erro { display: block; margin-top: 4px; color: #B3261E; font-size: 15px; font-weight: 600; }
+.campo__erro[hidden] { display: none; }
+.opcoes { border: 0; margin: 12px 0 0; padding: 0; }
+.opcoes legend { font: 700 16px 'Montserrat', sans-serif; color: var(--azul-institucional); margin-bottom: 10px; padding: 0; }
+.pagina__conteudo .opcao { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; margin-bottom: 10px; border: 2px solid #C9CFD5; border-radius: 6px; cursor: pointer; font-size: 16px; text-transform: none; }
+.opcao:hover { border-color: var(--azul-institucional); }
+.opcao:has(input:checked) { border-color: var(--azul-institucional); background: #EEF3F8; }
+.opcao input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--azul-institucional); flex: none; }
+.opcao strong { display: block; color: var(--azul-institucional); }
+.opcoes--erro .opcao { border-color: #B3261E; }
+.inscricao__resumo { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 12px 0 8px; font-size: 16px; }
+.inscricao__resumo dt { font-weight: 700; color: var(--azul-institucional); }
+.inscricao__resumo dd { margin: 0; }
+.inscricao p.inscricao__aviso { font-size: 16px; background: var(--fundo-alt); padding: 12px 16px; margin: 16px 0 0; }
+.inscricao__acoes { display: flex; flex-direction: column-reverse; gap: 12px; margin-top: 24px; }
+.inscricao__acoes .inscricao__avancar { margin-top: 0; }
+.inscricao__avancar, .inscricao__voltar {
+  min-height: 56px; border-radius: 6px; cursor: pointer; font: 700 18px 'Montserrat', sans-serif; padding: 0 20px;
+}
+.inscricao__avancar { width: 100%; margin-top: 24px; background: var(--azul-institucional); color: #fff; border: 0; }
+.inscricao__avancar:hover { background: #0B4A82; }
+.inscricao__voltar { background: #fff; color: var(--azul-institucional); border: 2px solid var(--azul-institucional); font-size: 16px; }
+.inscricao__voltar:hover { background: #EEF3F8; }
+.inscricao__avancar:focus-visible, .inscricao__voltar:focus-visible, .opcao:has(input:focus-visible) { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.inscricao__proximas { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.pagina__conteudo .inscricao__proximas { padding: 0; }
+.inscricao__proximas li { display: flex; align-items: center; gap: 14px; background: var(--fundo-alt); padding: 12px 16px; font-size: 16px; }
+.inscricao__proxima-num { width: 36px; height: 36px; border-radius: 50%; border: 3px solid #6B7480; display: flex; align-items: center; justify-content: center; font: 700 16px 'Montserrat', sans-serif; flex: none; }
+.inscricao__resultado { margin-top: 20px; padding: 14px 16px; border-left: 6px solid var(--amarelo); background: #FFF8EA; font-size: 16px; }
+
+.outros-eventos { background: var(--fundo-alt); padding: 28px; }
+.pagina__conteudo .outros-eventos h2 { margin: 0 0 16px; font: 700 22px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.outros-eventos__item { display: flex; align-items: center; gap: 16px; min-height: 88px; padding: 8px; border-top: 1px solid #C9CFD5; color: var(--texto); }
+.outros-eventos__item:hover { background: #E8EDF2; color: var(--texto); }
+.outros-eventos__item:focus-visible { outline: 3px solid var(--azul-institucional); outline-offset: 2px; }
+.outros-eventos__item img { width: 72px; height: 72px; object-fit: cover; flex: none; }
+.outros-eventos__item strong { display: block; font: 700 18px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+
+.participar { margin: 0 0 40px; padding: 28px 32px; background: var(--fundo-alt); border-top: 6px solid var(--amarelo); font-size: 18px; line-height: 1.6; }
+.participar h2 { margin: 0 0 16px; font: 700 28px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.participar__dados { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; align-items: center; margin: 0 0 20px; }
+.participar__dados dt { font-weight: 700; color: var(--azul-institucional); }
+.participar__dados dd { margin: 0; }
+.participar p { margin: 0 0 12px; }
+.participar a { color: var(--azul-institucional); text-decoration: underline; font-weight: 600; }
+.participar__destaque { padding-top: 12px; border-top: 1px solid #C9CFD5; }
+
+@media (max-width: 1024px) {
+  .evento { grid-template-columns: 1fr; }
+  .evento__fatos { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .inscricao__corpo { padding: 20px 16px; }
+  .inscricao__grade { grid-template-columns: 1fr; }
+  .participar { padding: 24px 20px; }
+  .participar__dados { grid-template-columns: 1fr; gap: 4px; }
+  .participar__dados dd { margin-bottom: 10px; }
+}
+
+/* --------------------------------------------------------------------------
    Responsivo (pontos de quebra do Elementor: 1024 e 767)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
