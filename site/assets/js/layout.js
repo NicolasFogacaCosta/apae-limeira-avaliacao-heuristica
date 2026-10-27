@@ -51,6 +51,7 @@
     }).join('') + '</div>';
   }
 
+  // Achado 08: o telefone do topo e do rodapé é um link tel:.
   // Menu principal. Achado 04: cada item com submenu abre a sua página de
   // seção e "Home" leva à página inicial; nenhum item usa mais href="#".
   var MENU = [
@@ -117,7 +118,7 @@
         '<div class="barra-topo__inner">' +
           '<div class="barra-topo__boasvindas">Seja bem-vindo a <strong>APAE Limeira!</strong></div>' +
           '<div class="barra-topo__direita">' +
-            '<div class="barra-topo__contato">' + icone('email') + ' apae@apaelimeira.org.br &nbsp;| ' + icone('telefone') + ' (19) 3404-1569</div>' +
+            '<div class="barra-topo__contato">' + icone('email') + ' apae@apaelimeira.org.br &nbsp;| ' + '<a class="barra-topo__tel" href="tel:+551934041569">' + icone('telefone') + ' (19) 3404-1569</a></div>' +
             redes('barra-topo__redes') +
             '<a class="botao-doe-topo" href="' + url('doacoes/') + '" target="_blank">' + icone('coracao') +
               '<span class="botao-doe-topo__texto">Doe Agora</span></a>' +
@@ -152,7 +153,7 @@
             '<div class="rodape__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-siterodape.png') + '" alt="logo-60-anos-siterodape"></a></div>' +
             '<p class="rodape__endereco">Av. Antônio D’Andréa, 364<br>Parque N Senhora das Dores<br>Limeira – SP | CEP: 13483-000</p>' +
             '<p class="rodape__email">apae@apaelimeira.org.br</p>' +
-            '<p class="rodape__telefone">(19) 3404-1569</p>' +
+            '<p class="rodape__telefone"><a href="tel:+551934041569">(19) 3404-1569</a></p>' +
             '<a class="rodape__doe" href="' + url('doacoes/') + '">' + icone('coracao') + 'Doe Agora</a>' +
           '</div>' +
           '<div class="rodape__col rodape__col--menu">' +

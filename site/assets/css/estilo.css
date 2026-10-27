@@ -71,6 +71,11 @@ iframe { max-width: 100%; border: 0; }
 .barra-topo__direita { display: flex; align-items: center; justify-content: flex-end; flex: 1 1 66%; }
 .barra-topo__contato { display: flex; align-items: center; gap: 6px; }
 .barra-topo__contato .icone { font-size: 14px; }
+/* Achado 08: telefones clicáveis no topo e no rodapé */
+.barra-topo__tel { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: #fff; }
+.barra-topo__tel:hover, .barra-topo__tel:focus-visible { color: #fff; text-decoration: underline; }
+.rodape__telefone a { color: #fff; }
+.rodape__telefone a:hover, .rodape__telefone a:focus-visible { color: #fff; text-decoration: underline; }
 .barra-topo__redes { display: flex; gap: 5px; padding: 0 20px 0 30px; }
 .rede {
   display: inline-flex; align-items: center; justify-content: center;

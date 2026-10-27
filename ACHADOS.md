@@ -198,7 +198,7 @@ sem menção ao WhatsApp no rótulo e sem indicação de que o usuário deixará
 indicação de que abre em nova janela.
 **Aceite:** o destino é previsível antes do clique.
 
-### [ ] 08 — Telefones e WhatsApp não são clicáveis
+### [x] 08 — Telefones e WhatsApp não são clicáveis
 **Heurística:** 07 — Flexibilidade e eficiência de uso · **Páginas:** todas
 
 Os números aparecem como texto inerte no topo fixo, no rodapé, em `/contato/`,
