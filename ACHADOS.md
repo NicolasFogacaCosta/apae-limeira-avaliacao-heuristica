@@ -351,7 +351,7 @@ substituído pela plataforma em 2023.
 compartilhamento faz sentido (eventos, campanhas). Onde permanecer, atualizar o rótulo.
 **Aceite:** nenhuma página institucional exibe convite a compartilhar.
 
-### [ ] 25 — Fax anunciado como canal de contato
+### [x] 25 — Fax anunciado como canal de contato
 **Heurística:** 02 — Correspondência com o mundo real · **Página:** `/contato/`
 
 A página traz "Tel.: (19) 3404.1569 | Fax: 3404.1569" — fax com o mesmo número do
