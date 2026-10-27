@@ -157,3 +157,17 @@ corretos". O único texto institucional que já os usa corretamente é o da Esco
 demais programas (CAD, CAT, CPC), a entidade precisa dizer quais serviços atendem pessoas
 autistas ou neurodivergentes; sem isso, escrever esses termos nas páginas seria afirmar
 um atendimento sem confirmação.
+
+## Achado 23: revisão das categorias atribuídas automaticamente
+
+**O que está no repositório:** as 349 publicações que estavam em "Sem categoria" foram
+classificadas automaticamente, pelo título, nas três categorias que o site já tinha:
+Eventos (127), Programas (57) e Notícias (165). Para isso foram usadas palavras como
+"corrida", "festa", "semana de", "fanfarra", "equoterapia" e "teste do pezinho". No
+índice da busca, essas publicações estão marcadas com `"auto": 1`. A seção `/noticias/`
+lista tudo com data completa e filtro por categoria, e entrou no menu do rodapé e no fim
+de cada publicação.
+
+**O que falta:** a equipe de comunicação da APAE deve revisar a classificação. Uma
+regra por palavra-chave acerta a maioria, mas não todas; por exemplo, uma doação feita
+durante uma festa pode ter ido para Eventos.

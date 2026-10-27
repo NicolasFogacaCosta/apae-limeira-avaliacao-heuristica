@@ -165,6 +165,7 @@
               itemLista('Conselhos', url('conselho/')) +
               itemLista('Política de Qualidade', url('politica-de-qualidade/')) +
               itemLista('Transparência', url('transparencia/')) +
+              itemLista('Notícias', url('noticias/')) +
               itemLista('Contato', url('contato/')) +
             '</ul>' +
           '</div>' +

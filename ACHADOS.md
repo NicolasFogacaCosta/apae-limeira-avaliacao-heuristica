@@ -293,7 +293,7 @@ mapear sinônimos na busca interna para que levem ao conteúdo existente.
 **Aceite:** buscar "neurodivergente", "neurodiversidade", "TEA" e "autismo" retorna
 conteúdo pertinente.
 
-### [ ] 23 — Publicações sem ano e sem acesso pelo menu
+### [x] 23 — Publicações sem ano e sem acesso pelo menu
 **Heurística:** 01 — Visibilidade do status do sistema · **Páginas:** publicações
 
 As notícias exibem apenas "01 ABRIL", sem ano, embora tratem de norma de 2012/2013.

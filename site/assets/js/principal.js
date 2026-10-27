@@ -456,7 +456,7 @@
           return '<article class="resultado">' +
             (item.i ? '<div class="resultado__imagem"><a href="' + link + '"><img src="' + item.i + '" alt="" loading="lazy"></a></div>' : '') +
             '<header class="resultado__cabecalho">' +
-              '<div class="resultado__data">' + d[2] + ' <i>' + MESES[parseInt(d[1], 10) - 1] + '</i></div>' +
+              '<div class="resultado__data">' + d[2] + ' <i>' + MESES[parseInt(d[1], 10) - 1] + '</i><b>' + d[0] + '</b></div>' +
               '<div><h2 class="resultado__titulo"><a href="' + link + '">' + esc(item.t) + '</a></h2>' + meta + '</div>' +
             '</header>' +
             '<div class="resultado__resumo"><p>' + esc(resumo(item)) + '</p></div>' +
