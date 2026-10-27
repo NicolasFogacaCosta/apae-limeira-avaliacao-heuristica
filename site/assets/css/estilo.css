@@ -339,6 +339,29 @@ iframe { max-width: 100%; border: 0; }
 .banner__seta img { width: 32px; height: 32px; display: block; }
 .banner__seta--ant { left: 10px; }
 .banner__seta--prox { right: 10px; }
+/* Achado 18: controles do banner */
+.banner__palco { position: relative; }
+.banner__seta:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px var(--azul-institucional); opacity: 1; }
+.banner__controles {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 6px 20px;
+  background: var(--azul-institucional); color: #fff; font: 600 15px 'Open Sans', sans-serif;
+}
+.banner__pausar {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px 0 14px; cursor: pointer;
+  background: transparent; color: #fff; border: 2px solid var(--amarelo); border-radius: 24px; font: 600 15px 'Open Sans', sans-serif;
+}
+.banner__pausar-icone { width: 14px; height: 16px; border-left: 5px solid var(--amarelo); border-right: 5px solid var(--amarelo); }
+.banner__pausar.pausado .banner__pausar-icone {
+  width: 0; height: 0; border-left: 14px solid var(--amarelo); border-right: 0;
+  border-top: 8px solid transparent; border-bottom: 8px solid transparent;
+}
+.banner__indicadores { display: flex; }
+.banner__indicadores button { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: none; border: 0; cursor: pointer; padding: 0; }
+.banner__indicadores span { display: block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; }
+.banner__indicadores [aria-current="true"] span { width: 28px; height: 12px; border-radius: 6px; border-color: var(--amarelo); background: var(--amarelo); }
+.banner__pausar:focus-visible, .banner__indicadores button:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.banner__posicao { margin: 0; }
+@media (prefers-reduced-motion: reduce) { .banner__trilho { transition: none; } }
 
 .secao-titulo { text-align: center; padding: 45px 10px 20px; }
 .secao-titulo__sobre { display: block; color: var(--amarelo); font-family: 'Engagement', cursive; font-size: 70px; font-weight: 400; line-height: 1; margin: 0 0 -10px; }

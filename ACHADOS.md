@@ -247,7 +247,7 @@ levam a arquivos no Google Drive sem indicar saída do site, formato, tamanho ou
 com formato, tamanho e marcação de link externo.
 **Aceite:** a lista de links lida fora de contexto continua compreensível.
 
-### [ ] 18 — Carrossel automático sem pausa
+### [x] 18 — Carrossel automático sem pausa
 **Heurística:** 03 — Controle e liberdade do usuário · **Página:** home
 
 Três banners alternam sozinhos, sem botão de pausa e sem indicadores de posição. Apenas

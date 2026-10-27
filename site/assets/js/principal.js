@@ -115,16 +115,65 @@
     }
     if (primeira.complete && primeira.naturalWidth) bannerCarregado();
     else primeira.addEventListener('load', bannerCarregado);
-    var slides = carrossel(banner, { trilho: '.banner__trilho', intervalo: 5000, reiniciar: true });
-    // Achado 01: a chamada que recebe foco pelo teclado fica visível na tela.
-    var slidesBanner = Array.prototype.slice.call(banner.querySelectorAll('.banner__slide'));
-    banner.querySelectorAll('.banner__link').forEach(function (link) {
-      link.addEventListener('focus', function () {
-        slides.parar();
-        slides.ir(slidesBanner.indexOf(link.closest('.banner__slide')));
+    // Achado 18: o banner pode ser pausado, tem indicadores clicáveis e setas
+    // nos dois sentidos; para ao receber foco ou ponteiro e não gira sozinho
+    // para quem pediu menos movimento no sistema.
+    (function () {
+      var trilho = banner.querySelector('.banner__trilho');
+      var itens = Array.prototype.slice.call(trilho.children);
+      var pontos = Array.prototype.slice.call(banner.querySelectorAll('[data-ir-slide]'));
+      var botaoPausar = banner.querySelector('[data-pausar]');
+      var textoPausar = banner.querySelector('[data-pausar-texto]');
+      var posicao = banner.querySelector('[data-posicao]');
+      var menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var atual = 0, timer = null, pausado = menosMovimento.matches, ponteiro = false, foco = false;
+
+      function ir(i) {
+        atual = (i + itens.length) % itens.length;
+        trilho.style.transform = 'translateX(' + (-atual * itens[0].getBoundingClientRect().width) + 'px)';
+        pontos.forEach(function (p, n) {
+          if (n === atual) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current');
+        });
+        posicao.textContent = 'Slide ' + (atual + 1) + ' de ' + itens.length;
+      }
+      function parar() { if (timer) clearInterval(timer); timer = null; }
+      function tocar() {
+        parar();
+        if (pausado || ponteiro || foco) return;
+        timer = setInterval(function () { ir(atual + 1); }, 5000);
+      }
+      function definirPausa(valor) {
+        pausado = valor;
+        textoPausar.textContent = pausado ? 'Continuar' : 'Pausar';
+        botaoPausar.classList.toggle('pausado', pausado);
+        // Enquanto gira sozinho, a posição não é anunciada a cada troca.
+        posicao.setAttribute('aria-live', pausado ? 'polite' : 'off');
+        tocar();
+      }
+
+      botaoPausar.addEventListener('click', function () { definirPausa(!pausado); });
+      // Escolher um slide para a rotação, para a pessoa conseguir ler.
+      pontos.forEach(function (p, n) { p.addEventListener('click', function () { ir(n); definirPausa(true); }); });
+      banner.querySelector('[data-anterior]').addEventListener('click', function () { ir(atual - 1); definirPausa(true); });
+      banner.querySelector('[data-proximo]').addEventListener('click', function () { ir(atual + 1); definirPausa(true); });
+
+      banner.addEventListener('pointerenter', function () { ponteiro = true; parar(); });
+      banner.addEventListener('pointerleave', function () { ponteiro = false; tocar(); });
+      banner.addEventListener('focusin', function (e) {
+        foco = true; parar();
+        // Achado 01: a chamada que recebe foco fica visível na tela.
+        var slide = e.target.closest('.banner__slide');
+        if (slide) ir(itens.indexOf(slide));
       });
-      link.addEventListener('blur', function () { slides.iniciar(); });
-    });
+      banner.addEventListener('focusout', function (e) {
+        if (!banner.contains(e.relatedTarget)) { foco = false; tocar(); }
+      });
+      menosMovimento.addEventListener('change', function () { if (menosMovimento.matches) definirPausa(true); });
+      window.addEventListener('resize', function () { ir(atual); });
+
+      definirPausa(pausado);
+      ir(0);
+    })();
   }
   carrossel(document.querySelector('.eventos__carrossel'), {
     trilho: '.eventos__trilho', intervalo: 5000, reiniciar: true, pausarNoPonteiro: true
