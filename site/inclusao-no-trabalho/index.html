@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inclusão no mercado de trabalho – APAE Limeira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Engagement&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;500;700&family=Rubik:wght@300;400&family=Sansita:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body class="pagina-interna pagina-trabalho">
+<script src="../assets/js/layout.js" data-parte="cabecalho"></script>
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">Inclusão no mercado de trabalho</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo trabalho">
+    <p class="trabalho__intro">A APAE de Limeira apoia empresas que querem contratar pessoas com deficiência e famílias que buscam um caminho de trabalho para uma pessoa com deficiência intelectual. Escolha a sua trilha.</p>
+    <nav class="trabalho__atalhos" aria-label="Trilhas desta página">
+      <a href="#para-empresas">Sou de uma empresa</a>
+      <a href="#para-familias">Sou de uma família</a>
+    </nav>
+
+    <div class="trabalho__trilhas">
+      <!-- Trilha 1: empresas -->
+      <section class="trilha trilha--empresas" id="para-empresas" aria-labelledby="empresas-titulo">
+        <p class="trilha__selo">Para empresas</p>
+        <h2 class="trilha__titulo" id="empresas-titulo">Contrate com o apoio da APAE</h2>
+
+        <div class="trilha__caixa">
+          <h3>Lei de Cotas (Lei 8.213/1991, art. 93)</h3>
+          <p>Empresas com 100 ou mais empregados devem preencher parte das vagas com pessoas com deficiência ou reabilitadas pelo INSS:</p>
+          <ul class="trilha__cotas">
+            <li><strong>2%</strong> de 100 a 200 empregados</li>
+            <li><strong>3%</strong> de 201 a 500</li>
+            <li><strong>4%</strong> de 501 a 1.000</li>
+            <li><strong>5%</strong> acima de 1.000</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Etapas da contratação</h3>
+          <p><span class="revisao-pendente">Proposta de texto: aguarda revisão da equipe da APAE</span></p>
+          <ol class="trilha__etapas">
+            <li>A empresa entra em contato com a APAE.</li>
+            <li>A equipe conhece a vaga e o posto de trabalho.</li>
+            <li>A APAE indica pessoas com o perfil da vaga.</li>
+            <li>A empresa contrata e a equipe da APAE acompanha o início.</li>
+          </ol>
+        </div>
+
+        <div class="trilha__apoios">
+          <div class="trilha__caixa"><h3>Adaptação do posto</h3><p>A APAE orienta a empresa a preparar o local e as tarefas de trabalho.</p></div>
+          <div class="trilha__caixa"><h3>Acompanhamento depois</h3><p>A equipe segue em contato com a empresa e com o trabalhador após a contratação.</p></div>
+        </div>
+
+        <form class="trilha__form" id="form-empresa" novalidate aria-labelledby="form-empresa-titulo">
+          <h3 id="form-empresa-titulo">Fale com a nossa equipe</h3>
+          <p>Preencha para que a equipe da APAE entre em contato com o seu setor de Recursos Humanos. Os campos com <span class="obrigatorio">*</span> são obrigatórios.</p>
+          <div class="trilha__campos">
+          <div class="campo">
+            <label for="rh-nome">Seu nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input id="rh-nome" name="nome" type="text" autocomplete="name" required aria-describedby="rh-nome-erro">
+            <span class="campo__erro" id="rh-nome-erro" aria-live="polite" hidden></span>
+          </div>
+          <div class="campo">
+            <label for="rh-empresa">Empresa <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input id="rh-empresa" name="empresa" type="text" autocomplete="organization" required aria-describedby="rh-empresa-erro">
+            <span class="campo__erro" id="rh-empresa-erro" aria-live="polite" hidden></span>
+          </div>
+          <div class="campo">
+            <label for="rh-email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input id="rh-email" name="email" type="email" autocomplete="email" required aria-describedby="rh-email-erro">
+            <span class="campo__erro" id="rh-email-erro" aria-live="polite" hidden></span>
+          </div>
+          <div class="campo">
+            <label for="rh-telefone">Telefone com DDD <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input id="rh-telefone" name="telefone" type="tel" autocomplete="tel" required aria-describedby="rh-telefone-dica rh-telefone-erro">
+            <span class="campo__dica" id="rh-telefone-dica">Exemplo: (19) 99999-9999</span>
+            <span class="campo__erro" id="rh-telefone-erro" aria-live="polite" hidden></span>
+          </div>
+          </div>
+          <button type="submit" class="trilha__botao">Quero contratar com apoio da APAE</button>
+          <div class="trilha__resultado" role="status" hidden></div>
+        </form>
+      </section>
+
+      <!-- Trilha 2: famílias -->
+      <section class="trilha trilha--familias" id="para-familias" aria-labelledby="familias-titulo">
+        <p class="trilha__selo">Para famílias</p>
+        <h2 class="trilha__titulo" id="familias-titulo">Centro Profissionalizante e de Convivência</h2>
+        <div class="trilha__idade"><strong>A partir de 14 anos</strong><p>O Centro atende pessoas com deficiência intelectual e desenvolve autonomia e habilidades profissionais e sociais.</p></div>
+
+        <div>
+          <h3>As três etapas</h3>
+          <ol class="trilha__fases">
+            <li><strong>Oficina de Iniciação / Habilidades</strong><p>Identificação do perfil, estímulo à comunicação, à interação e ao autocuidado.</p></li>
+            <li><strong>Oficinas de Qualificação</strong><p>Para quem demonstra interesse e perfil profissional: desenvolvimento de competências para o mercado de trabalho.</p></li>
+            <li><strong>Oficinas Ocupacionais / Grupo Conviver</strong><p>Para quem precisa de mais apoio nas habilidades do dia a dia e não tem perfil para o trabalho: empoderamento, autonomia e qualidade de vida.</p></li>
+          </ol>
+          <p><a href="../cpc/">Conheça o Centro Profissionalizante e de Convivência</a></p>
+        </div>
+
+        <div class="trilha__encaminhar">
+          <h3>Como encaminhar</h3>
+          <p>Ligue para <a href="tel:+551934041569">(19) 3404-1569</a> ou escreva para <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a>. A equipe explica os próximos passos.</p>
+          <a class="trilha__botao" href="mailto:apae@apaelimeira.org.br?subject=Encaminhamento%20ao%20Centro%20Profissionalizante%20e%20de%20Conviv%C3%AAncia">Quero encaminhar uma pessoa <span class="visualmente-oculto">(abre o seu programa de e-mail)</span></a>
+          <p class="trilha__nota">O botão abre o seu programa de e-mail com uma mensagem para a APAE.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Selo Empresa Cidadã -->
+    <section class="selo" aria-labelledby="selo-titulo">
+      <div>
+        <h2 id="selo-titulo">Selo Empresa Cidadã</h2>
+        <p>Reconhecimento anual da APAE de Limeira às empresas parceiras. Concorrem ao selo as empresas que, entre outros requisitos, oferecem estágio e contratação de aprendizes, fazem contribuições ou doações regulares e divulgam o trabalho da entidade.</p>
+        <p>Para saber mais, escreva para <a href="mailto:ger.geral@apaelimeira.org.br">ger.geral@apaelimeira.org.br</a>.</p>
+      </div>
+      <div class="selo__links">
+        <a href="../parceiros/">Ver os requisitos e as empresas parceiras</a>
+        <a href="../selo-empresa-cidada-2026/">Ver as fotos da entrega de 2026</a>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="../assets/js/layout.js" data-parte="rodape"></script>
+<script src="../assets/js/principal.js"></script>
+<script src="../assets/js/trabalho.js"></script>
+</body>
+</html>

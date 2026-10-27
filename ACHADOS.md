@@ -166,7 +166,7 @@ equipe da APAE antes de publicação.
 **Aceite:** nenhuma ocorrência dos termos vedados em todo o repositório; referências
 datadas de forma verificável.
 
-### [ ] 21 — Nenhum conteúdo sobre inclusão no mercado de trabalho
+### [x] 21 — Nenhum conteúdo sobre inclusão no mercado de trabalho
 **Heurística:** 10 — Ajuda e documentação · **Página:** nova + `/cpc/`
 
 A página do Centro Profissionalizante descreve as oficinas oferecidas aos usuários, mas

@@ -79,3 +79,23 @@ equipe técnica da APAE".
 **O que falta:** a equipe técnica da APAE precisa revisar e aprovar esses trechos.
 Depois disso, as marcas e o aviso do topo da página podem ser retirados. As respostas
 não alteradas continuam com o texto original.
+
+## Achado 21: canal das empresas e revisão dos textos da página de trabalho
+
+**O que está no repositório:** a página `/inclusao-no-trabalho/` tem duas trilhas.
+- **Empresas:** Lei 8.213/1991 com os percentuais da cota, etapas da contratação,
+  adaptação do posto, acompanhamento e formulário para o setor de RH.
+- **Famílias:** CPC, as três etapas, idade a partir de 14 anos e como encaminhar.
+
+Também tem a seção do Selo Empresa Cidadã. A página entra no menu Programas, na
+página de seção Programas e na faixa "Acesso rápido" da home.
+
+**O que falta:**
+- **Envio do formulário das empresas:** depende de servidor. Hoje ele valida os campos
+  e monta um e-mail para `apae@apaelimeira.org.br` com os dados preenchidos. A
+  entidade precisa dizer se há um canal próprio para empresas, marcado como
+  `[a confirmar com a entidade: canal do setor de inclusão no trabalho]`.
+- **Textos que precisam de revisão:** as etapas da contratação, a adaptação do posto e
+  o acompanhamento depois da contratação vieram da proposta visual e estão marcados
+  como proposta de texto. Os textos do CPC e do Selo foram tirados das páginas do
+  próprio site.

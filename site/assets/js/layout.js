@@ -68,7 +68,8 @@
       ['Centro de Apoio Diagnóstico', 'cad/'],
       ['Centro de Atenção Terapêutica', 'cat/'],
       ['Escola de Educação Especial “João Ometto”', 'escola-de-educacao-especial-joao-ometto/'],
-      ['Centro Profissionalizante e de Convivência', 'cpc/']
+      ['Centro Profissionalizante e de Convivência', 'cpc/'],
+      ['Inclusão no mercado de trabalho', 'inclusao-no-trabalho/']
     ]],
     ['Projetos', 'projetos/', [
       ['EquoterAPAE', 'equoterapia/'],
