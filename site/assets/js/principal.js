@@ -191,11 +191,7 @@
         return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? '' : 'Confira o e-mail: falta uma parte. Exemplo: nome@email.com.br';
       },
       'your-subject': function (v) { return v ? '' : 'Preencha o assunto.'; },
-      'your-message': function (v) { return v ? '' : 'Escreva a sua mensagem.'; },
-      'quiz': function (v) {
-        if (!v) return 'Responda à pergunta.';
-        return v === '26' ? '' : 'A resposta para o quiz está incorreta.';
-      }
+      'your-message': function (v) { return v ? '' : 'Escreva a sua mensagem.'; }
     };
     var campos = Array.prototype.slice.call(form.querySelectorAll('[required]'));
 
@@ -219,8 +215,18 @@
       campo.addEventListener('blur', function () { if (mexeu || campo.value) validar(campo); });
     });
 
+    // Achado 13: sem pergunta antispam. O campo armadilha (fora da tela) só é
+    // preenchido por robôs; a verificação definitiva deve ficar no servidor.
+    var armadilha = form.querySelector('[name="website"]');
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (armadilha && armadilha.value) {
+        resposta.hidden = false;
+        resposta.className = 'formulario-resposta formulario-resposta--erro';
+        resposta.textContent = 'Houve um erro ao tentar enviar sua mensagem. Tente novamente mais tarde.';
+        return;
+      }
       var invalidos = campos.filter(function (campo) { return !validar(campo); });
       resposta.hidden = false;
       if (invalidos.length) {

@@ -37,9 +37,12 @@ E-mail: <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a></p>
 <p class="formulario-campo"><label for="contato-mensagem">Sua mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
 <textarea id="contato-mensagem" cols="40" rows="10" maxlength="2000" required name="your-message" aria-describedby="contato-mensagem-erro"></textarea>
 <span class="formulario-erro" id="contato-mensagem-erro" aria-live="polite" hidden></span></p>
-<p class="formulario-campo"><label for="contato-quiz">Qual número é maior: 13 ou 26? <span class="obrigatorio" aria-hidden="true">*</span></label>
-<input id="contato-quiz" size="40" autocomplete="off" required type="text" name="quiz" aria-describedby="contato-quiz-erro">
-<span class="formulario-erro" id="contato-quiz-erro" aria-live="polite" hidden></span></p>
+<!-- Achado 13: campo armadilha (honeypot). Fica fora da tela, fora da ordem do teclado
+     e escondido de leitores de tela; só robôs o preenchem. -->
+<div class="campo-armadilha" aria-hidden="true">
+<label for="contato-site">Não preencha este campo</label>
+<input id="contato-site" type="text" name="website" tabindex="-1" autocomplete="off" value="">
+</div>
 <p><input type="submit" value="Enviar">
 </p>
 <div class="formulario-resposta" role="status" hidden></div>

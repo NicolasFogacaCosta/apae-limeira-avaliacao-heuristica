@@ -229,6 +229,8 @@ iframe { max-width: 100%; border: 0; }
 .pagina__conteudo form input:focus, .pagina__conteudo form textarea:focus { outline: 3px solid var(--amarelo); outline-offset: 1px; }
 .formulario-erro { display: flex; align-items: center; gap: 8px; margin-top: 6px; color: #B3261E; font-size: 15px; font-weight: 600; text-align: left; }
 .formulario-erro[hidden] { display: none; }
+/* Achado 13: campo armadilha fora da tela (não usar display:none, que alguns robôs ignoram) */
+.campo-armadilha { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .formulario-erro::before {
   content: '!'; flex: none; width: 22px; height: 22px; border-radius: 50%; background: #B3261E; color: #fff;
   font: 800 14px/22px 'Montserrat', sans-serif; text-align: center;

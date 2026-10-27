@@ -226,7 +226,7 @@ sugestão de grafia, sem conteúdos populares, sem link para seções ou atendim
 relacionados, atalhos para as seções mais procuradas e link para os canais de contato.
 **Aceite:** a tela de busca vazia sempre oferece pelo menos dois caminhos de saída.
 
-### [ ] 13 — Pergunta antisspam como barreira
+### [x] 13 — Pergunta antisspam como barreira
 **Heurística:** 05 — Prevenção de erros · **Página:** `/contato/`
 
 "QUAL NÚMERO É MAIOR: 13 OU 26?" em campo de texto livre, sem instrução de formato, sem

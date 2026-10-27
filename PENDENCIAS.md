@@ -107,3 +107,16 @@ crus `[download id="…"]` de um plugin de downloads que não existe mais. Eles 
 trocados por um aviso em português, porque os arquivos das edições não estão
 acessíveis. **Falta:** a entidade precisa fornecer os PDFs das edições do jornal, que
 podem então ser listados nas duas páginas.
+
+## Achado 13: verificação antispam no servidor
+
+**O que está no repositório:** a pergunta "Qual número é maior: 13 ou 26?" saiu do
+formulário de Contato. No lugar dela há um campo armadilha (*honeypot*) chamado
+`website`, fora da tela, fora da ordem do teclado e escondido de leitores de tela.
+Pessoas não o veem; robôs costumam preenchê-lo. Quando ele chega preenchido, o
+formulário não envia.
+
+**O que falta:** como esta cópia não tem servidor, a checagem só existe no navegador.
+Na publicação, o servidor que receber o formulário precisa descartar mensagens com o
+campo `website` preenchido. Se o volume de spam exigir, pode somar outra verificação
+invisível (por exemplo, tempo mínimo de preenchimento), sem desafio para o usuário.
