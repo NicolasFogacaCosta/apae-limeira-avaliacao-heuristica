@@ -177,45 +177,56 @@
     botao.addEventListener('keydown', function (e) { if (e.key === 'Enter') abrir(); });
   });
 
-  /* Formulário de contato (Contact Form 7) ----------------------------------
-     Sem servidor nesta cópia: o envio é simulado. A validação acontece só
-     depois de clicar em "Enviar", como no plugin. */
+  /* Formulário de contato ----------------------------------------------------
+     Achado 12: cada campo é validado ao sair dele (blur), com a mensagem em
+     português logo abaixo do campo; o que foi digitado nunca é apagado quando
+     a validação falha. Sem servidor nesta cópia, o envio é simulado com a
+     mensagem do Contact Form 7. */
   document.querySelectorAll('form[data-formulario-contato]').forEach(function (form) {
-    var resposta = document.createElement('div');
-    resposta.className = 'formulario-resposta';
-    resposta.hidden = true;
-    form.appendChild(resposta);
+    var resposta = form.querySelector('.formulario-resposta');
+    var MENSAGENS = {
+      'your-name': function (v) { return v ? '' : 'Preencha o seu nome.'; },
+      'your-email': function (v) {
+        if (!v) return 'Preencha o seu e-mail.';
+        return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? '' : 'Confira o e-mail: falta uma parte. Exemplo: nome@email.com.br';
+      },
+      'your-subject': function (v) { return v ? '' : 'Preencha o assunto.'; },
+      'your-message': function (v) { return v ? '' : 'Escreva a sua mensagem.'; },
+      'quiz': function (v) {
+        if (!v) return 'Responda à pergunta.';
+        return v === '26' ? '' : 'A resposta para o quiz está incorreta.';
+      }
+    };
+    var campos = Array.prototype.slice.call(form.querySelectorAll('[required]'));
 
-    function limparErros() {
-      form.querySelectorAll('.formulario-erro').forEach(function (el) { el.remove(); });
+    function validar(campo) {
+      var regra = MENSAGENS[campo.name];
+      var msg = regra ? regra(campo.value.trim()) : '';
+      var erro = document.getElementById(campo.id + '-erro');
+      erro.textContent = msg;
+      erro.hidden = !msg;
+      if (msg) campo.setAttribute('aria-invalid', 'true'); else campo.removeAttribute('aria-invalid');
+      return !msg;
     }
-    function erro(campo, texto) {
-      var span = document.createElement('span');
-      span.className = 'formulario-erro';
-      span.style.cssText = 'display:block;color:#dc3232;font-size:1em;font-weight:normal;';
-      span.textContent = texto;
-      campo.insertAdjacentElement('afterend', span);
-    }
+
+    campos.forEach(function (campo) {
+      var mexeu = false;
+      campo.addEventListener('input', function () {
+        mexeu = true;
+        if (campo.getAttribute('aria-invalid') === 'true') validar(campo);
+        resposta.hidden = true;
+      });
+      campo.addEventListener('blur', function () { if (mexeu || campo.value) validar(campo); });
+    });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      limparErros();
-      var falhou = false;
-      var quizErrado = false;
-      form.querySelectorAll('input[aria-required="true"], textarea[aria-required="true"]').forEach(function (campo) {
-        var v = campo.value.trim();
-        if (!v) { erro(campo, 'Preencha este campo.'); falhou = true; return; }
-        if (campo.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) {
-          erro(campo, 'Digite um endereço de e-mail.'); falhou = true; return;
-        }
-        if (campo.name === 'quiz' && v !== '26') {
-          erro(campo, 'A resposta para o quiz está incorreta.'); falhou = true; quizErrado = true;
-        }
-      });
+      var invalidos = campos.filter(function (campo) { return !validar(campo); });
       resposta.hidden = false;
-      if (falhou) {
+      if (invalidos.length) {
         resposta.className = 'formulario-resposta formulario-resposta--erro';
         resposta.textContent = 'Um ou mais campos possuem um erro. Verifique e tente novamente.';
+        invalidos[0].focus();
         return;
       }
       resposta.className = 'formulario-resposta';

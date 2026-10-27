@@ -121,7 +121,7 @@ identificado como tal. *Atenção ao nome: é Instituto **Jô** Clemente, não "
 **Aceite:** o bloco existe, é alcançável sem rolagem exaustiva e o link abre identificado
 como site externo.
 
-### [ ] 12 — Campos obrigatórios sem marcação e sem validação prévia
+### [x] 12 — Campos obrigatórios sem marcação e sem validação prévia
 **Heurística:** 05 — Prevenção de erros · **Página:** `/contato/`
 
 Os cinco campos do formulário são obrigatórios (`aria-required="true"`), mas nada na tela

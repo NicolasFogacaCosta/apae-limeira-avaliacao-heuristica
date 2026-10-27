@@ -24,22 +24,25 @@ E-mail: <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a></p>
 <p style="text-align: center"><strong>Preencha os campos abaixo e envie-nos sua mensagem:</strong><br>
 <p></p> <ul></ul>
 <form action="#" method="post" novalidate data-formulario-contato>
-<p><label> Seu nome<br>
-<input size="40" maxlength="400" aria-required="true" value="" type="text" name="your-name"> </label>
-</p>
-<p><label> Seu e-mail<br>
-<input size="40" maxlength="400" aria-required="true" value="" type="email" name="your-email"> </label>
-</p>
-<p><label> Assunto<br>
-<input size="40" maxlength="400" aria-required="true" value="" type="text" name="your-subject"> </label>
-</p>
-<p><label> Sua mensagem<br>
-<textarea cols="40" rows="10" maxlength="2000" aria-required="true" name="your-message"></textarea> </label>
-</p>
-<p><label>Qual número é maior: 13 ou 26? <input size="40" autocomplete="off" aria-required="true" type="text" name="quiz"></label>
-</p>
+<p class="formulario-legenda">Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+<p class="formulario-campo"><label for="contato-nome">Seu nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+<input id="contato-nome" size="40" maxlength="400" required autocomplete="name" type="text" name="your-name" aria-describedby="contato-nome-erro">
+<span class="formulario-erro" id="contato-nome-erro" aria-live="polite" hidden></span></p>
+<p class="formulario-campo"><label for="contato-email">Seu e-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+<input id="contato-email" size="40" maxlength="400" required autocomplete="email" type="email" name="your-email" aria-describedby="contato-email-erro">
+<span class="formulario-erro" id="contato-email-erro" aria-live="polite" hidden></span></p>
+<p class="formulario-campo"><label for="contato-assunto">Assunto <span class="obrigatorio" aria-hidden="true">*</span></label>
+<input id="contato-assunto" size="40" maxlength="400" required type="text" name="your-subject" aria-describedby="contato-assunto-erro">
+<span class="formulario-erro" id="contato-assunto-erro" aria-live="polite" hidden></span></p>
+<p class="formulario-campo"><label for="contato-mensagem">Sua mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
+<textarea id="contato-mensagem" cols="40" rows="10" maxlength="2000" required name="your-message" aria-describedby="contato-mensagem-erro"></textarea>
+<span class="formulario-erro" id="contato-mensagem-erro" aria-live="polite" hidden></span></p>
+<p class="formulario-campo"><label for="contato-quiz">Qual número é maior: 13 ou 26? <span class="obrigatorio" aria-hidden="true">*</span></label>
+<input id="contato-quiz" size="40" autocomplete="off" required type="text" name="quiz" aria-describedby="contato-quiz-erro">
+<span class="formulario-erro" id="contato-quiz-erro" aria-live="polite" hidden></span></p>
 <p><input type="submit" value="Enviar">
 </p>
+<div class="formulario-resposta" role="status" hidden></div>
 </form>
 </p>
 <p><iframe src="http://maps.google.com.br/maps?oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;q=apae+limeira+google+maps&amp;fb=1&amp;gl=br&amp;hq=apae&amp;hnear=0x94c880ecaee30113:0xd333475dd751788f,Limeira+-+S%C3%A3o+Paulo&amp;hl=pt-BR&amp;view=map&amp;cid=639038785901366490&amp;ll=-22.56799,-47.446589&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;iwloc=A&amp;output=embed" width="700" height="300" frameborder="0"></iframe><br>

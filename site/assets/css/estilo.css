@@ -216,6 +216,18 @@ iframe { max-width: 100%; border: 0; }
   font: 600 15px 'Open Sans', sans-serif; padding: 12px 30px;
 }
 .formulario-resposta { margin-top: 1em; padding: 10px 14px; border: 2px solid #46b450; }
+/* Achado 12: obrigatórios marcados e erro abaixo do campo, antes do envio */
+.formulario-legenda { font-size: 16px; }
+.formulario-legenda .obrigatorio { font-size: 20px; }
+.pagina__conteudo form input[aria-invalid="true"],
+.pagina__conteudo form textarea[aria-invalid="true"] { border: 2px solid #B3261E; background: #FDF3F2; }
+.pagina__conteudo form input:focus, .pagina__conteudo form textarea:focus { outline: 3px solid var(--amarelo); outline-offset: 1px; }
+.formulario-erro { display: flex; align-items: center; gap: 8px; margin-top: 6px; color: #B3261E; font-size: 15px; font-weight: 600; text-align: left; }
+.formulario-erro[hidden] { display: none; }
+.formulario-erro::before {
+  content: '!'; flex: none; width: 22px; height: 22px; border-radius: 50%; background: #B3261E; color: #fff;
+  font: 800 14px/22px 'Montserrat', sans-serif; text-align: center;
+}
 .formulario-resposta--erro { border-color: #ffb900; }
 
 /* Compartilhar */
