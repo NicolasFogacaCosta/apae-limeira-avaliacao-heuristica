@@ -20,7 +20,36 @@
 <p style="text-align: center">Av. Antônio d’Andrea, 364 | Parque Nossa Sr.ª das Dores | CEP 13483-000 | Limeira | SP<br>
 Tel.: <a href="tel:+551934041569">(19) 3404.1569</a> | Fax: <a href="tel:+551934041569">3404.1569</a><br>
 E-mail: <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a></p>
-<p style="text-align: center"><strong>Nossa Ouvidoria: </strong>Mande sua mensagem pelo e-mail <a href="mailto:ger.geral@apaelimeira.org.br"><strong>ger.geral@apaelimeira.org.br</strong></a></p>
+<!-- Achado 26: bloco próprio da Ouvidoria -->
+<section class="ouvidoria" aria-labelledby="ouvidoria-titulo">
+  <h2 class="ouvidoria__titulo" id="ouvidoria-titulo">Ouvidoria</h2>
+  <p class="ouvidoria__intro">Canal para elogios, sugestões, reclamações, denúncias e pedidos de informação sobre a APAE de Limeira.</p>
+  <div class="ouvidoria__grade">
+    <div>
+      <h3>O que pode ser tratado</h3>
+      <ul>
+        <li>Elogios e sugestões</li>
+        <li>Reclamações sobre o atendimento</li>
+        <li>Denúncias</li>
+        <li>Pedidos de informação</li>
+      </ul>
+      <p><span class="revisao-pendente">Proposta de texto: aguarda revisão da equipe da APAE</span></p>
+    </div>
+    <div>
+      <h3>O que acontece depois do envio</h3>
+      <p>A manifestação chega à Ouvidoria, que responde pelo e-mail informado.</p>
+      <p><strong>Prazo de resposta:</strong> <span class="a-confirmar">[a confirmar com a entidade: prazo de resposta]</span></p>
+    </div>
+    <div>
+      <h3>Manifestação anônima</h3>
+      <p><span class="a-confirmar">[a confirmar com a entidade: se a Ouvidoria aceita manifestações anônimas e por qual canal]</span></p>
+    </div>
+    <div>
+      <h3>Como enviar</h3>
+      <p>Pelo formulário abaixo, escolhendo o assunto “Manifestação de ouvidoria”, ou pelo e-mail <a href="mailto:ger.geral@apaelimeira.org.br">ger.geral@apaelimeira.org.br</a>.</p>
+    </div>
+  </div>
+</section>
 <p style="text-align: center"><strong>Preencha os campos abaixo e envie-nos sua mensagem:</strong><br>
 <p></p> <ul></ul>
 <form action="#" method="post" novalidate data-formulario-contato>
@@ -32,7 +61,17 @@ E-mail: <a href="mailto:apae@apaelimeira.org.br">apae@apaelimeira.org.br</a></p>
 <input id="contato-email" size="40" maxlength="400" required autocomplete="email" type="email" name="your-email" aria-describedby="contato-email-erro">
 <span class="formulario-erro" id="contato-email-erro" aria-live="polite" hidden></span></p>
 <p class="formulario-campo"><label for="contato-assunto">Assunto <span class="obrigatorio" aria-hidden="true">*</span></label>
-<input id="contato-assunto" size="40" maxlength="400" required type="text" name="your-subject" aria-describedby="contato-assunto-erro">
+<select id="contato-assunto" required name="your-subject" aria-describedby="contato-assunto-dica contato-assunto-erro">
+<option value="">Escolha o assunto</option>
+<option>Informações gerais</option>
+<option>Teste do Pezinho</option>
+<option>Doações</option>
+<option>Eventos</option>
+<option>Trabalho e inclusão</option>
+<option>Manifestação de ouvidoria</option>
+<option>Outro assunto</option>
+</select>
+<span class="formulario-dica" id="contato-assunto-dica">Para elogios, sugestões, reclamações ou denúncias, escolha “Manifestação de ouvidoria”.</span>
 <span class="formulario-erro" id="contato-assunto-erro" aria-live="polite" hidden></span></p>
 <p class="formulario-campo"><label for="contato-mensagem">Sua mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
 <textarea id="contato-mensagem" cols="40" rows="10" maxlength="2000" required name="your-message" aria-describedby="contato-mensagem-erro"></textarea>

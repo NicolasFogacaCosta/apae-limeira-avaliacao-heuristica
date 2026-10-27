@@ -171,3 +171,17 @@ de cada publicação.
 **O que falta:** a equipe de comunicação da APAE deve revisar a classificação. Uma
 regra por palavra-chave acerta a maioria, mas não todas; por exemplo, uma doação feita
 durante uma festa pode ter ido para Eventos.
+
+## Achado 26: dados da Ouvidoria a confirmar
+
+**O que está no repositório:** em `/contato/`, a linha solta com o e-mail da Ouvidoria
+virou um bloco próprio. Ele informa o que pode ser tratado, o que acontece depois do
+envio, o prazo de resposta, se há manifestação anônima e como enviar. O assunto do
+formulário virou um seletor com a opção "Manifestação de ouvidoria".
+
+**O que falta confirmar com a entidade:**
+- o prazo de resposta da Ouvidoria;
+- se a Ouvidoria aceita manifestações anônimas e por qual canal. Hoje o formulário
+  exige nome e e-mail;
+- a lista de temas ("o que pode ser tratado"), que veio da proposta visual e está
+  marcada como proposta de texto.

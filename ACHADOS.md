@@ -304,7 +304,7 @@ busca alcança esse conteúdo.
 reais e criar seção de notícias acessível pela navegação.
 **Aceite:** nenhuma publicação sem ano visível ou marcada como "Sem categoria".
 
-### [ ] 26 — Ouvidoria reduzida a um e-mail no corpo do texto
+### [x] 26 — Ouvidoria reduzida a um e-mail no corpo do texto
 **Heurística:** 10 — Ajuda e documentação · **Página:** `/contato/`
 
 O menu anuncia "Contato/Ouvidoria", mas a ouvidoria é uma linha solta no texto com um

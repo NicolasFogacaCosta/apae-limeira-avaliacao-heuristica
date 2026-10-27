@@ -253,10 +253,23 @@
         if (!v) return 'Preencha o seu e-mail.';
         return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? '' : 'Confira o e-mail: falta uma parte. Exemplo: nome@email.com.br';
       },
-      'your-subject': function (v) { return v ? '' : 'Preencha o assunto.'; },
+      'your-subject': function (v) { return v ? '' : 'Escolha o assunto.'; },
       'your-message': function (v) { return v ? '' : 'Escreva a sua mensagem.'; }
     };
     var campos = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+
+    // Achado 26: ao escolher "Manifestação de ouvidoria", a dica diz para onde vai.
+    var assunto = form.querySelector('select[name="your-subject"]');
+    var dicaAssunto = document.getElementById('contato-assunto-dica');
+    if (assunto && dicaAssunto) {
+      var dicaPadrao = dicaAssunto.textContent;
+      assunto.addEventListener('change', function () {
+        dicaAssunto.textContent = assunto.value === 'Manifestação de ouvidoria'
+          ? 'Este assunto vai direto para a Ouvidoria, que responde pelo e-mail informado (veja o bloco Ouvidoria acima).'
+          : dicaPadrao;
+        validar(assunto);
+      });
+    }
 
     function validar(campo) {
       var regra = MENSAGENS[campo.name];

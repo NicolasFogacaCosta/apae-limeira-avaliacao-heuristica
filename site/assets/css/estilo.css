@@ -229,6 +229,23 @@ iframe { max-width: 100%; border: 0; }
 .pagina__conteudo form input:focus, .pagina__conteudo form textarea:focus { outline: 3px solid var(--amarelo); outline-offset: 1px; }
 .formulario-erro { display: flex; align-items: center; gap: 8px; margin-top: 6px; color: #B3261E; font-size: 15px; font-weight: 600; text-align: left; }
 .formulario-erro[hidden] { display: none; }
+/* Achado 26: bloco da Ouvidoria e seletor de assunto */
+.ouvidoria { background: var(--azul-institucional); color: #fff; border-top: 8px solid var(--amarelo); padding: 28px 32px; margin: 8px 0 32px; text-align: left; }
+.pagina__conteudo .ouvidoria__titulo { margin: 0 0 6px; font: 800 28px 'Montserrat', sans-serif; color: #fff; }
+.ouvidoria__intro { font-size: 18px; margin: 0 0 18px; }
+.ouvidoria__grade { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.pagina__conteudo .ouvidoria h3 { margin: 0 0 8px; font: 700 17px 'Montserrat', sans-serif; color: var(--amarelo); }
+.ouvidoria ul { margin: 0 0 10px; padding-left: 20px; }
+.ouvidoria p { margin: 0 0 10px; font-size: 16px; }
+.pagina__conteudo .ouvidoria a { color: #fff; text-decoration: underline; font-weight: 700; overflow-wrap: anywhere; }
+.pagina__conteudo form select {
+  width: 100%; margin-top: 4px; min-height: 44px; padding: 8px 12px; border: 1px solid #ccc; background: #fff;
+  font: 15px 'Open Sans', sans-serif; color: var(--texto);
+}
+.pagina__conteudo form select[aria-invalid="true"] { border: 2px solid #B3261E; background: #FDF3F2; }
+.formulario-dica { display: block; margin-top: 4px; font-size: 15px; text-align: left; }
+@media (max-width: 1024px) { .ouvidoria__grade { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 767px) { .ouvidoria__grade { grid-template-columns: 1fr; } .ouvidoria { padding: 24px 20px; } }
 /* Achado 13: campo armadilha fora da tela (não usar display:none, que alguns robôs ignoram) */
 .campo-armadilha { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .formulario-erro::before {
