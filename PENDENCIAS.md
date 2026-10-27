@@ -127,3 +127,19 @@ O botão "Clique aqui" no fim de `/transparencia/` tinha `href="#"`, também em 
 e não levava a lugar nenhum. Como não há destino para descrever, ele foi retirado.
 **Falta:** se a entidade souber qual documento ou página o botão deveria abrir, ele pode
 voltar com um texto que descreva esse destino.
+
+## Achado 20: redirecionamento permanente e histórico da oficina de paletes
+
+**O que está no repositório:** `/reforma-de-pallets/` virou uma página de
+redirecionamento para `/fabrica-de-paletes/`, que é a página do menu. O
+redirecionamento usa `meta refresh`, JavaScript e `link rel="canonical"`, e o card da
+home agora aponta para a página do menu.
+
+**O que falta:**
+- **Redirecionamento 301 no servidor:** na publicação, o servidor deve responder à URL
+  antiga com 301 para `/fabrica-de-paletes/`. Assim os buscadores transferem o
+  endereço; a página de redirecionamento cobre os casos em que isso não for possível.
+- **Data de início da oficina:** a página antiga dizia que a oficina começou em 2007,
+  com detalhes de produção e empresas parceiras. A atual diz "Iniciado em 2012". Como
+  as informações se contradizem, o texto antigo não foi copiado. A entidade pode
+  confirmar a data e decidir se quer reaproveitar algo do histórico.

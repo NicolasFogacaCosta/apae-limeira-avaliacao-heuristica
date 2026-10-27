@@ -59,7 +59,7 @@
     ['Quem Somos', 'quem-somos/', [
       ['A Entidade', 'estrutura/'],
       ['A Diretoria', 'diretoria/'],
-      ['Conselho', 'conselho/'],
+      ['Conselhos', 'conselho/'],
       ['Política de Qualidade', 'politica-de-qualidade/'],
       ['Parceiros', 'parceiros/'],
       ['Revista APAE Limeira 50 anos', 'revista-apae-limeira-50-anos/']
@@ -162,7 +162,7 @@
               itemLista('Home', url('')) +
               itemLista('A Entidade', url('estrutura/')) +
               itemLista('A Diretoria', url('diretoria/')) +
-              itemLista('O Conselho', url('conselho/')) +
+              itemLista('Conselhos', url('conselho/')) +
               itemLista('Política de Qualidade', url('politica-de-qualidade/')) +
               itemLista('Transparência', url('transparencia/')) +
               itemLista('Contato', url('contato/')) +

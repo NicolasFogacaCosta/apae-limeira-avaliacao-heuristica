@@ -268,7 +268,7 @@ enquanto não houver decisão.
 de "Aceitar todos", e impedir que a faixa cubra conteúdo interativo.
 **Aceite:** aceitar e recusar custam o mesmo número de cliques.
 
-### [ ] 20 — Páginas duplicadas e rótulos divergentes
+### [x] 20 — Páginas duplicadas e rótulos divergentes
 **Heurística:** 04 — Consistência e padrões · **Páginas:** `/fabrica-de-paletes/`, `/reforma-de-pallets/`, `/estrutura/`, `/conselho/`
 
 Duas páginas para o mesmo serviço: "Fábrica de Paletes" (no menu) e "Reforma de pallets"
