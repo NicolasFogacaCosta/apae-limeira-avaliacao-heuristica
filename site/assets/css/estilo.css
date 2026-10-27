@@ -617,6 +617,10 @@ iframe { max-width: 100%; border: 0; }
 .pagina__conteudo .transparencia__nome a { color: #1c6880; text-decoration: underline; }
 .transparencia__explicacao { margin: 0 0 10px; font-size: 15px; line-height: 1.5; }
 .transparencia__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; font-size: 14px; color: #4A4A4A; }
+/* Achado 15: documentos externos identificados */
+.transparencia__nome .icone-externo { width: 15px; height: 15px; vertical-align: -2px; }
+.transparencia__externo { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
+.transparencia__externo .icone-externo { width: 14px; height: 14px; }
 
 /* --------------------------------------------------------------------------
    Achado 07: Teste do Pezinho encaminha ao Instituto Jô Clemente

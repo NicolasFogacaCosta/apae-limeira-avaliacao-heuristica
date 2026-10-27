@@ -47,7 +47,7 @@
 
   function redes(classe) {
     return '<div class="' + classe + '">' + REDES.map(function (r) {
-      return '<a class="rede" href="' + r[1] + '" target="_blank">' + icone(r[2]) + '<span>' + r[0] + '</span></a>';
+      return '<a class="rede" href="' + r[1] + '" target="_blank" rel="noopener">' + icone(r[2]) + '<span>' + r[0] + ' da APAE Limeira (abre em nova janela)</span></a>';
     }).join('') + '</div>';
   }
 
@@ -127,7 +127,7 @@
       '</div>' +
       '<header class="cabecalho">' +
         '<div class="cabecalho__inner">' +
-          '<div class="cabecalho__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-sitetopo.png') + '" alt="logo-60-anos-sitetopo"></a></div>' +
+          '<div class="cabecalho__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-sitetopo.png') + '" alt="APAE Limeira, 60 anos: página inicial"></a></div>' +
           '<div class="cabecalho__direita">' +
             '<form class="busca-topo" role="search" action="' + url('busca/') + '" method="get">' +
               '<input class="busca-topo__campo" type="search" name="s" title="Buscar no site" aria-label="Buscar no site" value="">' +
@@ -150,7 +150,7 @@
     return '<footer class="rodape">' +
         '<div class="rodape__inner">' +
           '<div class="rodape__col rodape__col--marca">' +
-            '<div class="rodape__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-siterodape.png') + '" alt="logo-60-anos-siterodape"></a></div>' +
+            '<div class="rodape__logo"><a href="' + url('') + '"><img src="' + url('storage/2025/05/logo-60-anos-siterodape.png') + '" alt="APAE Limeira, 60 anos: página inicial"></a></div>' +
             '<p class="rodape__endereco">Av. Antônio D’Andréa, 364<br>Parque N Senhora das Dores<br>Limeira – SP | CEP: 13483-000</p>' +
             '<p class="rodape__email">apae@apaelimeira.org.br</p>' +
             '<p class="rodape__telefone"><a href="tel:+551934041569">(19) 3404-1569</a></p>' +

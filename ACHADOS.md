@@ -237,7 +237,7 @@ verificação no servidor). Se for necessário manter um desafio visível, infor
 esperado e oferecer alternativa.
 **Aceite:** o envio do formulário não depende de raciocínio ou digitação adicional.
 
-### [ ] 15 — "Clique aqui" e downloads sem indicação de destino
+### [x] 15 — "Clique aqui" e downloads sem indicação de destino
 **Heurística:** 06 — Reconhecimento em vez de memorização · **Páginas:** `/transparencia/`, `/doacoes/`
 
 O único botão destacado da página de Transparência diz apenas "Clique aqui". Os documentos

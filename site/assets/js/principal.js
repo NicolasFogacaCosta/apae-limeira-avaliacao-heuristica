@@ -161,6 +161,8 @@
 
   /* Compartilhar ----------------------------------------------------------- */
   document.querySelectorAll('[data-compartilhar] [data-rede]').forEach(function (botao) {
+    // Achado 15: o nome do botão diz o que ele faz, mesmo lido fora de contexto.
+    botao.setAttribute('aria-label', 'Compartilhar esta página no ' + botao.textContent.trim() + ' (abre em nova janela)');
     function abrir() {
       var u = encodeURIComponent(location.href);
       var t = encodeURIComponent(document.title);

@@ -120,3 +120,10 @@ formulário não envia.
 Na publicação, o servidor que receber o formulário precisa descartar mensagens com o
 campo `website` preenchido. Se o volume de spam exigir, pode somar outra verificação
 invisível (por exemplo, tempo mínimo de preenchimento), sem desafio para o usuário.
+
+## Achado 15: destino do antigo botão "Clique aqui" da Transparência
+
+O botão "Clique aqui" no fim de `/transparencia/` tinha `href="#"`, também em produção,
+e não levava a lugar nenhum. Como não há destino para descrever, ele foi retirado.
+**Falta:** se a entidade souber qual documento ou página o botão deveria abrir, ele pode
+voltar com um texto que descreva esse destino.
