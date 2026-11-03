@@ -112,6 +112,7 @@ quebrado e redirecionamentos que levam a algum conteúdo.
 | 3 | O índice da busca passa a ser gerado no build, com as notícias novas e um resultado por tema da Transparência, que leva à lista filtrada pela palavra buscada | [`e237f0a`](../../commit/e237f0a) |
 | 4 | As notícias até 2018 vão para o arquivo do site (`/arquivo/`), com aviso de conteúdo antigo, junto das galerias e páginas que estavam soltas. Saem as páginas de plugin, de exemplo, vazias e de teste; outras viram redirecionamento. Entra a página 404 | [`726563a`](../../commit/726563a) |
 | 5 | Painel de conteúdo (Decap CMS) em `/admin/` para a equipe publicar notícias e documentos sem mexer em código. Os documentos passam a ser um arquivo cada | [`fff08d5`](../../commit/fff08d5) |
+| 5 | O painel passa a usar o novo nome do repositório, `apae-limeira-avaliacao-heuristica` | [`4483e5b`](../../commit/4483e5b) |
 
 As etapas não alteram os achados corrigidos na `main`. O que mudou na aparência foi só o
 que cada etapa acrescenta: filtros e caminho nas notícias, a lista de documentos, o
