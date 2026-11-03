@@ -1,0 +1,7 @@
+{# Uma notícia na listagem: data completa, categoria, título e resumo #}
+<li class="noticia">
+  <div><time class="noticia__data" datetime="{{ n.date | dataIso }}">{{ n.date | dataExtenso }}</time><br>
+    <a class="noticia__categoria" href="{{ raiz }}noticias/categoria/{{ n.data.categoria | slug }}/">{{ n.data.categoria }}</a></div>
+  <div><h2 class="noticia__titulo"><a href="{{ n.url | link(raiz) }}">{{ n.data.titulo }}</a></h2>
+    <p class="noticia__resumo">{{ n.data.resumo }}</p></div>
+</li>

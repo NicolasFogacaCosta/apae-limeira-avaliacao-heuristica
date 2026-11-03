@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+classeBody: publicacao-interna
+---
+{#
+  Página de uma notícia. O texto vem do arquivo Markdown em
+  src/noticias/publicacoes/; título, data e categoria vêm do front matter.
+#}
+{% set raiz = page.url | raiz %}
+<main id="conteudo" class="publicacao">
+  <div class="container publicacao__inner">
+    <nav class="caminho" aria-label="Você está em">
+      <ol>
+        <li><a href="{{ raiz }}">Início</a></li>
+        <li><a href="{{ raiz }}noticias/">Notícias</a></li>
+      </ol>
+    </nav>
+    <p class="publicacao__meta">
+      <time class="publicacao__data" datetime="{{ page.date | dataIso }}">{{ page.date | dataBr }}</time>
+      <a class="noticia__categoria" href="{{ raiz }}noticias/categoria/{{ categoria | slug }}/">{{ categoria }}<span class="visualmente-oculto">: ver todas desta categoria</span></a>
+    </p>
+    <h1 class="publicacao__titulo">{{ titulo }}</h1>
+    <div class="publicacao__conteudo">
+{{ content | safe }}
+    </div>
+  </div>
+</main>
+<section class="compartilhe">
+  <div class="container compartilhe__inner">
+    <h2 class="compartilhe__titulo">Compartilhe:</h2>
+    <div class="compartilhe__botoes" data-compartilhar>
+      <a class="compartilhe__btn compartilhe__btn--facebook" data-rede="facebook" role="button" tabindex="0">Facebook</a>
+      <a class="compartilhe__btn compartilhe__btn--whatsapp" data-rede="whatsapp" role="button" tabindex="0">WhatsApp</a>
+      <a class="compartilhe__btn compartilhe__btn--x" data-rede="x" role="button" tabindex="0">X</a>
+      <a class="compartilhe__btn compartilhe__btn--linkedin" data-rede="linkedin" role="button" tabindex="0">LinkedIn</a>
+    </div>
+    <p class="outras__todas"><a href="{{ raiz }}noticias/">Ver todas as notícias</a></p>
+  </div>
+</section>
+<section class="outras">
+  <div class="container">
+    <h2 class="outras__cabecalho">Outras notícias</h2>
+    <div class="outras__grade">
+      {%- for n in collections.noticia | outrasNoticias(page.url) %}
+      <article class="outras__item">
+        {% if n.data.imagem %}<a class="outras__thumb" href="{{ n.url | link(raiz) }}" tabindex="-1"><img src="{{ n.data.imagem }}" alt="" loading="lazy"></a>{% endif %}
+        <h3 class="outras__titulo"><a href="{{ n.url | link(raiz) }}">{{ n.data.titulo }}</a></h3>
+        <span class="outras__data">{{ n.date | dataExtenso }}</span>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

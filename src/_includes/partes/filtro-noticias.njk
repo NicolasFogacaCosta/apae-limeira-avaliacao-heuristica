@@ -1,0 +1,17 @@
+{# Filtros da seção de notícias: links comuns, que funcionam sem JavaScript.
+   Usa categoriaAtual e anoAtual, definidos pela página que inclui. #}
+<div class="noticias__filtros">
+  <nav class="noticias__filtro" aria-label="Filtrar por categoria">
+    <span class="noticias__filtro-rotulo">Categoria</span>
+    <a href="{{ raiz }}noticias/"{% if not categoriaAtual and not anoAtual %} aria-current="true"{% endif %}>Todas</a>
+    {% for c in categoriasNoticias %}
+    <a href="{{ raiz }}{{ c.url }}"{% if c.nome == categoriaAtual %} aria-current="true"{% endif %}>{{ c.nome }}</a>
+    {% endfor %}
+  </nav>
+  <nav class="noticias__filtro" aria-label="Filtrar por ano">
+    <span class="noticias__filtro-rotulo">Ano</span>
+    {% for a in collections.anosNoticias %}
+    <a href="{{ a.url | link(raiz) }}"{% if a.ano == anoAtual %} aria-current="true"{% endif %}>{{ a.ano }}</a>
+    {% endfor %}
+  </nav>
+</div>

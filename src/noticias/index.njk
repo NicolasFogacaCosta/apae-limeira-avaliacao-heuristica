@@ -1,0 +1,34 @@
+---
+# Achado 23: seção de notícias com data completa e categoria. Gerada no build,
+# 12 por página, em /noticias/ e /noticias/categoria/<categoria>/.
+layout: layouts/base.njk
+classeBody: pagina-interna pagina-noticias
+pagination:
+  data: collections.paginasNoticias
+  size: 1
+  alias: lista
+permalink: "{{ lista.url }}"
+eleventyComputed:
+  tituloPagina: "{% if lista.categoria %}{{ lista.categoria }} – {% endif %}Notícias{% if lista.numero > 1 %}, página {{ lista.numero }}{% endif %}"
+---
+{% set raiz = page.url | raiz %}
+{% set categoriaAtual = lista.categoria %}
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">NOTÍCIAS</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo noticias">
+    <p class="noticias__intro">Todas as publicações da APAE de Limeira, da mais recente para a mais antiga.</p>
+    {% include "partes/filtro-noticias.njk" %}
+    <p class="noticias__contagem">{{ lista.quantidade }} publicações{% if lista.categoria %} em {{ lista.categoria }}{% endif %} · página {{ lista.numero }} de {{ lista.total }}</p>
+    <ul class="noticias__lista">
+      {% for n in lista.itens %}{% include "partes/item-noticia.njk" %}{% endfor %}
+    </ul>
+    <nav class="noticias__paginas" aria-label="Páginas de notícias">
+      {% if lista.anterior %}<a href="{{ lista.anterior | link(raiz) }}" rel="prev">← Mais recentes</a>{% else %}<span class="noticias__desativado">← Mais recentes</span>{% endif %}
+      <span>Página {{ lista.numero }} de {{ lista.total }}</span>
+      {% if lista.proxima %}<a href="{{ lista.proxima | link(raiz) }}" rel="next">Mais antigas →</a>{% else %}<span class="noticias__desativado">Mais antigas →</span>{% endif %}
+    </nav>
+  </div>
+</main>

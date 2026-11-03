@@ -277,6 +277,14 @@ iframe { max-width: 100%; border: 0; }
    Publicação
    -------------------------------------------------------------------------- */
 .publicacao__inner { max-width: 800px; padding-top: 60px; padding-bottom: 20px; }
+/* Trilha de navegação (onde a pessoa está no site) */
+.caminho ol { display: flex; flex-wrap: wrap; gap: 4px 0; list-style: none; margin: 0 0 16px; padding: 0; font-size: 15px; }
+.caminho li + li::before { content: '›'; margin: 0 8px; color: #6B7280; }
+.caminho a { color: #1c6880; text-decoration: underline; }
+.publicacao__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 30px; }
+.publicacao__meta .publicacao__data { margin-bottom: 0; }
+.publicacao__meta .noticia__categoria { margin-top: 0; color: var(--texto); text-decoration: none; }
+.publicacao__meta .noticia__categoria:hover { text-decoration: underline; }
 .publicacao__data { display: block; color: var(--amarelo-divisor); font-family: 'Rubik', sans-serif; font-size: 16px; font-weight: 300; margin-bottom: 30px; }
 .publicacao__titulo { color: var(--azul-claro); font-family: 'Sansita', sans-serif; font-size: 45px; font-weight: 400; margin-bottom: 40px; }
 .publicacao__conteudo { font-size: 16px; line-height: 1.6; }
@@ -534,31 +542,42 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
 .resultado__data b { display: block; font-size: 13px; font-weight: 700; color: var(--texto); margin-top: 2px; }
 .noticias { text-align: left; }
 .noticias__intro { font-size: 18px; }
-.noticias__filtro { border: 0; padding: 0; margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.noticias__filtro legend { float: left; margin-right: 8px; font: 700 16px 'Montserrat', sans-serif; color: var(--azul-institucional); }
-.pagina__conteudo .noticias__filtro label {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 2px solid #C9CFD5; border-radius: 22px;
-  cursor: pointer; font: 600 15px 'Open Sans', sans-serif; text-transform: none;
+/* Filtros por categoria e por ano: links comuns, gerados no build */
+.noticias__filtros { display: flex; flex-direction: column; gap: 12px; margin: 0 0 16px; }
+.noticias__filtro { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.noticias__filtro-rotulo { min-width: 90px; font: 700 16px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.pagina__conteudo .noticias__filtro a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid #C9CFD5; border-radius: 22px;
+  color: var(--texto); font: 600 15px 'Open Sans', sans-serif; text-decoration: none;
 }
-.noticias__filtro label:has(input:checked) { border-color: var(--azul-institucional); background: #EEF3F8; color: var(--azul-institucional); }
-.noticias__filtro input { accent-color: var(--azul-institucional); }
+.pagina__conteudo .noticias__filtro a:hover { border-color: var(--azul-institucional); }
+.pagina__conteudo .noticias__filtro a[aria-current] { border-color: var(--azul-institucional); background: #EEF3F8; color: var(--azul-institucional); }
 .noticias__contagem { font-size: 15px; color: #4A4A4A; }
 .pagina__conteudo .noticias__lista { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 14px; }
 .noticia { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; background: #fff; border: 1px solid #DDE2E7; padding: 16px 20px; }
 .noticia__data { font: 700 15px 'Montserrat', sans-serif; color: var(--azul-institucional); }
 .noticia__categoria { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 12px; background: var(--fundo-alt); font-size: 13px; font-weight: 600; }
+.pagina__conteudo a.noticia__categoria { color: var(--texto); text-decoration: none; }
+.pagina__conteudo a.noticia__categoria:hover { text-decoration: underline; }
 .pagina__conteudo .noticia__titulo { margin: 0 0 6px; font: 700 18px/1.35 'Montserrat', sans-serif; }
 .pagina__conteudo .noticia__titulo a { color: #1c6880; text-decoration: underline; }
 .noticia__resumo { margin: 0; font-size: 15px; }
 .noticias__paginas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
-.noticias__paginas button {
-  min-height: 44px; padding: 0 18px; border: 2px solid var(--azul-institucional); border-radius: 6px; background: #fff;
-  color: var(--azul-institucional); font: 700 15px 'Montserrat', sans-serif; cursor: pointer;
+.pagina__conteudo .noticias__paginas a, .noticias__desativado {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 2px solid var(--azul-institucional); border-radius: 6px; background: #fff;
+  color: var(--azul-institucional); font: 700 15px 'Montserrat', sans-serif; text-decoration: none;
 }
-.noticias__paginas button[disabled] { opacity: .45; cursor: default; }
+.pagina__conteudo .noticias__paginas a:hover { background: #EEF3F8; }
+.noticias__desativado { opacity: .45; }
 .outras__todas { margin: 24px 0 0; }
 .outras__todas a { color: var(--azul-claro); font-weight: 700; text-decoration: underline; }
-@media (max-width: 767px) { .noticia { grid-template-columns: 1fr; gap: 6px; } }
+@media (max-width: 767px) {
+  .noticia { grid-template-columns: 1fr; gap: 6px; }
+  /* No celular, cada filtro vira uma faixa com rolagem lateral */
+  .noticias__filtro { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+  .noticias__filtro-rotulo { min-width: 0; flex: none; }
+  .pagina__conteudo .noticias__filtro a { flex: none; }
+}
 
 /* --------------------------------------------------------------------------
    Achado 21: inclusão no mercado de trabalho e faixa de acesso rápido

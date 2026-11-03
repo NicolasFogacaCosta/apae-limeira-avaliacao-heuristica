@@ -1,0 +1,29 @@
+---
+# Uma página por ano, em /noticias/<ano>/, com todas as notícias daquele ano
+layout: layouts/base.njk
+classeBody: pagina-interna pagina-noticias
+pagination:
+  data: collections.anosNoticias
+  size: 1
+  alias: grupo
+permalink: "{{ grupo.url }}"
+eleventyComputed:
+  tituloPagina: "Notícias de {{ grupo.ano }}"
+---
+{% set raiz = page.url | raiz %}
+{% set anoAtual = grupo.ano %}
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">NOTÍCIAS DE {{ grupo.ano }}</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo noticias">
+    <p class="noticias__intro">Publicações da APAE de Limeira em {{ grupo.ano }}, da mais recente para a mais antiga.</p>
+    {% include "partes/filtro-noticias.njk" %}
+    <p class="noticias__contagem">{{ grupo.itens.length }} publicações em {{ grupo.ano }}</p>
+    <ul class="noticias__lista">
+      {% for n in grupo.itens %}{% include "partes/item-noticia.njk" %}{% endfor %}
+    </ul>
+    <p class="outras__todas"><a href="{{ raiz }}noticias/">Ver todas as notícias</a></p>
+  </div>
+</main>

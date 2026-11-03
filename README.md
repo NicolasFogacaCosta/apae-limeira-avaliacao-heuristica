@@ -117,11 +117,16 @@ Dois commits marcados como `base:` não correspondem a achados:
 src/                         fonte do site (o Eleventy gera site/ a partir daqui)
   _data/                     menu.js, rodape.js, redes.js, cookies.js: os links do
                              cabeçalho e do rodapé, editados num lugar só
-  _includes/partes/          cabecalho.njk, rodape.njk, cookies.njk, icones.njk
+  _includes/partes/          cabecalho.njk, rodape.njk, cookies.njk, icones.njk,
+                             filtro-noticias.njk, item-noticia.njk
+  _includes/layouts/         base.njk (documento) e noticia.njk (página de notícia)
   _includes/macros.njk       ícone, redes sociais e item de lista do rodapé
   index.html                 home
   busca/                     resultados da busca (equivale a /?s= no WordPress)
-  <slug>/index.html          páginas e publicações, nas mesmas URLs da produção
+  <slug>/index.html          páginas institucionais, nas mesmas URLs da produção
+  noticias/publicacoes/      as 369 notícias em Markdown, publicadas em /<slug>/
+  noticias/index.njk         listagem: /noticias/ e /noticias/categoria/<categoria>/
+  noticias/ano.njk           uma página por ano: /noticias/<ano>/
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
   assets/js/principal.js     menu, busca, carrosséis, cookies, compartilhar, formulários
   assets/js/busca-indice.js  índice de busca gerado a partir do conteúdo
@@ -136,6 +141,33 @@ proposta-ui/extraido/        proposta visual de referência
 Cada página inclui as partes comuns com `{% include "partes/cabecalho.njk" %}` logo após
 o `<body>` e `{% include "partes/rodape.njk" %}` antes de fechar. Para mudar um item do
 menu ou do rodapé, edite o arquivo correspondente em `src/_data/`.
+
+### Como publicar uma notícia
+
+Crie um arquivo em `src/noticias/publicacoes/`. O nome do arquivo vira o endereço:
+`festa-junina-2026.md` é publicado em `/festa-junina-2026/`.
+
+```markdown
+---
+titulo: "Festa Junina reúne famílias na APAE"
+date: 2026-06-20
+categoria: "Eventos"
+imagem: "../storage/2026/06/festa-junina.jpg"
+resumo: "Uma ou duas frases que aparecem na lista de notícias."
+---
+
+Texto da notícia em Markdown. **Negrito**, _itálico_, [links](https://exemplo.org)
+e imagens em HTML (`<img src="..." width="..." height="..." alt="...">`).
+```
+
+A `categoria` é uma destas: `Notícias`, `Eventos` ou `Programas`. A `imagem` é opcional
+e aparece no bloco "Outras notícias". No próximo build, a notícia entra na listagem, na
+página da categoria e na página do ano, sem mais nenhuma edição.
+
+As notícias foram convertidas do HTML da reconstrução pelo script
+[`ferramentas/conversao/noticias-para-markdown.mjs`](ferramentas/conversao/noticias-para-markdown.mjs).
+O índice da busca (`assets/js/busca-indice.js`) ainda é o gerado na reconstrução e
+não inclui notícias novas.
 
 ## Limitações do protótipo
 
