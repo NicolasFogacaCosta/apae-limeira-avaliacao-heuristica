@@ -6,7 +6,7 @@ locale: pt
 # Repositório no GitHub. O login exige um provedor de OAuth (ver PENDENCIAS.md).
 backend:
   name: github
-  repo: NicolasFogacaCosta/APAE-Limeira---Avallia-o-de-Heuristica
+  repo: NicolasFogacaCosta/apae-limeira-avaliacao-heuristica
   branch: main
   commit_messages:
     create: 'conteúdo: cria {{collection}} "{{slug}}"'

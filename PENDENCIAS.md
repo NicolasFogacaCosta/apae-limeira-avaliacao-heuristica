@@ -200,7 +200,5 @@ fotos, sem perder o HTML das fotos.
   Pages e hospedar um pequeno serviço de OAuth (por exemplo, num Cloudflare Worker);
 - dar às pessoas da equipe da APAE acesso de escrita ao repositório no GitHub;
 - uma automação (GitHub Actions) que gere o site e publique a pasta `site/` a cada
-  commit, para que o que é salvo no painel apareça no ar;
-- confirmar o nome do repositório em `src/admin/config.yml` depois da troca de nome
-  combinada (`apae-limeira-avaliacao-heuristica`).
+  commit, para que o que é salvo no painel apareça no ar.
 
