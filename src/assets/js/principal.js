@@ -203,6 +203,9 @@
     }
     reservarEspaco();
     window.addEventListener('resize', reservarEspaco);
+    // A faixa também muda de altura sem a janela mudar (por exemplo, quando a
+    // hospedagem insere um selo depois do carregamento e o CSS abre espaço)
+    if ('ResizeObserver' in window) new ResizeObserver(reservarEspaco).observe(aviso);
 
     document.addEventListener('click', function (e) {
       var alvo = e.target.closest('[data-cookies]');

@@ -528,6 +528,12 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
   font: 13px 'Open Sans', sans-serif; padding: 5px 10px; border-radius: 3px 3px 0 0;
 }
 .cookies-reabrir[hidden] { display: none; }
+/* No Netlify gratuito, um selo "Powered by Netlify" (#nl-badge-frame, 64px de
+   altura) fica fixo no canto inferior direito: o aviso e o botão de reabrir
+   abrem espaço para ele, sem escondê-lo */
+body:has(#nl-badge-frame) .cookies { padding-bottom: 76px; }
+body:has(#nl-badge-frame) .cookies-reabrir { right: auto; left: 20px; }
+@media (max-width: 599px) { body:has(#nl-badge-frame) .cookies-reabrir { bottom: 70px; border-radius: 3px; } }
 .cookies-modal { position: fixed; inset: 0; z-index: 10000; background: rgba(0, 0, 0, .5); display: flex; align-items: center; justify-content: center; padding: 20px; }
 .cookies-modal[hidden] { display: none; }
 .cookies-modal__caixa { position: relative; background: #fff; color: #000; max-width: 720px; width: 100%; max-height: 90vh; overflow: auto; padding: 25px; font-size: 14px; }
