@@ -185,3 +185,22 @@ formulário virou um seletor com a opção "Manifestação de ouvidoria".
   exige nome e e-mail;
 - a lista de temas ("o que pode ser tratado"), que veio da proposta visual e está
   marcada como proposta de texto.
+
+## Reorganização, etapa 5: login do painel de conteúdo no site publicado
+
+**O que está no repositório:** o painel de conteúdo (Decap CMS) em `/admin/`, com as
+coleções Notícias e Documentos da Transparência. No computador de quem desenvolve, ele
+funciona sem login (`npm run painel`) e grava direto nos arquivos de `src/`. Foi testado
+assim: criar uma notícia, criar um documento e editar uma notícia antiga com galeria de
+fotos, sem perder o HTML das fotos.
+
+**O que falta para o painel funcionar no site publicado:**
+- um provedor de OAuth para o login com o GitHub. O GitHub Pages não oferece um. As
+  opções são publicar o site no Netlify, que tem o provedor pronto, ou manter o GitHub
+  Pages e hospedar um pequeno serviço de OAuth (por exemplo, num Cloudflare Worker);
+- dar às pessoas da equipe da APAE acesso de escrita ao repositório no GitHub;
+- uma automação (GitHub Actions) que gere o site e publique a pasta `site/` a cada
+  commit, para que o que é salvo no painel apareça no ar;
+- confirmar o nome do repositório em `src/admin/config.yml` depois da troca de nome
+  combinada (`apae-limeira-avaliacao-heuristica`).
+

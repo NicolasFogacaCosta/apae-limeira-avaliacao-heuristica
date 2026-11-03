@@ -5,10 +5,12 @@
   "description": "Site da APAE de Limeira gerado com Eleventy a partir de src/",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve --port 8080"
+    "start": "eleventy --serve --port 8080",
+    "painel": "decap-server"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "decap-server": "^3.11.5",
     "turndown": "^7.2.4"
   }
 }

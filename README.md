@@ -137,7 +137,9 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   transparencia/index.html   Transparência: documentos por tema, com explicação (achado 14)
   transparencia/documentos.njk  todos os documentos, com filtros: /transparencia/documentos/
   transparencia/redirecionamentos.njk  os 209 endereços antigos levam à lista já filtrada
-  _data/transparencia/       temas.json, documentos.json e redirecionamentos.json
+  _data/transparencia/       temas.json, redirecionamentos.json e documentos/
+                             (um arquivo .json por documento)
+  admin/                     painel de conteúdo (Decap CMS): index.html e config.yml
   _data/transparenciaArvore.js  organiza os documentos por tema, ano e área
   _lib/texto.js              funções de texto comuns aos dados e à configuração
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
@@ -155,7 +157,29 @@ Cada página inclui as partes comuns com `{% include "partes/cabecalho.njk" %}` 
 o `<body>` e `{% include "partes/rodape.njk" %}` antes de fechar. Para mudar um item do
 menu ou do rodapé, edite o arquivo correspondente em `src/_data/`.
 
-### Como publicar uma notícia
+### Painel de conteúdo
+
+A equipe da APAE pode publicar notícias e documentos da Transparência pelo painel em
+`/admin/`, sem mexer em código. Cada publicação vira um commit no repositório, e o site
+é gerado de novo a partir dele.
+
+Para usar o painel no próprio computador, com os arquivos locais e sem login, rode o
+site e o servidor do painel, cada um num terminal:
+
+```bash
+npm start
+```
+
+```bash
+npm run painel
+```
+
+Depois, abra **http://localhost:8080/admin/** e clique em **Entrar**.
+
+Para usar o painel no site publicado, o login com o GitHub precisa de um provedor de
+OAuth, que ainda não está configurado (ver [`PENDENCIAS.md`](PENDENCIAS.md)).
+
+### Como publicar uma notícia pelo código
 
 Crie um arquivo em `src/noticias/publicacoes/`. O nome do arquivo vira o endereço:
 `festa-junina-2026.md` é publicado em `/festa-junina-2026/`.
@@ -177,9 +201,9 @@ A `categoria` é uma destas: `Notícias`, `Eventos` ou `Programas`. A `imagem` �
 e aparece no bloco "Outras notícias". No próximo build, a notícia entra na listagem, na
 página da categoria e na página do ano, sem mais nenhuma edição.
 
-### Como publicar um documento da Transparência
+### Como publicar um documento da Transparência pelo código
 
-Acrescente um item em `src/_data/transparencia/documentos.json`:
+Crie um arquivo `.json` em `src/_data/transparencia/documentos/`, com qualquer nome:
 
 ```json
 {
@@ -198,7 +222,10 @@ Cultura, Educação, Esporte ou Saúde) e o `detalhe` são opcionais. O document
 lista, nos filtros e na contagem da página da Transparência no próximo build.
 
 Os dados foram extraídos das antigas páginas da Transparência pelo script
-[`ferramentas/conversao/transparencia-para-dados.py`](ferramentas/conversao/transparencia-para-dados.py).
+[`ferramentas/conversao/transparencia-para-dados.py`](ferramentas/conversao/transparencia-para-dados.py)
+e divididos em um arquivo por documento por
+[`ferramentas/conversao/documentos-um-por-arquivo.mjs`](ferramentas/conversao/documentos-um-por-arquivo.mjs).
+O campo `ordem`, que só os documentos extraídos têm, mantém a ordem da lista original.
 
 As notícias foram convertidas do HTML da reconstrução pelo script
 [`ferramentas/conversao/noticias-para-markdown.mjs`](ferramentas/conversao/noticias-para-markdown.mjs).

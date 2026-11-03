@@ -10,6 +10,8 @@ prestações de contas, também entram, com tema, ano e área tirados do nome.
 
 Uso único na etapa 3 da reorganização; fica no repositório para registrar
 como os dados foram gerados. Ao final, as páginas antigas são apagadas de src/.
+Na etapa 5, documentos.json foi dividido em um arquivo por documento
+(ferramentas/conversao/documentos-um-por-arquivo.mjs).
 
     python ferramentas/conversao/transparencia-para-dados.py
 """

@@ -1,0 +1,155 @@
+# Painel de conteúdo (Decap CMS) do site da APAE de Limeira.
+# Cada alteração salva no painel vira um commit no repositório, e o site é
+# gerado de novo a partir dele. Documentação: https://decapcms.org/docs/
+locale: pt
+
+# Repositório no GitHub. O login exige um provedor de OAuth (ver PENDENCIAS.md).
+backend:
+  name: github
+  repo: NicolasFogacaCosta/APAE-Limeira---Avallia-o-de-Heuristica
+  branch: main
+  commit_messages:
+    create: 'conteúdo: cria {{collection}} "{{slug}}"'
+    update: 'conteúdo: atualiza {{collection}} "{{slug}}"'
+    delete: 'conteúdo: apaga {{collection}} "{{slug}}"'
+    uploadMedia: 'conteúdo: envia "{{path}}"'
+    deleteMedia: 'conteúdo: apaga "{{path}}"'
+
+# No computador de quem desenvolve, "npm run painel" liga o painel aos arquivos
+# locais, sem login (http://localhost:8080/admin/).
+local_backend: true
+
+# Imagens enviadas pelo painel. As notícias ficam em /<slug>/, um nível abaixo
+# da raiz, por isso o caminho público é relativo ("../").
+media_folder: src/storage/noticias
+public_folder: ../storage/noticias
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: noticias
+    label: Notícias
+    label_singular: Notícia
+    description: >-
+      Notícias, eventos e programas. Cada notícia é publicada no endereço
+      formado pelo título, por exemplo /festa-junina-reune-familias/.
+    folder: src/noticias/publicacoes
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: titulo
+    slug: '{{slug}}'
+    summary: '{{date}} · {{titulo}}'
+    sortable_fields: [{ field: date, default_sort: desc }, titulo, categoria]
+    view_filters:
+      - { label: Notícias, field: categoria, pattern: Notícias }
+      - { label: Eventos, field: categoria, pattern: Eventos }
+      - { label: Programas, field: categoria, pattern: Programas }
+    fields:
+      - { name: titulo, label: Título, widget: string }
+      - name: date
+        label: Data
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD/MM/YYYY
+        time_format: false
+      - name: categoria
+        label: Categoria
+        widget: select
+        options: [Notícias, Eventos, Programas]
+        default: Notícias
+      - name: imagem
+        label: Imagem de destaque
+        widget: image
+        required: false
+        hint: Aparece no bloco "Outras notícias" e nos resultados da busca.
+      - name: resumo
+        label: Resumo
+        widget: text
+        hint: Uma ou duas frases, de até 30 palavras, que aparecem na lista de notícias.
+      - name: body
+        label: Texto
+        widget: markdown
+        modes: [rich_text, raw]
+        hint: >-
+          Nas notícias antigas, as galerias de fotos aparecem como código HTML
+          (<figure>, <img>). Deixe esse trecho como está para manter as fotos.
+
+  - name: documentos
+    label: Documentos da Transparência
+    label_singular: Documento
+    description: >-
+      Documentos da página Transparência. Cada documento aparece na lista
+      /transparencia/documentos/, com os filtros de tema, ano e área.
+    folder: src/_data/transparencia/documentos
+    extension: json
+    format: json
+    create: true
+    identifier_field: titulo
+    slug: '{{fields.tema}}-{{fields.ano}}-{{slug}}'
+    summary: "{{ano | default('sem ano')}} · {{titulo}}"
+    sortable_fields: [{ field: ano, default_sort: desc }, titulo, tema]
+    view_filters:
+      - { label: Utilidade pública, field: tema, pattern: '^utilidade-publica$' }
+      - { label: Declarações e certidões, field: tema, pattern: '^declaracoes$' }
+      - { label: Regulamentos, field: tema, pattern: '^regulamentos$' }
+      - { label: Legislação, field: tema, pattern: '^legislacao$' }
+      - { label: Balanços e auditoria, field: tema, pattern: '^balancos$' }
+      - { label: Prestações de contas, field: tema, pattern: '^prestacoes-de-contas$' }
+      - { label: Despesa com pessoal, field: tema, pattern: '^despesa-com-pessoal$' }
+      - { label: Relação de funcionários, field: tema, pattern: '^relacao-de-funcionarios$' }
+      - { label: Termos e planos de trabalho, field: tema, pattern: '^termos-e-planos$' }
+      - { label: Aditamento COVID-19, field: tema, pattern: '^aditamento-covid$' }
+      - { label: Outros documentos, field: tema, pattern: '^outros$' }
+    view_groups:
+      - { label: Ano, field: ano }
+    fields:
+      - name: titulo
+        label: Nome do documento
+        widget: string
+        hint: 'Como aparece na lista, por exemplo "Termo de fomento nº 05-2024" ou "Janeiro".'
+      - name: tema
+        label: Tema
+        widget: select
+        options:
+          - { label: Utilidade pública, value: utilidade-publica }
+          - { label: Declarações e certidões, value: declaracoes }
+          - { label: Regulamentos, value: regulamentos }
+          - { label: Legislação, value: legislacao }
+          - { label: Balanços e auditoria, value: balancos }
+          - { label: Prestações de contas, value: prestacoes-de-contas }
+          - { label: Despesa com pessoal, value: despesa-com-pessoal }
+          - { label: Relação de funcionários, value: relacao-de-funcionarios }
+          - { label: Termos e planos de trabalho, value: termos-e-planos }
+          - { label: Aditamento COVID-19, value: aditamento-covid }
+          - { label: Outros documentos, value: outros }
+      - { name: ano, label: Ano, widget: number, value_type: int, required: false }
+      - name: area
+        label: Área
+        widget: select
+        required: false
+        options: [Assistência social, Cultura, Educação, Esporte, Saúde]
+      - name: detalhe
+        label: Programa ou subdivisão
+        widget: string
+        required: false
+        hint: Por exemplo SCFV, PSE, CMDCA, Federal ou Municipal. Documentos com o mesmo detalhe aparecem juntos.
+      - name: url
+        label: Endereço do arquivo
+        widget: string
+        pattern: ['^https?://', 'Cole o endereço completo, começando por https://']
+        hint: Link de compartilhamento do Google Drive ou de outro site oficial.
+      - name: fonte
+        label: Onde o arquivo está
+        widget: select
+        default: Google Drive
+        options:
+          - Google Drive
+          - Diário Oficial da União
+          - Diário Oficial do Estado
+          - Salic, do Ministério da Cultura
+          - Portal da Legislação, do Planalto
+      - { name: ordem, label: Ordem, widget: hidden, required: false }
+      - { name: origem, label: Página de origem, widget: hidden, required: false }

@@ -25,6 +25,9 @@ export default function (eleventyConfig) {
   for (const pasta of ['assets', 'storage', 'wp-content']) {
     eleventyConfig.addPassthroughCopy(`src/${pasta}`);
   }
+  // Painel de conteúdo (Decap CMS): copiado como está, sem passar pelo Nunjucks
+  eleventyConfig.addPassthroughCopy('src/admin');
+  eleventyConfig.ignores.add('src/admin/**');
 
   // Prefixo relativo até a raiz do site ("./" na home, "../" nas páginas de
   // primeiro nível). Relativo para o site funcionar em qualquer subcaminho.

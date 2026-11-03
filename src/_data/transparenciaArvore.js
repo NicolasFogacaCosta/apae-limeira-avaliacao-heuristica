@@ -1,4 +1,5 @@
-// Organiza os documentos da Transparência (src/_data/transparencia/*.json)
+// Organiza os documentos da Transparência (src/_data/transparencia/: temas.json
+// e documentos/, um arquivo por documento, editável pelo painel de conteúdo)
 // para a página /transparencia/documentos/: tema > ano > grupo (área e
 // detalhe) > documentos, com o texto usado pelo filtro de palavras.
 import fs from 'node:fs';
@@ -8,12 +9,21 @@ import { idArea, normalizar } from '../_lib/texto.js';
 const PASTA = path.join(import.meta.dirname, 'transparencia');
 const ler = (nome) => JSON.parse(fs.readFileSync(path.join(PASTA, `${nome}.json`), 'utf8'));
 
+// Documentos na ordem da lista original; os novos (sem "ordem") vão para o fim
+function lerDocumentos() {
+  const pasta = path.join(PASTA, 'documentos');
+  return fs.readdirSync(pasta).filter((f) => f.endsWith('.json')).sort()
+    .map((f) => JSON.parse(fs.readFileSync(path.join(pasta, f), 'utf8')))
+    .map((d) => ({ ...d, ano: d.ano ? Number(d.ano) : null, area: d.area || null, detalhe: d.detalhe || null }))
+    .sort((a, b) => (a.ordem ?? Infinity) - (b.ordem ?? Infinity));
+}
+
 const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto',
   'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 export default function () {
   const temas = ler('temas');
-  const documentos = ler('documentos');
+  const documentos = lerDocumentos();
 
   const arvore = temas.map((tema) => {
     const docs = documentos.filter((d) => d.tema === tema.id);
