@@ -8,6 +8,8 @@ const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julh
   'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 const CATEGORIAS = ['Notícias', 'Eventos', 'Programas'];
 const POR_PAGINA = 12;
+// Notícias até este ano ficam no arquivo do site, fora da listagem principal
+const ARQUIVO_ATE = 2018;
 
 function slug(texto) {
   return texto.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -27,7 +29,7 @@ export default function (eleventyConfig) {
   // Prefixo relativo até a raiz do site ("./" na home, "../" nas páginas de
   // primeiro nível). Relativo para o site funcionar em qualquer subcaminho.
   eleventyConfig.addFilter('raiz', (url) => {
-    const nivel = (url || '/').split('/').filter(Boolean).length;
+    const nivel = (url || '/').replace(/[^/]*\.html$/, '').split('/').filter(Boolean).length;
     return nivel ? '../'.repeat(nivel) : './';
   });
 
@@ -49,10 +51,11 @@ export default function (eleventyConfig) {
 
   // Notícias da mais recente para a mais antiga
   const noticias = (api) => api.getFilteredByTag('noticia').slice().reverse();
+  const recentes = (api) => noticias(api).filter((n) => n.date.getUTCFullYear() > ARQUIVO_ATE);
 
-  // Páginas da listagem: todas as notícias e cada categoria, 12 por página
+  // Páginas da listagem: as notícias recentes, todas e por categoria, 12 por página
   eleventyConfig.addCollection('paginasNoticias', (api) => {
-    const todas = noticias(api);
+    const todas = recentes(api);
     const grupos = [{ categoria: null, base: '/noticias/', itens: todas }].concat(
       CATEGORIAS.map((c) => ({
         categoria: c,
@@ -84,7 +87,9 @@ export default function (eleventyConfig) {
       if (!porAno.has(ano)) porAno.set(ano, []);
       porAno.get(ano).push(n);
     }
-    return [...porAno].map(([ano, itens]) => ({ ano, itens, url: `/noticias/${ano}/` }));
+    return [...porAno].map(([ano, itens]) => ({
+      ano, itens, url: `/noticias/${ano}/`, arquivo: ano <= ARQUIVO_ATE
+    }));
   });
 
   // Endereço da lista de documentos da Transparência já filtrada (usado nos
@@ -97,6 +102,12 @@ export default function (eleventyConfig) {
     if (filtros.q) consulta.set('q', filtros.q);
     return `transparencia/documentos/?${consulta}#tema-${filtros.tema}`;
   });
+
+  eleventyConfig.addGlobalData('arquivoAte', ARQUIVO_ATE);
+
+  // Prefixo do site no servidor ("/" na raiz; "/repositorio/" no GitHub Pages).
+  // Só a página 404 precisa dele, porque é servida em qualquer endereço.
+  eleventyConfig.addGlobalData('caminhoBase', process.env.CAMINHO_BASE || '/');
 
   eleventyConfig.addGlobalData('categoriasNoticias', CATEGORIAS.map((c) => ({ nome: c, url: `noticias/categoria/${slug(c)}/` })));
 

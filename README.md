@@ -34,7 +34,9 @@ a cada alteração em `src/`.
 
 Para publicar, rode `npm run build` e sirva a pasta `site/` em qualquer hospedagem
 estática (GitHub Pages, Netlify, Vercel ou outra). Os links são relativos, então o site
-funciona também num subcaminho, como `usuario.github.io/repositorio/`.
+funciona também num subcaminho, como `usuario.github.io/repositorio/`. Nesse caso, gere o
+site com o subcaminho na variável `CAMINHO_BASE` (`CAMINHO_BASE=/repositorio/ npm run build`),
+que a página de endereço inexistente (`404.html`) usa para montar os links.
 
 ## Documentos do projeto
 
@@ -127,6 +129,11 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   noticias/publicacoes/      as 369 notícias em Markdown, publicadas em /<slug>/
   noticias/index.njk         listagem: /noticias/ e /noticias/categoria/<categoria>/
   noticias/ano.njk           uma página por ano: /noticias/<ano>/
+  arquivo/index.njk          arquivo do site: notícias até 2018, galerias de fotos e páginas antigas
+  404.njk                    página de endereço inexistente, com busca e caminhos
+  redirecionamentos.njk      endereços sem conteúdo levam ao destino mais útil
+  _data/arquivo.json         galerias e páginas antigas listadas no arquivo
+  _data/redirecionamentos.json  de onde para onde vai cada endereço antigo
   transparencia/index.html   Transparência: documentos por tema, com explicação (achado 14)
   transparencia/documentos.njk  todos os documentos, com filtros: /transparencia/documentos/
   transparencia/redirecionamentos.njk  os 209 endereços antigos levam à lista já filtrada

@@ -19,7 +19,8 @@ eleventyComputed:
     <div class="pagina__divisor"></div>
   </header>
   <div class="container pagina__conteudo noticias">
-    <p class="noticias__intro">Todas as publicações da APAE de Limeira, da mais recente para a mais antiga.</p>
+    <p class="noticias__intro">Publicações da APAE de Limeira de {{ arquivoAte + 1 }} em diante, da mais recente para a mais antiga.
+      As notícias até {{ arquivoAte }} estão no <a href="{{ raiz }}arquivo/#noticias">arquivo do site</a>.</p>
     {% include "partes/filtro-noticias.njk" %}
     <p class="noticias__contagem">{{ lista.quantidade }} publicações{% if lista.categoria %} em {{ lista.categoria }}{% endif %} · página {{ lista.numero }} de {{ lista.total }}</p>
     <ul class="noticias__lista">

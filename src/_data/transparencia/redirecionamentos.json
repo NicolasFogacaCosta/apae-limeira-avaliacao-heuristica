@@ -1871,5 +1871,37 @@
    "area": "Saúde"
   },
   "titulo": "Termos e planos de trabalho-2026 -saúde"
+ },
+ {
+  "de": "atas",
+  "filtros": {
+   "tema": "outros",
+   "q": "Atas"
+  },
+  "titulo": "Atas"
+ },
+ {
+  "de": "cebas-portaria-e-publicacao-dou",
+  "filtros": {
+   "tema": "outros",
+   "q": "CEBAS"
+  },
+  "titulo": "CEBAS – portaria e publicação no DOU"
+ },
+ {
+  "de": "valores-repassados-ano",
+  "filtros": {
+   "tema": "outros",
+   "q": "Valores repassados"
+  },
+  "titulo": "Valores repassados"
+ },
+ {
+  "de": "deca",
+  "filtros": {
+   "tema": "outros",
+   "q": "DECA"
+  },
+  "titulo": "DECA"
  }
 ]

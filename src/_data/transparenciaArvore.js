@@ -51,7 +51,8 @@ export default function () {
 
   return {
     temas: arvore,
-    porOrigem: Object.fromEntries(arvore.map((t) => [t.origem, t])),
+    porOrigem: Object.fromEntries(arvore.filter((t) => t.origem).map((t) => [t.origem, t])),
+    porId: Object.fromEntries(arvore.map((t) => [t.id, t])),
     quantidade: documentos.length,
     anos,
     areas

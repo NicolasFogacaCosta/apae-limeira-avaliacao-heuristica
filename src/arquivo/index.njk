@@ -1,0 +1,57 @@
+---
+# Arquivo do site: notícias até {{ arquivoAte }}, galerias de fotos e páginas
+# antigas que nenhum menu alcançava. A lista fica em src/_data/arquivo.json.
+layout: layouts/base.njk
+classeBody: pagina-interna pagina-arquivo
+tituloPagina: Arquivo do site
+permalink: /arquivo/
+---
+{% set raiz = page.url | raiz %}
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">ARQUIVO DO SITE</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo arquivo">
+    <nav class="caminho" aria-label="Você está em">
+      <ol>
+        <li><a href="{{ raiz }}">Início</a></li>
+      </ol>
+    </nav>
+    <p class="arquivo__intro">Conteúdo antigo do site da APAE de Limeira, guardado como registro. Ele pode estar
+      desatualizado: para informações atuais, use o menu ou fale com a APAE pelo telefone
+      <a href="tel:+551934041569">(19) 3404-1569</a>.</p>
+
+    <section class="arquivo__secao" id="noticias" aria-labelledby="arquivo-noticias">
+      <h2 class="arquivo__titulo" id="arquivo-noticias">Notícias até {{ arquivoAte }}</h2>
+      <p>As notícias mais recentes estão na página <a href="{{ raiz }}noticias/">Notícias</a>.</p>
+      <ul class="arquivo__anos">
+        {% for a in collections.anosNoticias %}{% if a.arquivo %}
+        <li><a href="{{ a.url | link(raiz) }}">{{ a.ano }}<span class="arquivo__quantidade">{{ a.itens.length }} {{ 'notícia' if a.itens.length == 1 else 'notícias' }}</span></a></li>
+        {% endif %}{% endfor %}
+      </ul>
+    </section>
+
+    <section class="arquivo__secao" id="galerias" aria-labelledby="arquivo-galerias">
+      <h2 class="arquivo__titulo" id="arquivo-galerias">Galerias de fotos dos eventos</h2>
+      <ul class="arquivo__lista">
+        {% for g in arquivo.galerias %}<li><a href="{{ raiz }}{{ g.url }}">{{ g.titulo }}</a></li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="arquivo__secao" id="paginas" aria-labelledby="arquivo-paginas">
+      <h2 class="arquivo__titulo" id="arquivo-paginas">Páginas antigas</h2>
+      <p>Para doar hoje, use a página <a href="{{ raiz }}doacoes/">Doações</a>.</p>
+      <ul class="arquivo__lista">
+        {% for p in arquivo.paginas %}<li><a href="{{ raiz }}{{ p.url }}">{{ p.titulo }}</a></li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="arquivo__secao" id="publicacoes" aria-labelledby="arquivo-publicacoes">
+      <h2 class="arquivo__titulo" id="arquivo-publicacoes">Outras publicações antigas</h2>
+      <ul class="arquivo__lista">
+        {% for p in arquivo.publicacoes %}<li><a href="{{ raiz }}{{ p.url }}">{{ p.titulo }}</a></li>{% endfor %}
+      </ul>
+    </section>
+  </div>
+</main>

@@ -1066,3 +1066,40 @@ body { padding-bottom: var(--altura-aviso-cookies, 0px); }
   outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px var(--texto-doacao);
 }
 .acesso__item--doar a:hover em { background: var(--rosa-doacao-hover); }
+
+/* Aviso nas notícias e páginas do arquivo do site */
+.aviso-arquivo { margin: 0 0 28px; padding: 14px 18px; background: #FFF6E5; border-left: 4px solid var(--amarelo); text-align: left; }
+.aviso-arquivo p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--texto); }
+.aviso-arquivo a { color: #1c6880; font-weight: 600; text-decoration: underline; }
+
+/* Arquivo do site */
+.arquivo { text-align: left; }
+.arquivo__intro { font-size: 18px; }
+.arquivo a, .noticias__intro a { color: #1c6880; text-decoration: underline; }
+.arquivo__secao { margin: 0 0 40px; }
+.pagina__conteudo .arquivo__titulo { margin: 0 0 12px; padding-bottom: 6px; border-bottom: 3px solid var(--amarelo); font: 700 24px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.pagina__conteudo .arquivo__anos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.pagina__conteudo .arquivo__anos a {
+  display: flex; flex-direction: column; min-height: 44px; padding: 12px 16px; border: 2px solid #C9CFD5; border-radius: 8px; background: #fff;
+  font: 700 20px 'Montserrat', sans-serif; color: var(--azul-institucional); text-decoration: none;
+}
+.pagina__conteudo .arquivo__anos a:hover { border-color: var(--azul-institucional); }
+.arquivo__quantidade { font: 400 14px 'Open Sans', sans-serif; color: #4A4A4A; }
+.pagina__conteudo .arquivo__lista { margin: 0; padding-left: 20px; columns: 2 320px; column-gap: 40px; }
+.arquivo__lista li { margin: 0 0 10px; break-inside: avoid; }
+
+/* Página não encontrada (404) */
+.nao-encontrada { text-align: left; max-width: 800px; }
+.nao-encontrada__explica { font-size: 18px; }
+.nao-encontrada a { color: #1c6880; text-decoration: underline; }
+.nao-encontrada__busca { margin: 0 0 32px; }
+.pagina__conteudo .nao-encontrada__busca label { text-transform: none; font: 700 16px 'Montserrat', sans-serif; color: var(--azul-institucional); margin-bottom: 6px; }
+.nao-encontrada__busca div { display: flex; gap: 10px; flex-wrap: wrap; }
+.nao-encontrada__busca input { flex: 1 1 240px; min-height: 44px; padding: 8px 12px; border: 2px solid #C9CFD5; border-radius: 6px; font: 400 16px 'Open Sans', sans-serif; }
+.nao-encontrada__busca button {
+  min-height: 44px; padding: 0 22px; border: 0; border-radius: 6px; background: var(--azul-institucional); color: #fff;
+  font: 700 15px 'Montserrat', sans-serif; cursor: pointer;
+}
+.pagina__conteudo .nao-encontrada__titulo { font: 700 20px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.pagina__conteudo .nao-encontrada__caminhos { columns: 2 220px; padding-left: 20px; }
+.nao-encontrada__caminhos li { margin: 0 0 10px; }

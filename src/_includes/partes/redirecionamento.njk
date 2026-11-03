@@ -1,0 +1,15 @@
+{# Página que só leva a outro endereço. Usa destino (relativo à página) e nome. #}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página transferida – APAE Limeira</title>
+<link rel="canonical" href="{{ destino }}">
+<meta http-equiv="refresh" content="0; url={{ destino }}">
+<script>location.replace({{ destino | dump | safe }});</script>
+</head>
+<body>
+<p>Esta página mudou de endereço. Acesse {{ nome }}: <a href="{{ destino }}">{{ destino }}</a>.</p>
+</body>
+</html>

@@ -48,5 +48,10 @@
   "id": "aditamento-covid",
   "nome": "Aditamento COVID-19",
   "origem": "aditamento-ao-termo-de-colaboracao-10_2020-covid"
+ },
+ {
+  "id": "outros",
+  "nome": "Outros documentos",
+  "origem": null
  }
 ]

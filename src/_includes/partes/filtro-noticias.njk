@@ -10,8 +10,9 @@
   </nav>
   <nav class="noticias__filtro" aria-label="Filtrar por ano">
     <span class="noticias__filtro-rotulo">Ano</span>
-    {% for a in collections.anosNoticias %}
+    {% for a in collections.anosNoticias %}{% if not a.arquivo %}
     <a href="{{ a.url | link(raiz) }}"{% if a.ano == anoAtual %} aria-current="true"{% endif %}>{{ a.ano }}</a>
-    {% endfor %}
+    {% endif %}{% endfor %}
+    <a href="{{ raiz }}arquivo/#noticias"{% if anoAtual and anoAtual <= arquivoAte %} aria-current="true"{% endif %}>Até {{ arquivoAte }} (arquivo)</a>
   </nav>
 </div>

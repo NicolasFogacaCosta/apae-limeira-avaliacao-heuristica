@@ -19,6 +19,7 @@ eleventyComputed:
   </header>
   <div class="container pagina__conteudo noticias">
     <p class="noticias__intro">Publicações da APAE de Limeira em {{ grupo.ano }}, da mais recente para a mais antiga.</p>
+    {% if grupo.arquivo %}{% include "partes/aviso-arquivo.njk" %}{% endif %}
     {% include "partes/filtro-noticias.njk" %}
     <p class="noticias__contagem">{{ grupo.itens.length }} publicações em {{ grupo.ano }}</p>
     <ul class="noticias__lista">

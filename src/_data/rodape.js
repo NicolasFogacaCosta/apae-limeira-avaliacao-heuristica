@@ -13,6 +13,8 @@ export default {
   uteis: [
     { titulo: 'Dúvidas Frequentes', url: 'duvidas-frequentes/' },
     { titulo: 'Sobre a Deficiência Intelectual', url: 'sobre-a-deficiencia-intelectual/' },
-    { titulo: 'Prevenção da Deficiência Intelectual', url: 'prevencao-da-deficiencia-intelectual/' }
+    { titulo: 'Prevenção da Deficiência Intelectual', url: 'prevencao-da-deficiencia-intelectual/' },
+    { titulo: 'Arquivo do site', url: 'arquivo/' },
+    { titulo: 'Política de cookies', url: 'politica-de-cookies/' }
   ]
 };

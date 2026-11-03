@@ -1,0 +1,10 @@
+[
+ {"de": "inicial", "para": "", "nome": "a página inicial"},
+ {"de": "doacoes-em-conta", "para": "doacoes/", "nome": "a página Doações"},
+ {"de": "trabalhe-conosco", "para": "contato/", "nome": "a página Contato/Ouvidoria"},
+ {"de": "fogo-de-chao", "para": "busca/?s=Fogo%20de%20Ch%C3%A3o", "nome": "as notícias sobre o Fogo de Chão"},
+ {"de": "organograma", "para": "estrutura/", "nome": "a página A Entidade"},
+ {"de": "entidade-sem-fins-lucrativos-federal-1987", "para": "transparencia/", "nome": "a página Transparência"},
+ {"de": "plano-trabalho-educacao-municipal", "para": "transparencia/documentos/?tema=termos-e-planos&area=educacao#tema-termos-e-planos", "nome": "os planos de trabalho da Educação"},
+ {"de": "contratacao-pessoal", "para": "transparencia/documentos/?tema=regulamentos#tema-regulamentos", "nome": "os regulamentos da APAE"}
+]

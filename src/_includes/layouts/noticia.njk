@@ -20,6 +20,7 @@ classeBody: publicacao-interna
       <a class="noticia__categoria" href="{{ raiz }}noticias/categoria/{{ categoria | slug }}/">{{ categoria }}<span class="visualmente-oculto">: ver todas desta categoria</span></a>
     </p>
     <h1 class="publicacao__titulo">{{ titulo }}</h1>
+    {% if page.date.getUTCFullYear() <= arquivoAte %}{% include "partes/aviso-arquivo.njk" %}{% endif %}
     <div class="publicacao__conteudo">
 {{ content | safe }}
     </div>

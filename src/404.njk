@@ -1,0 +1,40 @@
+---
+# Página de endereço inexistente. A hospedagem (GitHub Pages, Netlify…) a mostra
+# em qualquer endereço, por isso os links partem do <base> (variável CAMINHO_BASE).
+layout: layouts/base.njk
+classeBody: pagina-interna pagina-404
+tituloPagina: Página não encontrada
+permalink: /404.html
+usarBase: true
+eleventyExcludeFromCollections: true
+---
+{% set raiz = page.url | raiz %}
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">PÁGINA NÃO ENCONTRADA</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo nao-encontrada">
+    <p class="nao-encontrada__explica">O endereço que você abriu não existe mais ou mudou. Procure o que precisa
+      pela busca ou por um dos caminhos abaixo. Se você chegou aqui por um link do próprio site, conte para a
+      APAE pela <a href="{{ raiz }}contato/">Ouvidoria</a>.</p>
+    <form class="nao-encontrada__busca" role="search" action="{{ raiz }}busca/" method="get">
+      <label for="busca-404">Buscar no site</label>
+      <div>
+        <input id="busca-404" type="search" name="s">
+        <button type="submit">Buscar</button>
+      </div>
+    </form>
+    <h2 class="nao-encontrada__titulo">Páginas mais procuradas</h2>
+    <ul class="nao-encontrada__caminhos">
+      <li><a href="{{ raiz }}">Página inicial</a></li>
+      <li><a href="{{ raiz }}doacoes/">Doações</a></li>
+      <li><a href="{{ raiz }}teste-do-pezinho/">Teste do Pezinho</a></li>
+      <li><a href="{{ raiz }}eventos/">Eventos</a></li>
+      <li><a href="{{ raiz }}noticias/">Notícias</a></li>
+      <li><a href="{{ raiz }}transparencia/">Transparência</a></li>
+      <li><a href="{{ raiz }}contato/">Contato/Ouvidoria</a></li>
+      <li><a href="{{ raiz }}arquivo/">Arquivo do site</a></li>
+    </ul>
+  </div>
+</main>

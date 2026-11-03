@@ -1,0 +1,13 @@
+---
+# Páginas sem conteúdo ou só com links que não funcionam mais levam ao
+# endereço mais útil (lista em src/_data/redirecionamentos.json)
+pagination:
+  data: redirecionamentos
+  size: 1
+  alias: r
+permalink: "/{{ r.de }}/"
+eleventyExcludeFromCollections: true
+---
+{% set destino = '../' + r.para %}
+{% set nome = r.nome %}
+{% include "partes/redirecionamento.njk" %}

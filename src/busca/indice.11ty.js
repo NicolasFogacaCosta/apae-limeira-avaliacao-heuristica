@@ -50,7 +50,11 @@ export default class {
       };
     });
 
-    const indice = [...busca.paginas, ...noticias, ...temas].sort((a, b) => b.d.localeCompare(a.d));
+    // Só as páginas que ainda existem (as removidas ou redirecionadas saem)
+    const existentes = new Set(collections.all.map((p) => p.url.replace(/^\//, '')));
+    const paginas = busca.paginas.filter((p) => existentes.has(p.u));
+
+    const indice = [...paginas, ...noticias, ...temas].sort((a, b) => b.d.localeCompare(a.d));
     return `/* Gerado no build por src/busca/indice.11ty.js */\nwindow.APAE_INDICE = ${JSON.stringify(indice)};\n`;
   }
 }
