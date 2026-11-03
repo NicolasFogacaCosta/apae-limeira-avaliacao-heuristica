@@ -60,6 +60,10 @@ iframe { max-width: 100%; border: 0; }
 /* --------------------------------------------------------------------------
    Barra superior
    -------------------------------------------------------------------------- */
+/* Faixa do link público do protótipo (texto 8,3:1 sobre o amarelo) */
+.aviso-prototipo { padding: 8px 16px; background: var(--amarelo); color: var(--texto-doacao); font: 600 14px/1.4 'Open Sans', sans-serif; text-align: center; }
+.aviso-prototipo a { color: var(--texto-doacao); text-decoration: underline; }
+@media (max-width: 767px) { .aviso-prototipo { padding: 6px 12px; font-size: 13px; } .aviso-prototipo__extra { display: none; } }
 .barra-topo { background: var(--azul-institucional); }
 .barra-topo__inner {
   display: flex; align-items: center; justify-content: space-between;

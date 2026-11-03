@@ -7,6 +7,10 @@
 {% set html %}
 <script>window.APAE_BASE = '{{ raiz }}';</script>
 {% include "partes/icones.njk" %}
+{% if avisoPrototipo %}
+{# Link público do protótipo: deixa claro que não é o site oficial #}
+<div class="aviso-prototipo" role="note">Protótipo acadêmico<span class="aviso-prototipo__extra"> do Grupo FF (SI406, Unicamp)</span>, sem vínculo oficial. Site da APAE de Limeira: <a href="https://www.apaelimeira.org.br/">www.apaelimeira.org.br</a></div>
+{% endif %}
 <div class="barra-topo">
   <div class="barra-topo__inner">
     <div class="barra-topo__boasvindas">Seja bem-vindo a <strong>APAE Limeira!</strong></div>

@@ -112,6 +112,10 @@ export default function (eleventyConfig) {
   // Só a página 404 precisa dele, porque é servida em qualquer endereço.
   eleventyConfig.addGlobalData('caminhoBase', process.env.CAMINHO_BASE || '/');
 
+  // Faixa "protótipo acadêmico" no topo de todas as páginas. Para tirar, gere o
+  // site com AVISO_PROTOTIPO=nao.
+  eleventyConfig.addGlobalData('avisoPrototipo', process.env.AVISO_PROTOTIPO !== 'nao');
+
   eleventyConfig.addGlobalData('categoriasNoticias', CATEGORIAS.map((c) => ({ nome: c, url: `noticias/categoria/${slug(c)}/` })));
 
   return {
