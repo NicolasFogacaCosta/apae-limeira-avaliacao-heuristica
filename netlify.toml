@@ -1,0 +1,18 @@
+# Hospedagem no Netlify. O Netlify instala as dependências, gera o site com o
+# Eleventy e publica a pasta site/ a cada commit na branch escolhida.
+[build]
+  command = "npm run build"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Protótipo acadêmico: fora dos buscadores, para não competir com o site oficial
+# da APAE nos resultados. Tire este bloco se o site virar o oficial.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Os redirecionamentos dos endereços antigos (301) ficam em site/_redirects,
+# gerado no build a partir de src/_data/ (src/_redirects.njk).

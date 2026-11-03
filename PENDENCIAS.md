@@ -139,6 +139,9 @@ home agora aponta para a página do menu.
 - **Redirecionamento 301 no servidor:** na publicação, o servidor deve responder à URL
   antiga com 301 para `/fabrica-de-paletes/`. Assim os buscadores transferem o
   endereço; a página de redirecionamento cobre os casos em que isso não for possível.
+  Na branch `v2-arquitetura`, a regra 301 já vem pronta para o Netlify (e o Cloudflare
+  Pages) em `site/_redirects`, junto com a dos demais endereços antigos; falta só
+  publicar o site numa dessas hospedagens.
 - **Data de início da oficina:** a página antiga dizia que a oficina começou em 2007,
   com detalhes de produção e empresas parceiras. A atual diz "Iniciado em 2012". Como
   as informações se contradizem, o texto antigo não foi copiado. A entidade pode
@@ -194,11 +197,13 @@ funciona sem login (`npm run painel`) e grava direto nos arquivos de `src/`. Foi
 assim: criar uma notícia, criar um documento e editar uma notícia antiga com galeria de
 fotos, sem perder o HTML das fotos.
 
-**O que falta para o painel funcionar no site publicado:**
-- um provedor de OAuth para o login com o GitHub. O GitHub Pages não oferece um. As
-  opções são publicar o site no Netlify, que tem o provedor pronto, ou manter o GitHub
-  Pages e hospedar um pequeno serviço de OAuth (por exemplo, num Cloudflare Worker);
-- dar às pessoas da equipe da APAE acesso de escrita ao repositório no GitHub;
-- uma automação (GitHub Actions) que gere o site e publique a pasta `site/` a cada
-  commit, para que o que é salvo no painel apareça no ar.
+**O que já está pronto para o Netlify:** o `netlify.toml` gera e publica o site a cada
+commit na branch `v2-arquitetura`, que é também a branch onde o painel grava. O provedor
+de OAuth do Netlify cuida do login com o GitHub.
+
+**O que falta, e depende de contas que só o grupo ou a APAE podem criar** (passo a passo
+no README, em "Como publicar no Netlify"):
+- criar o site no Netlify a partir do repositório;
+- criar o aplicativo OAuth no GitHub e instalá-lo no Netlify;
+- dar às pessoas da equipe da APAE acesso de escrita ao repositório no GitHub.
 

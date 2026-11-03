@@ -1,0 +1,20 @@
+---
+# Redirecionamentos permanentes (301) para hospedagens que leem o arquivo
+# _redirects, como o Netlify e o Cloudflare Pages. Os mesmos endereços também
+# têm uma página de redirecionamento em HTML, para as demais hospedagens; o "!"
+# faz a regra valer mesmo com essa página no lugar. O trecho depois de "#" fica
+# de fora, porque no _redirects ele seria lido como comentário.
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+# Gerado no build por src/_redirects.njk. Não edite em site/.
+
+# Achado 20: "Reforma de pallets" virou Fábrica de Paletes
+/reforma-de-pallets/  /fabrica-de-paletes/  301!
+
+# Páginas sem conteúdo ou só com links que não funcionam mais
+{% for r in redirecionamentos %}/{{ r.de }}/  /{{ r.para.split('#')[0] | safe }}  301!
+{% endfor %}
+# Antigas páginas da Transparência: levam à lista de documentos já filtrada
+{% for r in transparencia.redirecionamentos %}/{{ r.de }}/  /{{ (r.filtros | documentosFiltrados).split('#')[0] | safe }}  301!
+{% endfor %}

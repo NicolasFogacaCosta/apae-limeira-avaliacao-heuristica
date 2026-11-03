@@ -7,7 +7,8 @@ locale: pt
 backend:
   name: github
   repo: NicolasFogacaCosta/apae-limeira-avaliacao-heuristica
-  branch: main
+  # A branch publicada no Netlify; o que for salvo no painel entra nela e vai ao ar
+  branch: v2-arquitetura
   commit_messages:
     create: 'conteúdo: cria {{collection}} "{{slug}}"'
     update: 'conteúdo: atualiza {{collection}} "{{slug}}"'

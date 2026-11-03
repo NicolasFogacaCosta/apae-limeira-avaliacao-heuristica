@@ -44,6 +44,43 @@ funciona também num subcaminho, como `usuario.github.io/repositorio/`. Nesse ca
 site com o subcaminho na variável `CAMINHO_BASE` (`CAMINHO_BASE=/repositorio/ npm run build`),
 que a página de endereço inexistente (`404.html`) usa para montar os links.
 
+## Como publicar no Netlify
+
+O repositório já traz a configuração do Netlify (`netlify.toml`): o comando de build, a
+pasta publicada, a versão do Node, o bloqueio de indexação nos buscadores e os
+redirecionamentos 301 dos endereços antigos, gerados no build em `site/_redirects`.
+
+**1. Publicar o site** (uma vez, uns 5 minutos):
+
+1. Crie uma conta em [netlify.com](https://www.netlify.com/), entrando com o GitHub.
+2. Em **Add new project › Import an existing project**, escolha o GitHub e o
+   repositório `apae-limeira-avaliacao-heuristica`.
+3. Em **Branch to deploy**, escolha `v2-arquitetura`. O comando (`npm run build`) e a
+   pasta (`site`) já vêm preenchidos pelo `netlify.toml`.
+4. Clique em **Deploy**. Em um ou dois minutos o site fica no ar num endereço como
+   `nome-aleatorio.netlify.app`, que dá para trocar em **Project configuration › Change
+   project name** (por exemplo, `apae-limeira-prototipo.netlify.app`).
+
+A partir daí, cada commit na branch `v2-arquitetura`, inclusive os feitos pelo painel,
+publica o site de novo sozinho.
+
+**2. Ligar o login do painel** (opcional, para a equipe publicar em `/admin/`):
+
+1. No GitHub, em **Settings › Developer settings › OAuth Apps › New OAuth App**, crie um
+   aplicativo com:
+   - **Homepage URL:** o endereço do site no Netlify;
+   - **Authorization callback URL:** `https://api.netlify.com/auth/done`.
+2. Gere um **client secret** e guarde o **Client ID** e o **Client secret**.
+3. No Netlify, em **Project configuration › Access & security › OAuth › Install
+   provider**, escolha GitHub e cole o Client ID e o Client secret.
+4. Dê acesso de escrita ao repositório (**Settings › Collaborators**) às pessoas da APAE
+   que vão publicar. Elas entram em `/admin/` com a própria conta do GitHub.
+
+**Protótipo, não o site oficial:** a faixa amarela no topo das páginas avisa que o site
+é um protótipo acadêmico, e o `netlify.toml` pede aos buscadores que não o indexem. Se
+um dia o site virar o oficial, gere-o com `AVISO_PROTOTIPO=nao` e tire o bloco
+`[[headers]]` do `netlify.toml`.
+
 ## Documentos do projeto
 
 | Arquivo | Conteúdo |
@@ -170,6 +207,7 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   _data/transparencia/       temas.json, redirecionamentos.json e documentos/
                              (um arquivo .json por documento)
   admin/                     painel de conteúdo (Decap CMS): index.html e config.yml
+  _redirects.njk             redirecionamentos 301 para o Netlify (site/_redirects)
   _data/transparenciaArvore.js  organiza os documentos por tema, ano e área
   _lib/texto.js              funções de texto comuns aos dados e à configuração
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
@@ -179,6 +217,7 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   storage/, wp-content/      imagens, no mesmo caminho das URLs originais
 site/                        site gerado (npm run build); fora do Git
 eleventy.config.js           configuração do Eleventy
+netlify.toml                 configuração da hospedagem no Netlify
 ferramentas/reconstrucao/    script que gerou a base a partir da API REST do WordPress
 proposta-ui/extraido/        proposta visual de referência
 ```
@@ -206,8 +245,9 @@ npm run painel
 
 Depois, abra **http://localhost:8080/admin/** e clique em **Entrar**.
 
-Para usar o painel no site publicado, o login com o GitHub precisa de um provedor de
-OAuth, que ainda não está configurado (ver [`PENDENCIAS.md`](PENDENCIAS.md)).
+Para usar o painel no site publicado, siga a parte 2 de
+[Como publicar no Netlify](#como-publicar-no-netlify). O painel grava na branch
+`v2-arquitetura`, a mesma que o Netlify publica.
 
 ### Como publicar uma notícia pelo código
 
