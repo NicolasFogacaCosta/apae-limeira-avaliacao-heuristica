@@ -150,6 +150,8 @@ quebrado e redirecionamentos que levam a algum conteúdo.
 | 4 | As notícias até 2018 vão para o arquivo do site (`/arquivo/`), com aviso de conteúdo antigo, junto das galerias e páginas que estavam soltas. Saem as páginas de plugin, de exemplo, vazias e de teste; outras viram redirecionamento. Entra a página 404 | [`726563a`](../../commit/726563a) |
 | 5 | Painel de conteúdo (Decap CMS) em `/admin/` para a equipe publicar notícias e documentos sem mexer em código. Os documentos passam a ser um arquivo cada | [`fff08d5`](../../commit/fff08d5) |
 | 5 | O painel passa a usar o novo nome do repositório, `apae-limeira-avaliacao-heuristica` | [`4483e5b`](../../commit/4483e5b) |
+| Hospedagem | Faixa de protótipo acadêmico no topo de todas as páginas, para o link público não ser confundido com o site oficial | [`955c24a`](../../commit/955c24a) |
+| Hospedagem | Configuração do Netlify: build, bloqueio de indexação, 222 redirecionamentos 301 e o painel gravando na branch publicada | [`a97981e`](../../commit/a97981e) |
 
 As etapas não alteram os achados corrigidos na `main`. O que mudou na aparência foi só o
 que cada etapa acrescenta: filtros e caminho nas notícias, a lista de documentos, o
