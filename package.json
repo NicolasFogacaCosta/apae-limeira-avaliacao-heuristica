@@ -1,0 +1,13 @@
+{
+  "name": "apae-limeira-site",
+  "private": true,
+  "type": "module",
+  "description": "Site da APAE de Limeira gerado com Eleventy a partir de src/",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port 8080"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

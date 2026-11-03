@@ -1,0 +1,27 @@
+{# Aviso e painel de consentimento de cookies #}
+<div class="cookies" id="aviso-cookies" hidden>
+  <p class="cookies__texto">Nós utilizamos cookies para lembrar suas preferências e te fornecer a melhor experiência de navegação possível no nosso site. Ao clicar em "aceitar todos", você consente o uso de todos os cookies. Você também pode clicar em "Configurações de cookies" para alterar as configurações.</p>
+  <div class="cookies__acoes">
+    <button class="cookies__btn cookies__btn--config" type="button" data-cookies="config">Configurações de cookies</button>
+    {# Achado 19: recusar custa o mesmo clique que aceitar, com o mesmo peso visual #}
+    <button class="cookies__btn cookies__btn--escolha" type="button" data-cookies="recusar">Recusar não essenciais</button>
+    <button class="cookies__btn cookies__btn--escolha" type="button" data-cookies="aceitar">Aceitar todos</button>
+  </div>
+</div>
+<button class="cookies-reabrir" type="button" data-cookies="config" hidden>Gerenciar consentimento</button>
+<div class="cookies-modal" id="modal-cookies" role="dialog" aria-labelledby="modal-cookies-titulo" hidden>
+  <div class="cookies-modal__caixa">
+    <button class="cookies-modal__fechar" type="button" data-cookies="fechar" aria-label="Fechar">×</button>
+    <h4 class="cookies-modal__titulo" id="modal-cookies-titulo">Visão geral de privacidade</h4>
+    <p>Este site usa cookies para melhorar a sua experiência enquanto navega pelo site. Destes, os cookies que são categorizados como necessários são armazenados no seu navegador, pois são essenciais para o funcionamento das funcionalidades básicas do site. Também usamos cookies de terceiros que nos ajudam a analisar e entender como você usa este site. Esses cookies serão armazenados em seu navegador apenas com o seu consentimento. Você também tem a opção de cancelar esses cookies. Porém, a desativação de alguns desses cookies pode afetar sua experiência de navegação.</p>
+    <details class="cookies-modal__categoria"><summary>Necessários <span class="cookies-modal__sempre">Sempre ativado</span></summary>
+      <p>Os cookies necessários são absolutamente essenciais para o bom funcionamento do site. Esses cookies garantem funcionalidades básicas e recursos de segurança do site, anonimamente.</p></details>
+    {% for c in cookies %}
+    <details class="cookies-modal__categoria"><summary>{{ c.nome }} <input type="checkbox" data-categoria="{{ c.nome | lower }}" checked></summary><p>{{ c.texto }}</p></details>
+    {% endfor %}
+    <div class="cookies-modal__rodape">
+      <button class="cookies-modal__salvar" type="button" data-cookies="salvar">SALVAR E ACEITAR</button>
+      <small>Desenvolvido por CookieYes</small>
+    </div>
+  </div>
+</div>

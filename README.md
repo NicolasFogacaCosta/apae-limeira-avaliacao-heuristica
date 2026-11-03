@@ -16,18 +16,25 @@ mostra, achado por achado, o antes e o depois de cada correção.
 
 ## Como abrir o protótipo
 
-O site é HTML, CSS e JavaScript puros, sem framework e sem etapa de build. Os links usam
-URLs de pasta (`/doacoes/`), então ele precisa ser servido por HTTP. Abrir o arquivo
-direto no navegador não funciona.
+O site é HTML, CSS e JavaScript puros, sem framework no navegador. Nesta branch, as
+páginas ficam em `src/` e o [Eleventy](https://www.11ty.dev/) gera o site final em
+`site/`, incluindo em cada página o cabeçalho, o rodapé e o aviso de cookies. É preciso
+ter o [Node.js](https://nodejs.org/) 18 ou mais recente.
 
 ```bash
-python -m http.server 8080 --directory site
+npm install
 ```
 
-Depois, acesse **http://localhost:8080**.
+```bash
+npm start
+```
 
-Para publicar, basta servir a pasta `site/` em qualquer hospedagem estática (GitHub
-Pages, Netlify, Vercel ou outra).
+Depois, acesse **http://localhost:8080**. O `npm start` gera o site e recarrega a página
+a cada alteração em `src/`.
+
+Para publicar, rode `npm run build` e sirva a pasta `site/` em qualquer hospedagem
+estática (GitHub Pages, Netlify, Vercel ou outra). Os links são relativos, então o site
+funciona também num subcaminho, como `usuario.github.io/repositorio/`.
 
 ## Documentos do projeto
 
@@ -107,19 +114,28 @@ Dois commits marcados como `base:` não correspondem a achados:
 ## Estrutura
 
 ```
-site/
+src/                         fonte do site (o Eleventy gera site/ a partir daqui)
+  _data/                     menu.js, rodape.js, redes.js, cookies.js: os links do
+                             cabeçalho e do rodapé, editados num lugar só
+  _includes/partes/          cabecalho.njk, rodape.njk, cookies.njk, icones.njk
+  _includes/macros.njk       ícone, redes sociais e item de lista do rodapé
   index.html                 home
   busca/                     resultados da busca (equivale a /?s= no WordPress)
   <slug>/index.html          páginas e publicações, nas mesmas URLs da produção
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
-  assets/js/layout.js        cabeçalho, rodapé e aviso de cookies, comuns a todas as páginas
   assets/js/principal.js     menu, busca, carrosséis, cookies, compartilhar, formulários
   assets/js/busca-indice.js  índice de busca gerado a partir do conteúdo
   assets/js/*.js             scripts específicos (inscrição, doação, trabalho, notícias)
   storage/, wp-content/      imagens, no mesmo caminho das URLs originais
+site/                        site gerado (npm run build); fora do Git
+eleventy.config.js           configuração do Eleventy
 ferramentas/reconstrucao/    script que gerou a base a partir da API REST do WordPress
 proposta-ui/extraido/        proposta visual de referência
 ```
+
+Cada página inclui as partes comuns com `{% include "partes/cabecalho.njk" %}` logo após
+o `<body>` e `{% include "partes/rodape.njk" %}` antes de fechar. Para mudar um item do
+menu ou do rodapé, edite o arquivo correspondente em `src/_data/`.
 
 ## Limitações do protótipo
 

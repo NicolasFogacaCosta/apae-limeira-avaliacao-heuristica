@@ -1,0 +1,39 @@
+{# Rodapé comum a todas as páginas, seguido do aviso de cookies #}
+{% import "macros.njk" as m %}
+{% set raiz = page.url | raiz %}
+{% set html %}
+<footer class="rodape">
+  <div class="rodape__inner">
+    <div class="rodape__col rodape__col--marca">
+      <div class="rodape__logo"><a href="{{ raiz }}"><img src="{{ raiz }}storage/2025/05/logo-60-anos-siterodape.png" alt="APAE Limeira, 60 anos: página inicial"></a></div>
+      <p class="rodape__endereco">Av. Antônio D&#39;Andréa, 364<br>Parque Nossa Senhora das Dores<br>Limeira/SP — CEP 13483-000</p>
+      <p class="rodape__email">apae@apaelimeira.org.br</p>
+      <p class="rodape__telefone"><a href="tel:+551934041569">(19) 3404-1569</a></p>
+      <a class="rodape__doe" href="{{ raiz }}doacoes/">{{ m.icone('coracao') }}Doe Agora</a>
+    </div>
+    <div class="rodape__col rodape__col--menu">
+      <h2 class="rodape__titulo">Menu</h2>
+      <ul class="rodape__lista">
+        {% for item in rodape.menu %}{{ m.itemLista(item.titulo, raiz + item.url) }}{% endfor %}
+      </ul>
+    </div>
+    <div class="rodape__col rodape__col--redes">
+      <h2 class="rodape__titulo">Siga-nos</h2>
+      {{ m.redes('rodape__redes', redes) }}
+      <div class="rodape__uteis">
+        <h2 class="rodape__titulo">Links Úteis</h2>
+        <ul class="rodape__lista">
+          {% for item in rodape.uteis %}{{ m.itemLista(item.titulo, raiz + item.url) }}{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="rodape-base">
+  <div class="rodape-base__inner">
+    <span>Copyright © 2026 <strong>APAE Limeira</strong> | Todos os direitos reservados.</span>
+    <a href="https://wmalaman.com.br/" target="_blank"><strong>WM</strong>alaman <img src="{{ raiz }}storage/2025/05/icon_wm.png" alt=""></a>
+  </div>
+</div>
+{% include "partes/cookies.njk" %}
+{% endset %}{{ html | compacto | safe }}

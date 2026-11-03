@@ -1,0 +1,11 @@
+{% macro icone(id) %}<svg class="icone" aria-hidden="true"><use href="#i-{{ id }}"></use></svg>{% endmacro %}
+
+{% macro redes(classe, lista) %}
+<div class="{{ classe }}">
+  {% for r in lista %}
+  <a class="rede" href="{{ r.url }}" target="_blank" rel="noopener">{{ icone(r.icone) }}<span>{{ r.nome }} da APAE Limeira (abre em nova janela)</span></a>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro itemLista(texto, destino) %}<li><a href="{{ destino }}">{{ icone('seta') }}<span>{{ texto }}</span></a></li>{% endmacro %}

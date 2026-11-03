@@ -9,3 +9,7 @@ proposta-ui/*.zip
 # Cache de download da reconstrução
 ferramentas/reconstrucao/.cache/
 __pycache__/
+
+# Eleventy: dependências e site gerado (npm run build)
+node_modules/
+site/

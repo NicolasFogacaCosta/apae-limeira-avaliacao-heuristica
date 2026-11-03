@@ -22,7 +22,8 @@ import urllib.request
 from html.parser import HTMLParser
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-SITE = os.path.join(RAIZ, 'site')
+# Fonte do Eleventy: o site final é gerado em site/ com npm run build
+SITE = os.path.join(RAIZ, 'src')
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.cache')
 ORIGEM = 'https://www.apaelimeira.org.br'
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36'
@@ -400,9 +401,9 @@ def documento(titulo, corpo, profundidade, classe_body='', estilo_extra='', desc
 <link rel="stylesheet" href="{p}assets/css/estilo.css">{estilo}
 </head>
 <body class="{classe_body}">
-<script src="{p}assets/js/layout.js" data-parte="cabecalho"></script>
+{{% include "partes/cabecalho.njk" %}}
 {corpo}
-<script src="{p}assets/js/layout.js" data-parte="rodape"></script>
+{{% include "partes/rodape.njk" %}}
 <script src="{p}assets/js/principal.js"></script>
 </body>
 </html>

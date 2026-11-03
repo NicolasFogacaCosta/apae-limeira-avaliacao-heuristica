@@ -1,0 +1,51 @@
+{#
+  Cabeçalho comum a todas as páginas: barra do topo, logo, busca e menu.
+  Reproduz o cabeçalho do site em produção (Elementor Header & Footer Builder).
+#}
+{% import "macros.njk" as m %}
+{% set raiz = page.url | raiz %}
+{% set html %}
+<script>window.APAE_BASE = '{{ raiz }}';</script>
+{% include "partes/icones.njk" %}
+<div class="barra-topo">
+  <div class="barra-topo__inner">
+    <div class="barra-topo__boasvindas">Seja bem-vindo a <strong>APAE Limeira!</strong></div>
+    <div class="barra-topo__direita">
+      {# Achados 08 e 09: telefone clicável, na grafia única do CLAUDE.md #}
+      <div class="barra-topo__contato">{{ m.icone('email') }} apae@apaelimeira.org.br &nbsp;| <a class="barra-topo__tel" href="tel:+551934041569">{{ m.icone('telefone') }} (19) 3404-1569</a></div>
+      {{ m.redes('barra-topo__redes', redes) }}
+      <a class="botao-doe-topo" href="{{ raiz }}doacoes/" target="_blank">{{ m.icone('coracao') }}<span class="botao-doe-topo__texto">Doe Agora</span></a>
+    </div>
+  </div>
+</div>
+<header class="cabecalho">
+  <div class="cabecalho__inner">
+    <div class="cabecalho__logo"><a href="{{ raiz }}"><img src="{{ raiz }}storage/2025/05/logo-60-anos-sitetopo.png" alt="APAE Limeira, 60 anos: página inicial"></a></div>
+    <div class="cabecalho__direita">
+      <form class="busca-topo" role="search" action="{{ raiz }}busca/" method="get">
+        <input class="busca-topo__campo" type="search" name="s" title="Buscar no site" aria-label="Buscar no site" value="">
+        <span class="busca-topo__icone" aria-hidden="true">{{ m.icone('busca') }}</span>
+      </form>
+      <nav class="menu-principal">
+        <button class="menu-principal__alternar" type="button" aria-label="Menu">{{ m.icone('menu') }}</button>
+        <ul class="menu-principal__lista">
+          {% for item in menu %}
+          <li class="menu-principal__item{% if item.itens %} tem-submenu{% endif %}">
+            <a class="menu-principal__link" href="{{ raiz }}{{ item.url }}">{{ item.titulo }}{% if item.itens %}<span class="menu-principal__seta" aria-hidden="true">{{ m.icone('baixo') }}</span>{% endif %}</a>
+            {% if item.itens %}
+            {# No celular, o submenu abre por um botão próprio; o link leva à página de seção. #}
+            <button class="submenu-alternar" type="button" aria-expanded="false" aria-controls="submenu-{{ loop.index0 }}">{{ m.icone('baixo') }}<span class="visualmente-oculto">Mostrar as páginas de {{ item.titulo }}</span></button>
+            <ul class="submenu" id="submenu-{{ loop.index0 }}">
+              {% for sub in item.itens %}
+              <li><a href="{{ raiz }}{{ sub.url }}">{{ sub.titulo }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+{% endset %}{{ html | compacto | safe }}
