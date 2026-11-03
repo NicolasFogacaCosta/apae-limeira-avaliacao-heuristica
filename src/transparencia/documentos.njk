@@ -1,0 +1,90 @@
+---
+# Todos os documentos da Transparência numa página, por tema e por ano, com
+# filtros (assets/js/transparencia.js). Os dados ficam em src/_data/transparencia/.
+layout: layouts/base.njk
+classeBody: pagina-interna pagina-documentos
+tituloPagina: Documentos da Transparência
+permalink: /transparencia/documentos/
+---
+{% set raiz = page.url | raiz %}
+{% set arvore = transparenciaArvore %}
+<main id="conteudo" class="pagina">
+  <header class="pagina__topo">
+    <h1 class="pagina__titulo">DOCUMENTOS DA TRANSPARÊNCIA</h1>
+    <div class="pagina__divisor"></div>
+  </header>
+  <div class="container pagina__conteudo docs">
+    <nav class="caminho" aria-label="Você está em">
+      <ol>
+        <li><a href="{{ raiz }}">Início</a></li>
+        <li><a href="{{ raiz }}transparencia/">Transparência</a></li>
+      </ol>
+    </nav>
+    <p class="docs__intro">Os {{ arvore.quantidade }} documentos publicados pela APAE de Limeira, por tema e por ano.
+      Escolha um tema, um ano ou uma área para encontrar um documento. Os arquivos abrem em nova janela,
+      quase todos no Google Drive.</p>
+
+    <form class="docs__filtros" data-filtros-docs role="search" aria-label="Filtrar documentos" action="./" method="get">
+      <div class="docs__campo">
+        <label for="filtro-tema">Tema</label>
+        <select id="filtro-tema" name="tema">
+          <option value="">Todos os temas</option>
+          {% for t in arvore.temas %}<option value="{{ t.id }}">{{ t.nome }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="docs__campo">
+        <label for="filtro-ano">Ano</label>
+        <select id="filtro-ano" name="ano">
+          <option value="">Todos os anos</option>
+          {% for a in arvore.anos %}<option value="{{ a }}">{{ a }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="docs__campo">
+        <label for="filtro-area">Área</label>
+        <select id="filtro-area" name="area">
+          <option value="">Todas as áreas</option>
+          {% for a in arvore.areas %}<option value="{{ a.id }}">{{ a.nome }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="docs__campo docs__campo--palavra">
+        <label for="filtro-palavra">Palavra no nome</label>
+        <input id="filtro-palavra" name="q" type="search" placeholder="Ex.: termo de fomento">
+      </div>
+      <div class="docs__acoes">
+        <button type="submit">Filtrar</button>
+        <a href="./" data-limpar>Limpar filtros</a>
+      </div>
+    </form>
+
+    <p class="docs__contagem" data-contagem aria-live="polite">{{ arvore.quantidade }} documentos</p>
+    <div class="docs__vazio" data-vazio hidden>
+      <p>Nenhum documento corresponde a esses filtros. <a href="./" data-limpar>Ver todos os documentos</a>
+        ou peça o documento pela <a href="{{ raiz }}contato/">Ouvidoria</a>.</p>
+    </div>
+
+    {% for tema in arvore.temas %}
+    <section class="docs__tema" id="tema-{{ tema.id }}" data-tema="{{ tema.id }}" aria-labelledby="titulo-{{ tema.id }}">
+      <h2 class="docs__titulo-tema" id="titulo-{{ tema.id }}">{{ tema.nome }}</h2>
+      {% for grupoAno in tema.anos %}
+      <div class="docs__ano" data-ano="{{ grupoAno.ano or '' }}">
+        {% if grupoAno.ano %}<h3 class="docs__titulo-ano">{{ grupoAno.ano }}</h3>{% endif %}
+        {% for g in grupoAno.grupos %}
+        <div class="docs__grupo" data-area="{{ g.area }}">
+          {% if g.rotulo %}<h4 class="docs__titulo-grupo">{{ g.rotulo }}</h4>{% endif %}
+          <ul class="docs__lista{% if g.meses %} docs__lista--meses{% endif %}">
+            {% for d in g.docs %}
+            <li class="docs__item" data-texto="{{ d.texto }}">
+              <a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.titulo }}<span class="visualmente-oculto">{% if g.meses %} de {{ grupoAno.ano }}{% if g.rotulo %}, {{ g.rotulo }}{% endif %}{% endif %} ({{ d.fonte }}, abre em nova janela)</span> <svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
+              {% if d.fonte != 'Google Drive' %}<span class="docs__fonte">{{ d.fonte }}</span>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+</main>
+<script src="{{ raiz }}assets/js/transparencia.js"></script>

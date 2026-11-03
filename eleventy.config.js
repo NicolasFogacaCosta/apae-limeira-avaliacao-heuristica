@@ -2,6 +2,8 @@
 // As páginas institucionais continuam sendo HTML; o Nunjucks só entra para
 // incluir as partes comuns (cabeçalho, rodapé e aviso de cookies). As notícias
 // são arquivos Markdown em src/noticias/publicacoes/, com listagem gerada aqui.
+import { idArea } from './src/_lib/texto.js';
+
 const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
   'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 const CATEGORIAS = ['Notícias', 'Eventos', 'Programas'];
@@ -83,6 +85,17 @@ export default function (eleventyConfig) {
       porAno.get(ano).push(n);
     }
     return [...porAno].map(([ano, itens]) => ({ ano, itens, url: `/noticias/${ano}/` }));
+  });
+
+  // Endereço da lista de documentos da Transparência já filtrada (usado nos
+  // redirecionamentos das páginas antigas): "transparencia/documentos/?tema=…#tema-…"
+  eleventyConfig.addFilter('documentosFiltrados', (filtros) => {
+    const consulta = new URLSearchParams();
+    consulta.set('tema', filtros.tema);
+    if (filtros.ano) consulta.set('ano', filtros.ano);
+    if (filtros.area) consulta.set('area', idArea(filtros.area));
+    if (filtros.q) consulta.set('q', filtros.q);
+    return `transparencia/documentos/?${consulta}#tema-${filtros.tema}`;
   });
 
   eleventyConfig.addGlobalData('categoriasNoticias', CATEGORIAS.map((c) => ({ nome: c, url: `noticias/categoria/${slug(c)}/` })));

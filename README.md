@@ -127,6 +127,12 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   noticias/publicacoes/      as 369 notícias em Markdown, publicadas em /<slug>/
   noticias/index.njk         listagem: /noticias/ e /noticias/categoria/<categoria>/
   noticias/ano.njk           uma página por ano: /noticias/<ano>/
+  transparencia/index.html   Transparência: documentos por tema, com explicação (achado 14)
+  transparencia/documentos.njk  todos os documentos, com filtros: /transparencia/documentos/
+  transparencia/redirecionamentos.njk  os 209 endereços antigos levam à lista já filtrada
+  _data/transparencia/       temas.json, documentos.json e redirecionamentos.json
+  _data/transparenciaArvore.js  organiza os documentos por tema, ano e área
+  _lib/texto.js              funções de texto comuns aos dados e à configuração
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
   assets/js/principal.js     menu, busca, carrosséis, cookies, compartilhar, formulários
   assets/js/busca-indice.js  índice de busca gerado a partir do conteúdo
@@ -163,6 +169,29 @@ e imagens em HTML (`<img src="..." width="..." height="..." alt="...">`).
 A `categoria` é uma destas: `Notícias`, `Eventos` ou `Programas`. A `imagem` é opcional
 e aparece no bloco "Outras notícias". No próximo build, a notícia entra na listagem, na
 página da categoria e na página do ano, sem mais nenhuma edição.
+
+### Como publicar um documento da Transparência
+
+Acrescente um item em `src/_data/transparencia/documentos.json`:
+
+```json
+{
+ "titulo": "Termo de fomento nº 06-2026",
+ "tema": "termos-e-planos",
+ "ano": 2026,
+ "area": "Assistência social",
+ "detalhe": "CMDCA",
+ "url": "https://drive.google.com/file/d/…/view",
+ "fonte": "Google Drive"
+}
+```
+
+O `tema` é um dos identificadores de `temas.json`. A `area` (Assistência social,
+Cultura, Educação, Esporte ou Saúde) e o `detalhe` são opcionais. O documento aparece na
+lista, nos filtros e na contagem da página da Transparência no próximo build.
+
+Os dados foram extraídos das antigas páginas da Transparência pelo script
+[`ferramentas/conversao/transparencia-para-dados.py`](ferramentas/conversao/transparencia-para-dados.py).
 
 As notícias foram convertidas do HTML da reconstrução pelo script
 [`ferramentas/conversao/noticias-para-markdown.mjs`](ferramentas/conversao/noticias-para-markdown.mjs).

@@ -23,6 +23,7 @@
 						<div class="el-w el-w-text-editor el-6cc2a97">
 									<!-- Achado 14: documentos agrupados por tema, com nome por extenso, explicação, ano e formato -->
 <div class="transparencia">
+  <p class="transparencia__todos"><a href="documentos/">Ver todos os {{ transparenciaArvore.quantidade }} documentos, com filtros por tema, ano e área</a></p>
   <section class="transparencia__grupo" aria-labelledby="grupo-certificacoes-e-titulos">
     <h2 class="transparencia__titulo" id="grupo-certificacoes-e-titulos">Certificações e títulos</h2>
     <ul class="transparencia__lista">
@@ -42,14 +43,14 @@
         <p class="transparencia__meta"><span class="transparencia__externo"><svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg> Arquivo no Google Drive</span><span><strong>Ano:</strong> 2026</span><span><strong>Formato:</strong> PDF, 221 KB</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../utilidade-publica-ano/">Títulos de utilidade pública federal, estadual e municipal</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=utilidade-publica#tema-utilidade-publica">Títulos de utilidade pública federal, estadual e municipal</a></h3>
         <p class="transparencia__explicacao">Reconhecimento da APAE como entidade de utilidade pública pelos três níveis de governo.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano de cada título]</span></span><span><strong>Formato:</strong> Página com 3 documentos</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano de cada título]</span></span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['utilidade-publica-ano'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../declaracoes/">Declarações, certidões negativas de débitos (CND), certificados e registro no Conselho Regional de Medicina do Estado de São Paulo (CREMESP)</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=declaracoes#tema-declaracoes">Declarações, certidões negativas de débitos (CND), certificados e registro no Conselho Regional de Medicina do Estado de São Paulo (CREMESP)</a></h3>
         <p class="transparencia__explicacao">Certidões de regularidade, declarações de entidades parceiras, certificados e o registro no CREMESP.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano de cada documento]</span></span><span><strong>Formato:</strong> Página com 22 documentos</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano de cada documento]</span></span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['declaracoes'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
         <h3 class="transparencia__nome"><a href="https://drive.google.com/file/d/1ioxE-ce_jx4O0eKeEVrGJYs9GHtjmAJP/view?usp=sharing" target="_blank" rel="noopener">CID da Lei Paulista de Incentivo ao Esporte (LPIE) <svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg><span class="visualmente-oculto"> (PDF, 204 KB, abre o Google Drive em nova janela)</span></a></h3>
@@ -77,14 +78,14 @@
         <p class="transparencia__meta"><span class="transparencia__externo"><svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg> Arquivo no Google Drive</span><span><strong>Ano:</strong> 2025–2026</span><span><strong>Formato:</strong> PDF, 189 KB</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../regulamentos-2/">Regulamentos de compras e de contratação de pessoal</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=regulamentos#tema-regulamentos">Regulamentos de compras e de contratação de pessoal</a></h3>
         <p class="transparencia__explicacao">Regras que a APAE segue para comprar e para contratar funcionários.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano dos regulamentos]</span></span><span><strong>Formato:</strong> Página com 2 documentos</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> <span class="a-confirmar">[a confirmar com a entidade: ano dos regulamentos]</span></span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['regulamentos-2'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../legislacao-transparencia/">Legislação sobre transparência</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=legislacao#tema-legislacao">Legislação sobre transparência</a></h3>
         <p class="transparencia__explicacao">Lei de Acesso à Informação (Lei 12.527/2011) e Marco Regulatório das Organizações da Sociedade Civil (Lei 13.019/2014).</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> leis de 2011 e 2014</span><span><strong>Formato:</strong> Página com 2 leis</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> leis de 2011 e 2014</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['legislacao-transparencia'].quantidade }} documentos</span></p>
       </li>
     </ul>
   </section>
@@ -92,14 +93,14 @@
     <h2 class="transparencia__titulo" id="grupo-prestacao-de-contas">Prestação de contas</h2>
     <ul class="transparencia__lista">
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../balanco-relatorio-auditores-externos-ano/">Balanço patrimonial e relatório dos auditores externos</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=balancos#tema-balancos">Balanço patrimonial e relatório dos auditores externos</a></h3>
         <p class="transparencia__explicacao">Demonstrações contábeis de cada ano, com o relatório da auditoria externa.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2018 a 2024</span><span><strong>Formato:</strong> Página com um documento por ano</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> {{ transparenciaArvore.porOrigem['balanco-relatorio-auditores-externos-ano'].faixa }}</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['balanco-relatorio-auditores-externos-ano'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../prestacoes-de-contas-anuais-ano/">Prestações de contas anuais</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=prestacoes-de-contas#tema-prestacoes-de-contas">Prestações de contas anuais</a></h3>
         <p class="transparencia__explicacao">A prestação de contas da APAE em cada ano.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2018 a 2024</span><span><strong>Formato:</strong> Página com um documento por ano</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> {{ transparenciaArvore.porOrigem['prestacoes-de-contas-anuais-ano'].faixa }}</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['prestacoes-de-contas-anuais-ano'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
         <h3 class="transparencia__nome"><a href="https://drive.google.com/file/d/17LOKkL-p6Ufje5mwvlb9xQ6J9NI56H7L/view?usp=sharing" target="_blank" rel="noopener">Relatório de atividades <svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg><span class="visualmente-oculto"> (PDF, 1,9 MB, 68 páginas, abre o Google Drive em nova janela)</span></a></h3>
@@ -107,14 +108,14 @@
         <p class="transparencia__meta"><span class="transparencia__externo"><svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg> Arquivo no Google Drive</span><span><strong>Ano:</strong> 2025</span><span><strong>Formato:</strong> PDF, 1,9 MB, 68 páginas</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../lei-12-527-2011-despesa-com-pessoal-ano/">Despesa com pessoal (Lei 12.527/2011)</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=despesa-com-pessoal#tema-despesa-com-pessoal">Despesa com pessoal (Lei 12.527/2011)</a></h3>
         <p class="transparencia__explicacao">Gastos com funcionários, publicados conforme a Lei de Acesso à Informação.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2019 a 2025</span><span><strong>Formato:</strong> Página com um documento por ano</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> {{ transparenciaArvore.porOrigem['lei-12-527-2011-despesa-com-pessoal-ano'].faixa }}</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['lei-12-527-2011-despesa-com-pessoal-ano'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-ano/">Relação de funcionários incluídos na despesa com pessoal</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=relacao-de-funcionarios#tema-relacao-de-funcionarios">Relação de funcionários incluídos na despesa com pessoal</a></h3>
         <p class="transparencia__explicacao">Lista dos funcionários considerados na despesa com pessoal de cada ano.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2019 a 2025</span><span><strong>Formato:</strong> Página com um documento por ano</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> {{ transparenciaArvore.porOrigem['relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-ano'].faixa }}</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-ano'].quantidade }} documentos</span></p>
       </li>
     </ul>
   </section>
@@ -122,9 +123,9 @@
     <h2 class="transparencia__titulo" id="grupo-convênios">Convênios</h2>
     <ul class="transparencia__lista">
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../termos-e-planos-de-trabalho/">Termos de colaboração e planos de trabalho</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=termos-e-planos#tema-termos-e-planos">Termos de colaboração e planos de trabalho</a></h3>
         <p class="transparencia__explicacao">Os acordos firmados com o poder público e o plano de trabalho de cada um.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2018 a 2025</span><span><strong>Formato:</strong> Página com documentos por ano</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> {{ transparenciaArvore.porOrigem['termos-e-planos-de-trabalho'].faixa }}</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['termos-e-planos-de-trabalho'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
         <h3 class="transparencia__nome"><a href="https://drive.google.com/file/d/13CduKXsOY2IYJq7eVdiUXKFK8gDK21aP/view?usp=sharing" target="_blank" rel="noopener">Valores repassados <svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg><span class="visualmente-oculto"> (PDF, 590 KB, 11 páginas, abre o Google Drive em nova janela)</span></a></h3>
@@ -132,9 +133,9 @@
         <p class="transparencia__meta"><span class="transparencia__externo"><svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg> Arquivo no Google Drive</span><span><strong>Ano:</strong> 2026, atualizado em 21/10/2026</span><span><strong>Formato:</strong> PDF, 590 KB, 11 páginas</span></p>
       </li>
       <li class="transparencia__item">
-        <h3 class="transparencia__nome"><a href="../aditamento-ao-termo-de-colaboracao-10_2020-covid/">Aditamento ao Termo de Colaboração 10/2020 (COVID-19)</a></h3>
+        <h3 class="transparencia__nome"><a href="documentos/?tema=aditamento-covid#tema-aditamento-covid">Aditamento ao Termo de Colaboração 10/2020 (COVID-19)</a></h3>
         <p class="transparencia__explicacao">Alteração do convênio durante a pandemia de COVID-19, com plano de trabalho, custos e fornecedores.</p>
-        <p class="transparencia__meta"><span><strong>Ano:</strong> 2020</span><span><strong>Formato:</strong> Página com 4 documentos</span></p>
+        <p class="transparencia__meta"><span><strong>Ano:</strong> 2020</span><span><strong>Formato:</strong> lista com {{ transparenciaArvore.porOrigem['aditamento-ao-termo-de-colaboracao-10_2020-covid'].quantidade }} documentos</span></p>
       </li>
       <li class="transparencia__item">
         <h3 class="transparencia__nome"><a href="https://3s.escam.ceprosom.govsis.com.br/portal?idAreaGestoraContratado=7#header-ano" target="_blank" rel="noopener">Portal da Transparência das organizações da sociedade civil – CEPROSOM e FMDCA <svg class="icone-externo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg><span class="visualmente-oculto"> (site externo, abre em nova janela)</span></a></h3>

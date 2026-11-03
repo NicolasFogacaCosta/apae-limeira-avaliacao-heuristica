@@ -1,0 +1,25 @@
+---
+# As páginas antigas da Transparência (uma por tema, ano, área e programa)
+# viraram a lista de documentos. Cada endereço antigo leva à lista já filtrada.
+pagination:
+  data: transparencia.redirecionamentos
+  size: 1
+  alias: r
+permalink: "/{{ r.de }}/"
+eleventyExcludeFromCollections: true
+---
+{% set destino = '../' + (r.filtros | documentosFiltrados) %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ r.titulo }} – APAE Limeira</title>
+<link rel="canonical" href="{{ destino }}">
+<meta http-equiv="refresh" content="0; url={{ destino }}">
+<script>location.replace({{ destino | dump | safe }});</script>
+</head>
+<body>
+<p>Os documentos desta página agora estão na <a href="{{ destino }}">lista de documentos da Transparência</a>.</p>
+</body>
+</html>

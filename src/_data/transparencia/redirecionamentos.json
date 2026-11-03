@@ -1,0 +1,1875 @@
+[
+ {
+  "de": "utilidade-publica-ano",
+  "filtros": {
+   "tema": "utilidade-publica"
+  },
+  "titulo": "Utilidade pública"
+ },
+ {
+  "de": "declaracoes",
+  "filtros": {
+   "tema": "declaracoes"
+  },
+  "titulo": "Declarações"
+ },
+ {
+  "de": "regulamentos-2",
+  "filtros": {
+   "tema": "regulamentos"
+  },
+  "titulo": "Regulamentos"
+ },
+ {
+  "de": "legislacao-transparencia",
+  "filtros": {
+   "tema": "legislacao"
+  },
+  "titulo": "Legislação Transparência"
+ },
+ {
+  "de": "balanco-relatorio-auditores-externos-ano",
+  "filtros": {
+   "tema": "balancos"
+  },
+  "titulo": "Balanço – ano"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-ano",
+  "filtros": {
+   "tema": "prestacoes-de-contas"
+  },
+  "titulo": "Prestações de contas anuais — ano"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-ano",
+  "filtros": {
+   "tema": "despesa-com-pessoal"
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-ano"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-ano",
+  "filtros": {
+   "tema": "relacao-de-funcionarios"
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal- ano"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho",
+  "filtros": {
+   "tema": "termos-e-planos"
+  },
+  "titulo": "Termos e planos de trabalho – ano"
+ },
+ {
+  "de": "aditamento-ao-termo-de-colaboracao-10_2020-covid",
+  "filtros": {
+   "tema": "aditamento-covid"
+  },
+  "titulo": "Aditamento ao Termo de Colaboração 10/2020 – COVID 19"
+ },
+ {
+  "de": "balanco-relatorio-auditores-externos-2018",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2018
+  },
+  "titulo": "Balanço – relatório auditores externos – 2018"
+ },
+ {
+  "de": "balanco-relatorio-auditores-externos-2019",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2019
+  },
+  "titulo": "Balanço – 2019"
+ },
+ {
+  "de": "balanco-2020",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2020
+  },
+  "titulo": "Balanço patrimonial – DRE – demonstrativo resultado – balancete analítico – 2020"
+ },
+ {
+  "de": "balanco-patrimonial-dre-demonstrativo-resultado-balancete-analitico-2021",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2021
+  },
+  "titulo": "Balanço patrimonial – DRE – demonstrativo resultado – balancete analítico – 2021"
+ },
+ {
+  "de": "balanco-patrimonial-dre-demonstrativo-resultado-balancete-analitico-2022",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2022
+  },
+  "titulo": "Balanço patrimonial – 2022"
+ },
+ {
+  "de": "balanco-patrimonial-2023",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2023
+  },
+  "titulo": "Balanço patrimonial – 2023"
+ },
+ {
+  "de": "balanco-patrimonial-2024",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2024
+  },
+  "titulo": "Balanço patrimonial – 2024"
+ },
+ {
+  "de": "balanco-patrimonial-2025",
+  "filtros": {
+   "tema": "balancos",
+   "ano": 2025
+  },
+  "titulo": "Balanço patrimonial – 2025"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2018",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018
+  },
+  "titulo": "Prestações de contas anuais – 2018"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2019",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2019
+  },
+  "titulo": "Prestações de contas anuais – 2019"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2020",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2020
+  },
+  "titulo": "Prestações de contas anuais – 2020"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021
+  },
+  "titulo": "Prestações de contas anuais – 2021"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2022",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2022
+  },
+  "titulo": "Prestações de contas anuais – 2022"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-2",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023
+  },
+  "titulo": "Prestações de contas anuais – 2023"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2024",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2024
+  },
+  "titulo": "Prestações de contas anuais – 2024"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2025",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2025
+  },
+  "titulo": "Prestações de contas anuais – 2025"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2019
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2019"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2020",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2020
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2020"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2021",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2021
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2021"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2022",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2022
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2022"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2023",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2023
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2023"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2024",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2024
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2024"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2025",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2025
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2025"
+ },
+ {
+  "de": "lei-12-527-2011-despesa-com-pessoal-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026
+  },
+  "titulo": "Lei 12.527-2011 – despesa com pessoal-2026"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2019
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2019"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2020",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2020
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2020"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2021",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2021
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2021"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2022",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2022
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2022"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2023",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2023
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2023"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2024",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2024
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2024"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2025",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2025
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2025"
+ },
+ {
+  "de": "relacao-de-funcionarios-utilizados-na-despesa-com-pessoal-2026",
+  "filtros": {
+   "tema": "relacao-de-funcionarios",
+   "ano": 2026
+  },
+  "titulo": "Relação de funcionários utilizados na despesa com pessoal-2026"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018
+  },
+  "titulo": "Termos e planos de trabalho-2018"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019
+  },
+  "titulo": "Termos e planos de trabalho-2019"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020
+  },
+  "titulo": "Termos e planos de trabalho-2020"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021
+  },
+  "titulo": "Termos e planos de trabalho-2021"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022
+  },
+  "titulo": "Termos e planos de trabalho-2022"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023
+  },
+  "titulo": "Termos e planos de trabalho-2023"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024
+  },
+  "titulo": "Termos e planos de trabalho-2024"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025
+  },
+  "titulo": "Termos e planos de trabalho-2025"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2018-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2018-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2018 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2018-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2018-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2019-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2019,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2019-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2019-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2019,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2019 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2019-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2019,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2019-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2020-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2020,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2020 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-as-termos",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2021-as-termos"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2021 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-educacao-termos",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2021 – educação – termos"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2022-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2022,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2022-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2022-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2022,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2022 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2022-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2022,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2022-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-as-3",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2023-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-saude-3",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2023 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-educacao-3",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2023-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2024-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2024,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2024-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2024-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2024,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2024 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2024-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2024,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2024-educação"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2019",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2019,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2019"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2019",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2019,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2019"
+ },
+ {
+  "de": "funcionarios-utilizados-esporte-2019-lpie",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2019,
+   "area": "Esporte"
+  },
+  "titulo": "Funcionários utilizados – esporte-2019 – LPIE"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2019",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2019,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde – 2019"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2020",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2020,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2020"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2020",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2020,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2020"
+ },
+ {
+  "de": "funcionarios-utilizados-esporte-2020-lpie",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2020,
+   "area": "Esporte"
+  },
+  "titulo": "Funcionários utilizados – esporte-2020 – LPIE"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2020",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2020,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde – 2020"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2019-copy",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2021,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2021"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2021",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2021,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2021"
+ },
+ {
+  "de": "funcionarios-utilizados-esporte-2021-lpie",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2021,
+   "area": "Esporte"
+  },
+  "titulo": "Funcionários utilizados – esporte-2021 – LPIE"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2021",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2021,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde – 2021"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2022",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2022,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2022"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2022",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2022,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2022"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2022",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2022,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde-2022"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2023",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2023,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2023"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2023",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2023,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2023"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2023",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2023,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde-2023"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2024",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2024,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2024"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2024",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2024,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2024"
+ },
+ {
+  "de": "funcionarios-utilizados-esporte-2024",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2024,
+   "area": "Esporte"
+  },
+  "titulo": "Funcionários utilizados – esporte -2024"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2024",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2024,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde-2024"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2025",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2025,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2025"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2025",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2025,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2025"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2025",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2025,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde-2025"
+ },
+ {
+  "de": "funcionarios-utilizados-assistencia-social-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026,
+   "area": "Assistência social"
+  },
+  "titulo": "Funcionários utilizados – assistência social-2026"
+ },
+ {
+  "de": "funcionarios-utilizados-educacao-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026,
+   "area": "Educação"
+  },
+  "titulo": "Funcionários utilizados – educação-2026"
+ },
+ {
+  "de": "profissionais-utilizados-cultura-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026,
+   "area": "Cultura"
+  },
+  "titulo": "Profissionais utilizados – cultura-2026"
+ },
+ {
+  "de": "profissionais-utilizados-esporte-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026,
+   "area": "Esporte"
+  },
+  "titulo": "Profissionais utilizados – esporte-2026"
+ },
+ {
+  "de": "funcionarios-utilizados-saude-2026",
+  "filtros": {
+   "tema": "despesa-com-pessoal",
+   "ano": 2026,
+   "area": "Saúde"
+  },
+  "titulo": "Funcionários utilizados – saúde-2026"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2018-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2018-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-esporte",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Esporte"
+  },
+  "titulo": "Termos e planos de trabalho-2018-esporte"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2018-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2019-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2019-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-esporte",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Esporte"
+  },
+  "titulo": "Termos e planos de trabalho-2019-esporte"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2019-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2020-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2020-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-educacao-2",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2020-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-esporte",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Esporte"
+  },
+  "titulo": "Termos e planos de trabalho-2020-esporte"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2020-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2021-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2021-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2021-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-esporte",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Esporte"
+  },
+  "titulo": "Termos e planos de trabalho-2021-esporte"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2021-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2022-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2022-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2022-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2022-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2023-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2023-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho- 2023-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2023-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2024-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2024-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho- 2024-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2024-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2025-as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2025-cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho- 2025-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-saude-2",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2025-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-as-scfv",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2018-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-as-pse",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2018-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-as-cmdca",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2018-as-CMDCA"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-as-term-55-2020",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "Termo 55-2020"
+  },
+  "titulo": "Prestações de contas anuais – 2021 – as-termo 55-2020"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-as-termo-56-2020",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "Termo 56-2020"
+  },
+  "titulo": "Prestações de contas anuais – 2021 – as-termo 56-2020"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-saude-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2018-saúde-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2018-saude-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2018,
+   "area": "Saúde",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2018-saúde-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-scfv-2",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-educacao-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Educação",
+   "q": "Federal"
+  },
+  "titulo": "Termos e planos de trabalho-2019-educação-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2019-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Educação",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2019-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-saude-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Saúde",
+   "q": "Federal"
+  },
+  "titulo": "Termos e planos de trabalho-2019-saúde-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-saude-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Saúde",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2019-saúde-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-scfv-3",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2020-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2020-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2020-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-educacao-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2020-educação-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2020-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Educação",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2020-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2021-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2021-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-as-cmdca-2",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2021-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-educacao-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2021-educação-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2021-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2021-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2021-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2022-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2022-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2022-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-educacao-federal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2022-educação-federal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2022-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2022,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2022-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2023-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2023-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2023-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2023-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2023,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2023-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2024-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2024-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2024-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2024-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2024-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2024,
+   "area": "Educação",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2024-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2025-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2025-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2025-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-educacao-estadual",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Educação",
+   "q": "Estadual"
+  },
+  "titulo": "Termos e planos de trabalho-2025-educação-estadual"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Educação",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2025-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Saúde",
+   "q": "Federal"
+  },
+  "titulo": "Termos e planos de trabalho-2025-saúde"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2025-saude-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2025,
+   "area": "Saúde",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2025-saúde-municipal"
+ },
+ {
+  "de": "termo-de-colaboracao-federal-estadual-10-2020",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social",
+   "q": "PSE Termo de colaboração (federal /estadual) 10-2020"
+  },
+  "titulo": "Termo de colaboração (federal /estadual) 10-2020"
+ },
+ {
+  "de": "aditamento-ao-termo-de-colaboracao-102020-sigtv-2019",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Assistência social",
+   "q": "PSE Aditamento ao termo de colaboração – 10-2020 – SIGTV 2019"
+  },
+  "titulo": "Aditamento ao Termo de Colaboração 10/2020 – SIGTV 2019"
+ },
+ {
+  "de": "termo-de-colaboracao-federal-estadual-56-2020",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "PSE Termo de colaboração (federal /estadual) 56-2020"
+  },
+  "titulo": "Termo de colaboração (federal /estadual) 56-2020"
+ },
+ {
+  "de": "aditamento-ao-termo-de-colaboracao-102020-sigtv-2019-2021",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2021,
+   "area": "Assistência social",
+   "q": "PSE Aditamento ao termo de colaboração – 10-2020 – SIGTV 2019"
+  },
+  "titulo": "Aditamento ao Termo de Colaboração 10/2020 – SIGTV 2019 – 2021"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2018-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2018,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2018-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2021-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2021,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2021-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023
+  },
+  "titulo": "Prestações de contas anuais – 2023"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2023-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2023-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2023-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2023,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2023 – saúde"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2025-as",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2025,
+   "area": "Assistência social"
+  },
+  "titulo": "Prestações de contas anuais – 2025-as"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2025-educacao",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2025,
+   "area": "Educação"
+  },
+  "titulo": "Prestações de contas anuais – 2025-educação"
+ },
+ {
+  "de": "prestacoes-de-contas-anuais-2025-saude",
+  "filtros": {
+   "tema": "prestacoes-de-contas",
+   "ano": 2025,
+   "area": "Saúde"
+  },
+  "titulo": "Prestações de contas anuais – 2025 – saúde"
+ },
+ {
+  "de": "termo-de-colaboracao-02-2026-e-plano-de-trabalho",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "q": "Termo de colaboração 02/2026"
+  },
+  "titulo": "Termo de colaboração 02/2026 e plano de trabalho"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-pse-termo-12-2018",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "PSE Termo 12-2018"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-PSE-termo 12-2018"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-pse-termo-12-2019",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "PSE Termo 12-2019"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-PSE-termo 12-2019"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2019-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2019,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2019-as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2020-educacao",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2020,
+   "area": "Educação"
+  },
+  "titulo": "Termos e planos de trabalho-2020-educação"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026
+  },
+  "titulo": "Termos e planos de trabalho-2026"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-as",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Assistência social"
+  },
+  "titulo": "Termos e planos de trabalho-2026 -as"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-as-cmdca",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Assistência social",
+   "q": "CMDCA"
+  },
+  "titulo": "Termos e planos de trabalho-2026-as-CMDCA"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-as-pse",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Assistência social",
+   "q": "PSE"
+  },
+  "titulo": "Termos e planos de trabalho-2026-as-PSE"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-as-scfv",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Assistência social",
+   "q": "SCFV"
+  },
+  "titulo": "Termos e planos de trabalho-2026 -as-SCFV"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-cultura",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Cultura"
+  },
+  "titulo": "Termos e planos de trabalho-2026 – cultura"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-educacao-municipal",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Educação",
+   "q": "Municipal"
+  },
+  "titulo": "Termos e planos de trabalho-2026-educação-municipal"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-esporte",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Esporte"
+  },
+  "titulo": "Termos e planos de trabalho-2026-esporte"
+ },
+ {
+  "de": "termos-e-planos-de-trabalho-2026-saude",
+  "filtros": {
+   "tema": "termos-e-planos",
+   "ano": 2026,
+   "area": "Saúde"
+  },
+  "titulo": "Termos e planos de trabalho-2026 -saúde"
+ }
+]
