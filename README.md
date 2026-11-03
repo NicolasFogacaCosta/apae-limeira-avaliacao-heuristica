@@ -59,7 +59,9 @@ redirecionamentos 301 dos endereços antigos, gerados no build em `site/_redirec
    pasta (`site`) já vêm preenchidos pelo `netlify.toml`.
 4. Clique em **Deploy**. Em um ou dois minutos o site fica no ar num endereço como
    `nome-aleatorio.netlify.app`, que dá para trocar em **Project configuration › Change
-   project name** (por exemplo, `apae-limeira-prototipo.netlify.app`).
+   project name**. O protótipo está em **https://apae-limeira-prototipo.netlify.app/**.
+5. Se o site pedir login no Netlify ("This site is private"), desligue a proteção em
+   **Project configuration › Access & security › Visitor access**.
 
 A partir daí, cada commit na branch `v2-arquitetura`, inclusive os feitos pelo painel,
 publica o site de novo sozinho.
@@ -152,6 +154,7 @@ quebrado e redirecionamentos que levam a algum conteúdo.
 | 5 | O painel passa a usar o novo nome do repositório, `apae-limeira-avaliacao-heuristica` | [`4483e5b`](../../commit/4483e5b) |
 | Hospedagem | Faixa de protótipo acadêmico no topo de todas as páginas, para o link público não ser confundido com o site oficial | [`955c24a`](../../commit/955c24a) |
 | Hospedagem | Configuração do Netlify: build, bloqueio de indexação, 222 redirecionamentos 301 e o painel gravando na branch publicada | [`a97981e`](../../commit/a97981e) |
+| Hospedagem | O aviso de cookies abre espaço para o selo "Powered by Netlify", que cobria os botões | [`86dea51`](../../commit/86dea51) |
 
 As etapas não alteram os achados corrigidos na `main`. O que mudou na aparência foi só o
 que cada etapa acrescenta: filtros e caminho nas notícias, a lista de documentos, o
