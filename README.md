@@ -12,6 +12,12 @@ mostra, achado por achado, o antes e o depois de cada correção.
 > **Regra do projeto:** manter o site reconhecível como o mesmo site e alterar apenas o
 > que está em [`ACHADOS.md`](ACHADOS.md). Detalhes em [`CLAUDE.md`](CLAUDE.md).
 
+> **Branch `v2-arquitetura`:** sobre os 27 achados corrigidos, esta branch reorganiza a
+> arquitetura do site em cinco etapas, um commit por etapa: o site passa a ser gerado
+> com o Eleventy, com notícias e documentos como dados e um painel de conteúdo. Veja
+> [Reorganização da arquitetura](#reorganização-da-arquitetura-branch-v2-arquitetura).
+> A branch `main` continua sendo a entrega da avaliação heurística.
+
 ---
 
 ## Como abrir o protótipo
@@ -88,6 +94,29 @@ Dois commits marcados como `base:` não correspondem a achados:
   problemas originais.
 - [`6dbc285`](../../commit/6dbc285): uma correção de fidelidade da própria reconstrução,
   em que o botão da página Doações aparecia verde em vez do rosa da produção.
+
+## Reorganização da arquitetura (branch `v2-arquitetura`)
+
+Depois dos achados, o site foi reorganizado para ficar mais simples de usar e de manter.
+As cerca de 690 páginas soltas, editadas uma a uma, viraram modelos e dados. O site
+continua sendo HTML estático, sem framework no navegador, e cada endereço antigo continua
+funcionando, seja como a mesma página, seja como redirecionamento. Cada etapa foi
+verificada contra a anterior antes do commit: o mesmo conteúdo, nenhum link interno
+quebrado e redirecionamentos que levam a algum conteúdo.
+
+| Etapa | O que mudou | Commit |
+|---|---|---|
+| 1 | Cabeçalho, rodapé e aviso de cookies viram modelos do Eleventy, incluídos no build em vez de inseridos por JavaScript. O menu e os links do rodapé ficam em `src/_data/`. As páginas passam de `site/` para `src/`, e o site gerado vai para `site/` | [`e9df4d5`](../../commit/e9df4d5) |
+| 2 | As 369 notícias viram arquivos Markdown, nos mesmos endereços. A listagem é gerada no build, com 12 por página e filtros por categoria e por ano que funcionam sem JavaScript. Cada notícia ganha o caminho "Início › Notícias" e a categoria como link | [`2561412`](../../commit/2561412) |
+| 3 | As 209 páginas da Transparência, em até cinco níveis, viram dados: 695 documentos numa lista filtrável por tema, ano, área e palavra. Entram 23 páginas que nenhum link alcançava. Os endereços antigos levam à lista já filtrada | [`812f7ae`](../../commit/812f7ae) |
+| 3 | O índice da busca passa a ser gerado no build, com as notícias novas e um resultado por tema da Transparência, que leva à lista filtrada pela palavra buscada | [`e237f0a`](../../commit/e237f0a) |
+| 4 | As notícias até 2018 vão para o arquivo do site (`/arquivo/`), com aviso de conteúdo antigo, junto das galerias e páginas que estavam soltas. Saem as páginas de plugin, de exemplo, vazias e de teste; outras viram redirecionamento. Entra a página 404 | [`726563a`](../../commit/726563a) |
+| 5 | Painel de conteúdo (Decap CMS) em `/admin/` para a equipe publicar notícias e documentos sem mexer em código. Os documentos passam a ser um arquivo cada | [`fff08d5`](../../commit/fff08d5) |
+
+As etapas não alteram os achados corrigidos na `main`. O que mudou na aparência foi só o
+que cada etapa acrescenta: filtros e caminho nas notícias, a lista de documentos, o
+arquivo do site, a página 404 e o painel. Os scripts que converteram o conteúdo em cada
+etapa ficam em [`ferramentas/conversao/`](ferramentas/conversao/).
 
 ## Principais mudanças, em resumo
 
