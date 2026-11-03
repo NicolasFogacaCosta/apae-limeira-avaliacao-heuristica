@@ -459,6 +459,10 @@
           }).join('') + '</ul></section>' : '') +
         achados.slice(inicio, inicio + POR_PAGINA).map(function (item) {
           var link = BASE + item.u;
+          // Na lista de documentos da Transparência, a palavra buscada vira filtro
+          if (item.u.indexOf('transparencia/documentos/') === 0) {
+            link = link.replace('#', '&q=' + encodeURIComponent(termo) + '#');
+          }
           var d = item.d.split('-');
           var meta = item.p ? '<div class="resultado__meta">' +
             '<span><svg class="icone" aria-hidden="true"><use href="#i-pessoa"></use></svg><a href="#">apae_limeira</a></span>' +

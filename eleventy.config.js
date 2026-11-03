@@ -102,7 +102,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: 'src', output: 'site', includes: '_includes', data: '_data' },
-    templateFormats: ['html', 'njk', 'md'],
+    templateFormats: ['html', 'njk', 'md', '11ty.js'],
     htmlTemplateEngine: 'njk',
     // O texto das notícias é conteúdo, não modelo: nada de Nunjucks dentro dele
     markdownTemplateEngine: false

@@ -135,7 +135,7 @@ src/                         fonte do site (o Eleventy gera site/ a partir daqui
   _lib/texto.js              funções de texto comuns aos dados e à configuração
   assets/css/estilo.css      estilos (tokens da identidade visual em :root)
   assets/js/principal.js     menu, busca, carrosséis, cookies, compartilhar, formulários
-  assets/js/busca-indice.js  índice de busca gerado a partir do conteúdo
+  busca/indice.11ty.js       gera o índice da busca (assets/js/busca-indice.js) no build
   assets/js/*.js             scripts específicos (inscrição, doação, trabalho, notícias)
   storage/, wp-content/      imagens, no mesmo caminho das URLs originais
 site/                        site gerado (npm run build); fora do Git
@@ -195,8 +195,9 @@ Os dados foram extraídos das antigas páginas da Transparência pelo script
 
 As notícias foram convertidas do HTML da reconstrução pelo script
 [`ferramentas/conversao/noticias-para-markdown.mjs`](ferramentas/conversao/noticias-para-markdown.mjs).
-O índice da busca (`assets/js/busca-indice.js`) ainda é o gerado na reconstrução e
-não inclui notícias novas.
+O índice da busca é gerado a cada build por `src/busca/indice.11ty.js`, então notícias e
+documentos novos entram na busca sem mais nenhuma edição. O texto das páginas
+institucionais vem de `src/_data/busca/paginas.json`, extraído na reconstrução.
 
 ## Limitações do protótipo
 
