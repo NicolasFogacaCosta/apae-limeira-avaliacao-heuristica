@@ -1,7 +1,7 @@
 // Menu principal. Achado 04: cada item com submenu abre a sua página de
-// seção e "Home" leva à página inicial; nenhum item usa href="#".
+// seção e "Início" leva à página inicial; nenhum item usa href="#".
 export default [
-  { titulo: 'Home', url: '' },
+  { titulo: 'Início', url: '' },
   { titulo: 'Quem Somos', url: 'quem-somos/', itens: [
     { titulo: 'A Entidade', url: 'estrutura/' },
     { titulo: 'A Diretoria', url: 'diretoria/' },

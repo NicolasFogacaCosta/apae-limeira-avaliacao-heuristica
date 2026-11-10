@@ -65,7 +65,7 @@ dado inventado não é.
 ## Estrutura de navegação correta
 
 ```
-Home | Quem Somos | Programas | Projetos | Serviços | Eventos | Transparência | Contato/Ouvidoria
+Início | Quem Somos | Programas | Projetos | Serviços | Eventos | Transparência | Contato/Ouvidoria
 ```
 
 - **Quem Somos**: A Entidade, A Diretoria, Conselhos, Política de Qualidade, Parceiros, Revista 50 anos

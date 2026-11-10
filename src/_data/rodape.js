@@ -1,7 +1,7 @@
 // Listas de links do rodapé
 export default {
   menu: [
-    { titulo: 'Home', url: '' },
+    { titulo: 'Início', url: '' },
     { titulo: 'A Entidade', url: 'estrutura/' },
     { titulo: 'A Diretoria', url: 'diretoria/' },
     { titulo: 'Conselhos', url: 'conselho/' },

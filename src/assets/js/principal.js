@@ -134,7 +134,7 @@
         pontos.forEach(function (p, n) {
           if (n === atual) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current');
         });
-        posicao.textContent = 'Slide ' + (atual + 1) + ' de ' + itens.length;
+        posicao.textContent = 'Imagem ' + (atual + 1) + ' de ' + itens.length;
       }
       function parar() { if (timer) clearInterval(timer); timer = null; }
       function tocar() {

@@ -21,7 +21,7 @@
       <h2 class="rodape__titulo">Siga-nos</h2>
       {{ m.redes('rodape__redes', redes) }}
       <div class="rodape__uteis">
-        <h2 class="rodape__titulo">Links Úteis</h2>
+        <h2 class="rodape__titulo">Informações úteis</h2>
         <ul class="rodape__lista">
           {% for item in rodape.uteis %}{{ m.itemLista(item.titulo, raiz + item.url) }}{% endfor %}
         </ul>
@@ -31,7 +31,7 @@
 </footer>
 <div class="rodape-base">
   <div class="rodape-base__inner">
-    <span>Copyright © 2026 <strong>APAE Limeira</strong> | Todos os direitos reservados.</span>
+    <span>© 2026 <strong>APAE Limeira</strong>. Todos os direitos reservados.</span>
     <a href="https://wmalaman.com.br/" target="_blank"><strong>WM</strong>alaman <img src="{{ raiz }}storage/2025/05/icon_wm.png" alt=""></a>
   </div>
 </div>
