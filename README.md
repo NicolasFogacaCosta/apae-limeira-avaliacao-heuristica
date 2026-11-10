@@ -155,6 +155,10 @@ quebrado e redirecionamentos que levam a algum conteúdo.
 | Hospedagem | Faixa de protótipo acadêmico no topo de todas as páginas, para o link público não ser confundido com o site oficial | [`955c24a`](../../commit/955c24a) |
 | Hospedagem | Configuração do Netlify: build, bloqueio de indexação, 222 redirecionamentos 301 e o painel gravando na branch publicada | [`a97981e`](../../commit/a97981e) |
 | Hospedagem | O aviso de cookies abre espaço para o selo "Powered by Netlify", que cobria os botões | [`86dea51`](../../commit/86dea51) |
+| Teste-piloto | Notícias alcançáveis pela home ("últimas NOTÍCIAS"), pela página Eventos e pela página do Selo Empresa Cidadã | [`43cec90`](../../commit/43cec90) |
+| Teste-piloto | Fotos das galerias carregam sob demanda (na página do Selo 2026, de 301 para 2 fotos ao abrir) | [`ffb44fa`](../../commit/ffb44fa) |
+| Linguagem | Termos em inglês da interface passam para o português ("Home" vira "Início", "Slide" vira "Imagem", sai "Copyright") | [`233957e`](../../commit/233957e) |
+| Linguagem | Textos populares no lugar de jargão: Teste do Pezinho sem "painéis", aviso de cookies em linguagem simples, crase em "Boas-vindas à APAE" | [`df77194`](../../commit/df77194) |
 
 As etapas não alteram os achados corrigidos na `main`. O que mudou na aparência foi só o
 que cada etapa acrescenta: filtros e caminho nas notícias, a lista de documentos, o
