@@ -194,7 +194,7 @@
     if (consentimento) reabrir.hidden = false; else aviso.hidden = false;
 
     // Achado 19: a faixa não cobre o conteúdo. Enquanto ela (ou a aba
-    // "Gerenciar consentimento") está visível, a página ganha um espaço no
+    // "Mudar escolha de cookies") está visível, a página ganha um espaço no
     // fim do mesmo tamanho, e o elemento focado rola para cima dela.
     function reservarEspaco() {
       var visivel = !aviso.hidden ? aviso : (!reabrir.hidden ? reabrir : null);

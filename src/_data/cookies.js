@@ -1,8 +1,8 @@
-// Categorias do painel de consentimento de cookies
+// Categorias do painel de consentimento de cookies, em linguagem simples
 export default [
-  { nome: 'Funcional', texto: 'Os cookies funcionais ajudam a executar certas funcionalidades, como compartilhar o conteúdo do site em plataformas de mídia social, coletar feedbacks e outros recursos de terceiros.' },
-  { nome: 'Desempenho', texto: 'Os cookies de desempenho são usados para entender e analisar os principais índices de desempenho do site, o que ajuda a oferecer uma melhor experiência de usuário aos visitantes.' },
-  { nome: 'Analíticos', texto: 'Os cookies analíticos são usados para entender como os visitantes interagem com o site. Esses cookies ajudam a fornecer informações sobre métricas de número de visitantes, taxa de rejeição, origem de tráfego, etc.' },
-  { nome: 'Propaganda', texto: 'Os cookies de publicidade são usados para fornecer aos visitantes anúncios e campanhas de marketing relevantes. Esses cookies rastreiam os visitantes em sites e coletam informações para fornecer anúncios personalizados.' },
-  { nome: 'Outros', texto: 'Outros cookies não categorizados são aqueles que estão sendo analisados e ainda não foram classificados em uma categoria.' }
+  { nome: 'Funcionais', texto: 'Permitem recursos como compartilhar uma página nas redes sociais.' },
+  { nome: 'Desempenho', texto: 'Mostram se o site está rápido e funcionando bem, para que possamos melhorá-lo.' },
+  { nome: 'Estatísticas', texto: 'Contam quantas pessoas visitam o site e quais páginas são mais vistas, sem identificar ninguém.' },
+  { nome: 'Propaganda', texto: 'São usados por empresas de anúncios para mostrar propagandas de acordo com o seu interesse.' },
+  { nome: 'Outros', texto: 'Cookies que ainda estão sendo avaliados e não entraram em nenhum dos grupos acima.' }
 ];
