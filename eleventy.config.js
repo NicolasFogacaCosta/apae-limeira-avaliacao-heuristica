@@ -48,6 +48,18 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('slug', slug);
   // Endereço interno ("/slug/") como link relativo a partir da página atual
   eleventyConfig.addFilter('link', (url, raiz) => raiz + url.replace(/^\//, ''));
+  // Imagens sob demanda: as galerias reconstruídas trazem centenas de fotos em
+  // tamanho original. Fora as duas primeiras do conteúdo (que aparecem logo),
+  // toda imagem sem "loading" só carrega quando chega perto da tela.
+  eleventyConfig.addTransform('imagensSobDemanda', function (html) {
+    if (!(this.page.outputPath || '').endsWith('.html')) return html;
+    const inicio = html.indexOf('<main');
+    if (inicio === -1) return html;
+    let vistas = 0;
+    return html.slice(0, inicio) + html.slice(inicio).replace(/<img\b(?![^>]*\bloading=)([^>]*)>/g,
+      (tag, atributos) => (++vistas <= 2 ? tag : `<img loading="lazy" decoding="async"${atributos}>`));
+  });
+
   // Notícias cujo título contém o termo (sem acento), da mais recente para a mais antiga
   eleventyConfig.addFilter('noticiasSobre', (lista, termo) =>
     lista.slice().reverse().filter((n) => normalizar(n.data.titulo).includes(normalizar(termo))));
