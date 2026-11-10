@@ -2,7 +2,7 @@
 // As páginas institucionais continuam sendo HTML; o Nunjucks só entra para
 // incluir as partes comuns (cabeçalho, rodapé e aviso de cookies). As notícias
 // são arquivos Markdown em src/noticias/publicacoes/, com listagem gerada aqui.
-import { idArea } from './src/_lib/texto.js';
+import { idArea, normalizar } from './src/_lib/texto.js';
 
 const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
   'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
@@ -48,6 +48,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('slug', slug);
   // Endereço interno ("/slug/") como link relativo a partir da página atual
   eleventyConfig.addFilter('link', (url, raiz) => raiz + url.replace(/^\//, ''));
+  // Notícias cujo título contém o termo (sem acento), da mais recente para a mais antiga
+  eleventyConfig.addFilter('noticiasSobre', (lista, termo) =>
+    lista.slice().reverse().filter((n) => normalizar(n.data.titulo).includes(normalizar(termo))));
   // As seis notícias mais recentes, sem a da própria página
   eleventyConfig.addFilter('outrasNoticias', (lista, url) =>
     lista.slice().reverse().filter((n) => n.url !== url).slice(0, 6));

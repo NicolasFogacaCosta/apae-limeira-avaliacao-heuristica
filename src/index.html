@@ -170,6 +170,24 @@
     <div class="programas__seta programas__seta--prox" data-proximo role="button" tabindex="0" aria-label="Próximos programas"><svg class="icone" aria-hidden="true"><use href="#i-direita"></use></svg></div>
   </section>
 
+  <!-- Últimas notícias: a seção Notícias (achado 23) também a partir da home, não só pelo rodapé -->
+  <div class="secao-titulo">
+    <h2 class="secao-titulo__sobre">últimas</h2>
+    <h2 class="secao-titulo__nome">NOTÍCIAS</h2>
+    <div class="secao-titulo__barra"></div>
+  </div>
+  <section class="ultimas" aria-label="Últimas notícias">
+    <ul class="ultimas__lista">
+      {%- for n in collections.noticia | outrasNoticias('') %}{% if loop.index <= 3 %}
+      <li class="ultimas__item">
+        <p class="ultimas__meta"><time datetime="{{ n.date | dataIso }}">{{ n.date | dataExtenso }}</time> · {{ n.data.categoria }}</p>
+        <h3 class="ultimas__nome"><a href="{{ n.url | link('./') }}">{{ n.data.titulo }}</a></h3>
+      </li>
+      {%- endif %}{% endfor %}
+    </ul>
+    <p class="ultimas__todas"><a href="noticias/">Ver todas as notícias</a></p>
+  </section>
+
   <!-- Mapa -->
   <section class="mapa">
     <iframe loading="lazy" src="https://maps.google.com/maps?q=Av.%20Ant%C3%B4nio%20D%27Andr%C3%A9a%2C%20364%20-%20Parque%20N%20Senhora%20das%20Dores%2C%20Limeira%20-%20SP%2C%2013483-000&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="Av. Antônio D'Andréa, 364 — Parque Nossa Senhora das Dores — Limeira/SP — CEP 13483-000" aria-label="Av. Antônio D'Andréa, 364 — Parque Nossa Senhora das Dores — Limeira/SP — CEP 13483-000"></iframe>

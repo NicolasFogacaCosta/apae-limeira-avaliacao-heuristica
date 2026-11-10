@@ -17,6 +17,23 @@
     <div class="pagina__divisor"></div>
   </header>
   <div class="container pagina__conteudo">
+<!-- Teste-piloto: quem chega pelo menu Eventos encontra, antes das fotos de 2026,
+     as outras edições e as notícias do Selo -->
+<section class="anteriores" aria-labelledby="anteriores-titulo">
+  <h2 class="anteriores__titulo" id="anteriores-titulo">Outras edições e notícias do Selo</h2>
+  <ul class="anteriores__lista">
+    <li><a href="../selo-empresa-cidada-2025/">Fotos da entrega de 2025</a></li>
+    <li><a href="../fotos-certificado-empresa-cidada-2024/">Fotos da entrega de 2024</a></li>
+    <li><a href="../selo-apae-empresa-cidada-2023/">Fotos da entrega de 2023</a></li>
+  </ul>
+  <h3 class="anteriores__subtitulo">Notícias sobre o Selo Empresa Cidadã</h3>
+  <ul class="anteriores__lista">
+    {%- for n in collections.noticia | noticiasSobre('selo empresa cidada') %}
+    <li><a href="{{ n.url | link('../') }}">{{ n.data.titulo }}</a> <span class="anteriores__data">({{ n.date | dataExtenso }})</span></li>
+    {%- endfor %}
+  </ul>
+  <h2 class="anteriores__titulo">Fotos da entrega de 2026</h2>
+</section>
 <div class="el-secao el-0c29c20">
 						<div class="el-container">
 					<div class="el-col el-col-100 el-f08971a">

@@ -1113,3 +1113,28 @@ body:has(#nl-badge-frame) .cookies-reabrir { right: auto; left: 20px; }
 .pagina__conteudo .nao-encontrada__titulo { font: 700 20px 'Montserrat', sans-serif; color: var(--azul-institucional); }
 .pagina__conteudo .nao-encontrada__caminhos { columns: 2 220px; padding-left: 20px; }
 .nao-encontrada__caminhos li { margin: 0 0 10px; }
+
+/* Teste-piloto: últimas notícias na home */
+.ultimas { max-width: var(--container-largo); margin: 0 auto 50px; padding: 0 20px; }
+.ultimas__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.ultimas__item { background: #fff; border: 1px solid #DDE2E7; border-top: 4px solid var(--amarelo); padding: 18px 20px; }
+.ultimas__meta { margin: 0 0 8px; font-size: 14px; color: #4A4A4A; }
+.ultimas__nome { margin: 0; font: 700 18px/1.35 'Montserrat', sans-serif; }
+.ultimas__nome a { color: #1c6880; text-decoration: underline; }
+.ultimas__todas { margin: 24px 0 0; text-align: center; }
+.ultimas__todas a {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 10px 22px; border-radius: 6px;
+  background: var(--azul-institucional); color: #fff; font: 700 16px 'Montserrat', sans-serif; text-decoration: none;
+}
+.ultimas__todas a:hover { background: #0A4A85; }
+@media (max-width: 900px) { .ultimas__lista { grid-template-columns: 1fr; } }
+
+/* Teste-piloto: edições anteriores na seção Eventos e na página do Selo */
+.secao-anteriores { margin: 24px 0 0; font-size: 17px; }
+.secao-anteriores a, .anteriores a { color: #1c6880; text-decoration: underline; font-weight: 600; }
+.anteriores { padding: 0 0 10px; text-align: left; }
+.anteriores__titulo { margin: 0 0 12px; font: 700 24px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.anteriores__subtitulo { margin: 20px 0 8px; font: 700 18px 'Montserrat', sans-serif; color: var(--azul-institucional); }
+.anteriores__lista { margin: 0; padding-left: 20px; }
+.anteriores__lista li { margin: 0 0 8px; }
+.anteriores__data { color: #4A4A4A; font-size: 15px; }
